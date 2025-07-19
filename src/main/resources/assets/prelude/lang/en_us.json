@@ -57,5 +57,7 @@
   "item.prelude.coke": "Coke",
   "item.prelude.lignite": "Lignite",
   "item.prelude.yutyrannus_dna": "Yutyrannus DNA",
-  "item.prelude.yutyrannus_spawn_egg": "Yutyrannus Spawn Egg"
+  "item.prelude.yutyrannus_spawn_egg": "Yutyrannus Spawn Egg",
+  "prelude.books.book_name": "Prelude Guide",
+  "prelude.book_name.book_landing_text": "This is an official in game guide of Prelude Mod..."
 }
