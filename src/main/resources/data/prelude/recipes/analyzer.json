@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AXA",
+    "AYA",
+    "AAR"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "minecraft:tinted_glass"
+    },
+    "Y": {
+      "item": "minecraft:water_bucket"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "prelude:analyzer",
+    "count": 1
+  }
+}

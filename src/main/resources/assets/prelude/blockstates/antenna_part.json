@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "prelude:block/antenna_part0"
+    },
+    "facing=east": {
+      "model": "prelude:block/antenna_part0",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "prelude:block/antenna_part0",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prelude:block/antenna_part0",
+      "y": 270
+    }
+  }
+}

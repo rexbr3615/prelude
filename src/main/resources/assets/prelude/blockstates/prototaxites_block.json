@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "part=base":  { "model": "prelude:block/fossil_ore" },
+    "part=top": { "model": "prelude:block/analyzer" },
+    "part=topmid": { "model": "prelude:block/proto_model_topmid" },
+    "part=middle": { "model": "prelude:block/proto_model_middle" }
+  }
+}

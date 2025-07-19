@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "proto_model_middle",
+	"textures": {
+		"0": "prelude:block/prototaxites/proto_base_top",
+		"1": "prelude:block/prototaxites/proto_stem_base",
+		"particle": "prelude:block/prototaxites/proto_base_top"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 2],
+			"to": [14, 16, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [2, 0, 14, 16], "texture": "#1"},
+				"east": {"uv": [2, 0, 14, 16], "texture": "#1"},
+				"south": {"uv": [2, 0, 14, 16], "texture": "#1"},
+				"west": {"uv": [2, 0, 14, 16], "texture": "#1"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#0"},
+				"down": {"uv": [2, 2, 14, 14], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "middle",
+			"origin": [0, 16, 0],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

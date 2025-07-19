@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "VZV",
+    "XZX",
+    "VVV"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:glass_pane"
+    },
+    "Z": {
+      "item": "minecraft:redstone"
+    },
+    "V": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "prelude:vat",
+    "count": 1
+  }
+}

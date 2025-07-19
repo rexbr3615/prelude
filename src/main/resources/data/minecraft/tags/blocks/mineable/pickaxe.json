@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "prelude:enchased_fossil",
+    "prelude:analyzer",
+    "prelude:fossil_ore",
+    "prelude:deep_fossil_ore",
+    "prelude:common_fence",
+    "prelude:antenna1",
+    "prelude:antenna2",
+    "prelude:antenna3",
+    "prelude:antenna4",
+    "prelude:antenna_part",
+    "prelude:vat",
+    "prelude:high_security_fence",
+    "prelude:marble",
+    "prelude:marble_bricks",
+    "prelude:marble_tiles",
+    "prelude:marble_floor",
+    "prelude:marble_pillar",
+    "prelude:security_block"
+  ]
+}

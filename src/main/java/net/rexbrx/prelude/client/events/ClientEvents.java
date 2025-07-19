@@ -1,0 +1,81 @@
+package net.rexbrx.prelude.client.events;
+
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.Registry;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.rexbrx.prelude.client.CreaturesMR.allosaurus.AllosaurusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.coelacanth.blue.BlueCoelacanthRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.conodonta.ConodontaRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.gallimimus.GallimimusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.juravenator.JuravenatorRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.megaraptor.MegaraptorRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.proterosuchus.ProterosuchusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.pteranodon.PteranodonRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.rugops.RugopsRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.therizinosaurus.TherizinosaurusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.yutyrannus.YutyrannusRenderer;
+import net.rexbrx.prelude.client.menu.AnalyzerScreen;
+import net.rexbrx.prelude.client.menu.VatScreen;
+import net.rexbrx.prelude.prelude;
+import net.rexbrx.prelude.server.blocks.PreludeBlocks;
+import net.rexbrx.prelude.server.entity.EntityInit;
+import net.rexbrx.prelude.server.entity.common.RugopsEntity;
+import net.rexbrx.prelude.server.entity.common.YutyrannusEntity;
+import net.rexbrx.prelude.server.recipes.common.AnalyzerRecipe;
+import net.rexbrx.prelude.server.recipes.common.VatRecipe;
+import net.rexbrx.prelude.server.screens.ModMenuTypes;
+
+@Mod.EventBusSubscriber(modid = prelude.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+public class ClientEvents {
+
+    @SubscribeEvent
+    public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        //event.registerLayerDefinition(ModModelLayers.PRELUDE_LAYER, JuravenatorModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+
+        event.registerEntityRenderer(EntityInit.JURAVENATOR.get(), JuravenatorRenderer::new);
+        event.registerEntityRenderer(EntityInit.ALLOSAURUS.get(), AllosaurusRenderer::new);
+        event.registerEntityRenderer(EntityInit.GALLIMIMUS.get(), GallimimusRenderer::new);
+        event.registerEntityRenderer(EntityInit.RUGOPS.get(), RugopsRenderer::new);
+        event.registerEntityRenderer(EntityInit.PROTEROSUCHUS.get(), ProterosuchusRenderer::new);
+        event.registerEntityRenderer(EntityInit.MEGARAPTOR.get(), MegaraptorRenderer::new);
+        event.registerEntityRenderer(EntityInit.YUTYRANNUS.get(), YutyrannusRenderer::new);
+        event.registerEntityRenderer(EntityInit.BLUE_COELACANTH.get(), BlueCoelacanthRenderer::new);
+        event.registerEntityRenderer(EntityInit.CONODONTA.get(), ConodontaRenderer::new);
+        event.registerEntityRenderer(EntityInit.PTERANODON.get(), PteranodonRenderer::new);
+        event.registerEntityRenderer(EntityInit.THERIZINOSAURUS.get(), TherizinosaurusRenderer::new);
+
+
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.ENCRINUS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.ENCRINUS_STEM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.COMMON_FENCE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.SWARTPUNTIA.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
+
+
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.POWER_BOX.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CABLE_BLOCK.get(), RenderType.translucent());
+
+
+        MenuScreens.register(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
+        MenuScreens.register(ModMenuTypes.VAT_MENU.get(), VatScreen::new);
+
+
+    }
+
+
+}

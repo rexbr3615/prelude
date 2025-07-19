@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyzer",
+  "ingredients": [
+    {
+      "item": "prelude:triassic_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:triassic_disk"
+  }
+}

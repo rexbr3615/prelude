@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:proterosuchus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:proterosuchus_spawn_egg"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prelude:antenna1"
+    }
+  ],
+  "result": {
+    "item": "prelude:antenna3",
+    "count": 2
+  }
+}

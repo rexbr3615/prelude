@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyzer",
+  "ingredients": [
+    {
+      "item": "prelude:plant_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:plant_disk"
+  }
+}
