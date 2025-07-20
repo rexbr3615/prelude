@@ -79,6 +79,10 @@ public class PreludeItems {
             () -> new ForgeSpawnEggItem(EntityInit.THERIZINOSAURUS,0xffffff, 0xffffff,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> TORVOSAURUS_SPAWN_EGG = ITEMS.register("torvosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.TORVOSAURUS,0xffffff, 0xffffff,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 
@@ -125,6 +129,16 @@ public class PreludeItems {
     public static final RegistryObject<Item> MEGARAPTOR_DNA = ITEMS.register("megaraptor_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> YUTYRANNUS_DNA = ITEMS.register("yutyrannus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CONODONTA_DNA = ITEMS.register("conodonta_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> PTERANODON_DNA = ITEMS.register("pteranodon_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> THERIZINOSAURUS_DNA = ITEMS.register("therizinosaurus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TORVOSAURUS_DNA = ITEMS.register("torvosaurus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> COELACANTH_DNA = ITEMS.register("coelacanth_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TEST_DNA = ITEMS.register("test_dna",

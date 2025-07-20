@@ -59,6 +59,11 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.PROTEROSUCHUS_DNA.get());
                         pOutput.accept(PreludeItems.INFERNORAPTOR_DNA.get());
                         pOutput.accept(PreludeItems.YUTYRANNUS_DNA.get());
+                        pOutput.accept(PreludeItems.COELACANTH_DNA.get());
+                        pOutput.accept(PreludeItems.CONODONTA_DNA.get());
+                        pOutput.accept(PreludeItems.PTERANODON_DNA.get());
+                        pOutput.accept(PreludeItems.THERIZINOSAURUS_DNA.get());
+                        pOutput.accept(PreludeItems.TORVOSAURUS_DNA.get());
 
                         pOutput.accept(PreludeItems.JURAVENATOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.ALLOSAURUS_SPAWN_EGG.get());
@@ -71,6 +76,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.CONODONTA_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.PTERANODON_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.THERIZINOSAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.TORVOSAURUS_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
 

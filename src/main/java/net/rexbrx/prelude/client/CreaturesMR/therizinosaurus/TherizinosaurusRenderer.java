@@ -26,7 +26,7 @@ public class TherizinosaurusRenderer extends GeoEntityRenderer<TherizinosaurusEn
     @Override
     public void preRender(PoseStack poseStack, TherizinosaurusEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
                           float blue, float alpha) {
-        float scale = 1.79f;
+        float scale = 1.58f;
         this.scaleHeight = scale;
         this.scaleWidth = scale;
         super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
