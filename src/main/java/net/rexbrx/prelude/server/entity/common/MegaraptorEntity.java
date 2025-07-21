@@ -22,6 +22,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.rexbrx.prelude.server.entity.EntityInit;
+import net.rexbrx.prelude.server.entity.ai.MoveToTaggedItemGoal;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
@@ -91,6 +92,9 @@ public class MegaraptorEntity extends PathfinderMob implements GeoEntity
                 return (double) (2.0 + entity.getBbWidth() * entity.getBbWidth());
             }
         });
+
+        this.goalSelector.addGoal(1, new MoveToTaggedItemGoal(this, 1.2D, 10.0D, new ResourceLocation("prelude", "carnivore_food")));
+
     }
 
     @Override

@@ -1,6 +1,8 @@
 {
   "values": [
     "prelude:proterosuchus_dna",
-    "prelude:test_dna"
+    "prelude:test_dna",
+    "prelude:coelacanth_dna",
+    "prelude:conodonta_dna"
   ]
 }

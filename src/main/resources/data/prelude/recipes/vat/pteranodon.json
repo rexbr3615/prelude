@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:pteranodon_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:pteranodon_spawn_egg"
+  }
+}

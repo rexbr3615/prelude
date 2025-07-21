@@ -14,7 +14,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 public class GallimimusRenderer extends GeoEntityRenderer<GallimimusEntity> {
     public GallimimusRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new GallimimusModel());
-        this.shadowRadius = 0.35f;
+        this.shadowRadius = 0.567f;
     }
 
     @Override

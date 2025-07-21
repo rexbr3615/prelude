@@ -50,6 +50,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.PLANT_FOSSIL.get());
 
                         pOutput.accept(PreludeItems.RAW_MARBLE.get());
+                        pOutput.accept(PreludeItems.SYRINGE.get());
+                        pOutput.accept(PreludeItems.TEST_TUBE.get());
 
                         pOutput.accept(PreludeItems.ALLOSAURUS_DNA.get());
                         pOutput.accept(PreludeItems.GALLIMIMUS_DNA.get());

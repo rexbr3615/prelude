@@ -42,7 +42,7 @@ public class VatEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 1200;
+    private int maxProgress = 1120;
 
     public VatEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.VAT_ENTITY.get(), pPos, pBlockState);

@@ -3,6 +3,9 @@
     "prelude:gallimimus_dna",
     "prelude:rugops_dna",
     "prelude:megaraptor_dna",
-    "prelude:yutyrannus_dna"
+    "prelude:yutyrannus_dna",
+    "prelude:coelacanth_dna",
+    "prelude:pteranodon_dna",
+    "prelude:therizinosaurus_dna"
   ]
 }

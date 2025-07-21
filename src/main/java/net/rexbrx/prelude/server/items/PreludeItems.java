@@ -35,6 +35,12 @@ public class PreludeItems {
     public static final RegistryObject<Item> FLARE = ITEMS.register("flare",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> SYRINGE = ITEMS.register("syringe",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> TEST_TUBE = ITEMS.register("test_tube",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> JURAVENATOR_SPAWN_EGG = ITEMS.register("juravenator_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityInit.JURAVENATOR,0x4d2817, 0x946c5a,
                     new Item.Properties()));
@@ -72,15 +78,15 @@ public class PreludeItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PTERANODON_SPAWN_EGG = ITEMS.register("pteranodon_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.PTERANODON,0xffffff, 0xffffff,
+            () -> new ForgeSpawnEggItem(EntityInit.PTERANODON,0xebc934, 0xdeca71,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> THERIZINOSAURUS_SPAWN_EGG = ITEMS.register("therizinosaurus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.THERIZINOSAURUS,0xffffff, 0xffffff,
+            () -> new ForgeSpawnEggItem(EntityInit.THERIZINOSAURUS,0x212121, 0x5e5353,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> TORVOSAURUS_SPAWN_EGG = ITEMS.register("torvosaurus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.TORVOSAURUS,0xffffff, 0xffffff,
+            () -> new ForgeSpawnEggItem(EntityInit.TORVOSAURUS,0x420006, 0x8a0a14,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
