@@ -36,7 +36,7 @@ public class PreludeItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SYRINGE = ITEMS.register("syringe",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TEST_TUBE = ITEMS.register("test_tube",
             () -> new Item(new Item.Properties()));
@@ -93,6 +93,9 @@ public class PreludeItems {
             () -> new PlasterItem(new Item.Properties()));
 
     public static final RegistryObject<Item> ESSENCE = ITEMS.register("essence",
+            () -> new EssenceItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> CPU = ITEMS.register("cpu",
             () -> new EssenceItem(new Item.Properties()));
 
     public static final RegistryObject<Item> RAW_MARBLE = ITEMS.register("raw_marble",
