@@ -81,6 +81,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.PTERANODON_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.THERIZINOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.TORVOSAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.MUTADON_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
 

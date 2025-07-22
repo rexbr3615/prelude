@@ -16,7 +16,7 @@
       "item": "minecraft:water_bucket"
     },
     "R": {
-      "item": "minecraft:redstone"
+      "item": "prelude:cpu"
     }
   },
   "result": {

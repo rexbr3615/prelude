@@ -80,6 +80,11 @@ public class EntityInit {
 
                     .sized(1.29f, 2.789f));
 
+    public static final RegistryObject<EntityType<MutadonEntity>> MUTADON = register("mutadon",
+            EntityType.Builder.<MutadonEntity>of(MutadonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MutadonEntity::new)
+
+                    .sized(1.29f, 2.789f));
+
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
     }
@@ -100,6 +105,7 @@ public class EntityInit {
             PteranodonEntity.init();
             TherizinosaurusEntity.init();
             TorvosaurusEntity.init();
+            MutadonEntity.init();
 
         });
     }
@@ -118,6 +124,7 @@ public class EntityInit {
         event.put(PTERANODON.get(), PteranodonEntity.createAttributes().build());
         event.put(THERIZINOSAURUS.get(), TherizinosaurusEntity.createAttributes().build());
         event.put(TORVOSAURUS.get(), TorvosaurusEntity.createAttributes().build());
+        event.put(MUTADON.get(), MutadonEntity.createAttributes().build());
 
     }
 

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "VZV",
-    "XZX",
+    "XYX",
     "VVV"
   ],
   "key": {
@@ -11,6 +11,9 @@
     },
     "Z": {
       "item": "minecraft:redstone"
+    },
+    "Y": {
+      "item": "prelude:cpu"
     },
     "V": {
       "item": "minecraft:iron_ingot"

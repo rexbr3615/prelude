@@ -18,6 +18,7 @@
     "prelude:marble_tiles",
     "prelude:marble_floor",
     "prelude:marble_pillar",
-    "prelude:security_block"
+    "prelude:security_block",
+    "prelude:antenna_base"
   ]
 }

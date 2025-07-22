@@ -89,6 +89,10 @@ public class PreludeItems {
             () -> new ForgeSpawnEggItem(EntityInit.TORVOSAURUS,0x420006, 0x8a0a14,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> MUTADON_SPAWN_EGG = ITEMS.register("mutadon_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.MUTADON,0x420006, 0x8a0a14,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 

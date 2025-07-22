@@ -15,6 +15,7 @@ import net.rexbrx.prelude.client.CreaturesMR.conodonta.ConodontaRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.gallimimus.GallimimusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.juravenator.JuravenatorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.megaraptor.MegaraptorRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.mutadon.MutadonRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.proterosuchus.ProterosuchusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.pteranodon.PteranodonRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.rugops.RugopsRenderer;
@@ -55,6 +56,7 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.PTERANODON.get(), PteranodonRenderer::new);
         event.registerEntityRenderer(EntityInit.THERIZINOSAURUS.get(), TherizinosaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.TORVOSAURUS.get(), TorvosaurusRenderer::new);
+        event.registerEntityRenderer(EntityInit.MUTADON.get(), MutadonRenderer::new);
 
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
