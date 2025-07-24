@@ -43,6 +43,10 @@ public class PreludeBlocks
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)
                     .strength(3f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> GRAPHITE_BLOCK = registerBlock("graphite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.BASALT)
+                    .strength(4f).requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> PROTOTAXITES_BLOCK = registerBlock("prototaxites_block",
             () -> new PrototaxitesBlock(BlockBehaviour.Properties.copy(Blocks.SUGAR_CANE).randomTicks()));
 

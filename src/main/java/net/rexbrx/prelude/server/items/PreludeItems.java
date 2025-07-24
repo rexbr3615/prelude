@@ -173,6 +173,17 @@ public class PreludeItems {
     public static final RegistryObject<Item> LIGNITE = ITEMS.register("lignite",
             () -> new PreludeFuelItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> COAL_DUST = ITEMS.register("coal_dust",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CARBON_FIBRE_PLATE = ITEMS.register("carbon_fibre_plate",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STEEL_NUGGETS = ITEMS.register("steel_nuggets",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GRAPHITE = ITEMS.register("graphite",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -84,6 +84,11 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.MUTADON_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
+                        pOutput.accept(PreludeItems.COAL_DUST.get());
+                        pOutput.accept(PreludeItems.CARBON_FIBRE_PLATE.get());
+                        pOutput.accept(PreludeItems.STEEL_INGOT.get());
+                        pOutput.accept(PreludeItems.STEEL_NUGGETS.get());
+                        pOutput.accept(PreludeItems.GRAPHITE.get());
 
                         pOutput.accept(PreludeBlocks.VAT.get());
                         pOutput.accept(PreludeBlocks.ANALYZER.get());
@@ -128,6 +133,10 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.CALAMITES_TRAPDOOR.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_LEAVES.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_SAPLING2.get());
+
+
+                        pOutput.accept(PreludeBlocks.GRAPHITE_BLOCK.get());
+
 
 
                         pOutput.accept(PreludeItems.TEST_DNA.get());

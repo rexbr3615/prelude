@@ -7,7 +7,7 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:iron_ingot"
+      "item": "prelude:steel_ingot"
     },
     "X": {
       "item": "minecraft:tinted_glass"

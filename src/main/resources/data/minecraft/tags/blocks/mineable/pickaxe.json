@@ -19,6 +19,7 @@
     "prelude:marble_floor",
     "prelude:marble_pillar",
     "prelude:security_block",
-    "prelude:antenna_base"
+    "prelude:antenna_base",
+    "prelude:graphite_block"
   ]
 }
