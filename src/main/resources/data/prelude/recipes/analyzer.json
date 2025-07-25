@@ -2,8 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "AXA",
-    "AYA",
-    "AAR"
+    "AYC",
+    "AHR"
   ],
   "key": {
     "A": {
@@ -17,6 +17,12 @@
     },
     "R": {
       "item": "prelude:cpu"
+    },
+    "C": {
+      "item": "prelude:computer_screen"
+    },
+    "H": {
+      "item": "prelude:heat_dissipator"
     }
   },
   "result": {

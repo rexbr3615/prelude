@@ -89,6 +89,12 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.STEEL_INGOT.get());
                         pOutput.accept(PreludeItems.STEEL_NUGGETS.get());
                         pOutput.accept(PreludeItems.GRAPHITE.get());
+                        pOutput.accept(PreludeItems.NACRE.get());
+                        pOutput.accept(PreludeItems.HEAT_DISSIPATOR.get());
+                        pOutput.accept(PreludeItems.SATA.get());
+                        pOutput.accept(PreludeItems.RAM.get());
+                        pOutput.accept(PreludeItems.COMPUTER_MODULE.get());
+                        pOutput.accept(PreludeItems.COMPUTER_SCREEN.get());
 
                         pOutput.accept(PreludeBlocks.VAT.get());
                         pOutput.accept(PreludeBlocks.ANALYZER.get());

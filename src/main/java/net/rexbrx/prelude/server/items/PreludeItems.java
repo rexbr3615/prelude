@@ -183,6 +183,18 @@ public class PreludeItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GRAPHITE = ITEMS.register("graphite",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NACRE = ITEMS.register("nacre",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HEAT_DISSIPATOR = ITEMS.register("heat_dissipator",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SATA = ITEMS.register("sata",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAM = ITEMS.register("ram",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COMPUTER_MODULE = ITEMS.register("computer_modules",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COMPUTER_SCREEN = ITEMS.register("computer_screen",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

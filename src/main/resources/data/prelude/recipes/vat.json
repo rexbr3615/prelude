@@ -3,7 +3,7 @@
   "pattern": [
     "VZV",
     "XYX",
-    "VVV"
+    "HSH"
   ],
   "key": {
     "X": {
@@ -17,6 +17,12 @@
     },
     "V": {
       "item": "prelude:steel_ingot"
+    },
+    "S": {
+      "item": "prelude:computer_screen"
+    },
+    "H": {
+      "item": "prelude:heat_dissipator"
     }
   },
   "result": {
