@@ -10,6 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.screens.menu.AnalyzerMenu;
+import net.rexbrx.prelude.server.screens.menu.CrusherMenu;
 import net.rexbrx.prelude.server.screens.menu.VatMenu;
 
 
@@ -23,6 +24,9 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<VatMenu>> VAT_MENU =
             registerMenuType("vat_menu", VatMenu::new);
+
+    public static final RegistryObject<MenuType<CrusherMenu>> CRUSHER_MENU =
+            registerMenuType("crusher_menu", CrusherMenu::new);
 
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {

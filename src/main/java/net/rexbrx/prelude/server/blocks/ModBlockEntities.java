@@ -7,6 +7,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.blocks.tile.AnalyzerEntity;
+import net.rexbrx.prelude.server.blocks.tile.CrusherEntity;
 import net.rexbrx.prelude.server.blocks.tile.VatEntity;
 
 
@@ -26,6 +27,11 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("vat_entity", () ->
                     BlockEntityType.Builder.of(VatEntity::new,
                             PreludeBlocks.VAT.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<CrusherEntity>> CRUSHER_ENTITY =
+            BLOCK_ENTITIES.register("crusher_entity", () ->
+                    BlockEntityType.Builder.of(CrusherEntity::new,
+                            PreludeBlocks.CRUSHER.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

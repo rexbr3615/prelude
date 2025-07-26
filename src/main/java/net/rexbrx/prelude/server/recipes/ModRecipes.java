@@ -8,6 +8,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.recipes.common.AnalyzerRecipe;
+import net.rexbrx.prelude.server.recipes.common.CrusherRecipe;
 import net.rexbrx.prelude.server.recipes.common.VatRecipe;
 
 
@@ -20,6 +21,8 @@ public class ModRecipes {
             SERIALIZERS.register("analyzer", () -> AnalyzerRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<VatRecipe>> VAT_SERIALIZER =
             SERIALIZERS.register("vat", () -> VatRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<CrusherRecipe>> CRUSHER_SERIALIZER =
+            SERIALIZERS.register("crusher", () -> CrusherRecipe.Serializer.INSTANCE);
 
 
     public static void register(IEventBus eventBus) {

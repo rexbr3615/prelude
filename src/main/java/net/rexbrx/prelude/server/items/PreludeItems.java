@@ -195,6 +195,16 @@ public class PreludeItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COMPUTER_SCREEN = ITEMS.register("computer_screen",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GYPSUM_CRYSTAL = ITEMS.register("gypsum_crystal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GYPSUM_POWDER = ITEMS.register("gypsum_powder",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CRUSHER_BOX = ITEMS.register("crusher_box",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STEEL_COGWHEEL = ITEMS.register("steel_cogwheel",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MECHANISM = ITEMS.register("mechanism",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

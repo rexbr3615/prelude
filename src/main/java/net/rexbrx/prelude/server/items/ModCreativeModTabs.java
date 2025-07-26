@@ -95,9 +95,17 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.RAM.get());
                         pOutput.accept(PreludeItems.COMPUTER_MODULE.get());
                         pOutput.accept(PreludeItems.COMPUTER_SCREEN.get());
+                        pOutput.accept(PreludeItems.GYPSUM_CRYSTAL.get());
+                        pOutput.accept(PreludeItems.GYPSUM_POWDER.get());
+                        pOutput.accept(PreludeItems.CRUSHER_BOX.get());
+                        pOutput.accept(PreludeItems.STEEL_COGWHEEL.get());
+                        pOutput.accept(PreludeItems.MECHANISM.get());
+                        pOutput.accept(PreludeBlocks.STEEL_BLOCK.get());
+
 
                         pOutput.accept(PreludeBlocks.VAT.get());
                         pOutput.accept(PreludeBlocks.ANALYZER.get());
+                        pOutput.accept(PreludeBlocks.CRUSHER.get());
                         pOutput.accept(PreludeBlocks.SWARTPUNTIA.get());
                         pOutput.accept(PreludeBlocks.COMMON_FENCE.get());
                         pOutput.accept(PreludeBlocks.PROTOTAXITES_BLOCK.get());

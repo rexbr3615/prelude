@@ -82,6 +82,9 @@ public class PreludeBlocks
     public static final RegistryObject<Block> COMMON_FENCE = registerBlock("common_fence",
             () -> new PreludeFence());
 
+    public static final RegistryObject<Block> STEEL_BLOCK = registerBlock("steel_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.NETHERITE_BLOCK)
+                    .strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> ANTENNA_4X4 = registerBlock("antenna1",
             () -> new AntennaBaseBlock());
@@ -217,6 +220,9 @@ public class PreludeBlocks
 
     public static final RegistryObject<Block> VAT = registerBlock("vat",
             () -> new VatBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> CRUSHER = registerBlock("crusher",
+            () -> new CrusherBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     //==================================================================================
 
