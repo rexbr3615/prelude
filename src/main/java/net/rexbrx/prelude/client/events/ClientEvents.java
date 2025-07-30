@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.rexbrx.prelude.client.CreaturesMR.allosaurus.AllosaurusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.avaceratops.AvaceratopsRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.ceratosaurus.CeratosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.coelacanth.blue.BlueCoelacanthRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.conodonta.ConodontaRenderer;
@@ -62,6 +63,7 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.MUTADON.get(), MutadonRenderer::new);
         event.registerEntityRenderer(EntityInit.CERATOSAURUS.get(), CeratosaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.OURANOSAURUS.get(), OuranosaurusRenderer::new);
+        event.registerEntityRenderer(EntityInit.AVACERATOPS.get(), AvaceratopsRenderer::new);
 
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());

@@ -22,64 +22,88 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.List;
+
 public class GravityGunItem extends Item {
     public GravityGunItem(Properties properties) {
         super(properties);
     }
 
-    // Botão direito: pegar ou soltar
+    // NBT key para armazenar a entidade agarrada
+    private static final String TAG_ENTITY_ID = "GrabbedEntityId";
+
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
-        CompoundTag tag = stack.getOrCreateTag();
 
         if (!level.isClientSide) {
-            // Se já está segurando, solta
-            if (tag.contains("heldEntityId")) {
-                tag.remove("heldEntityId");
-                player.displayClientMessage(Component.literal("Entidade solta!"), true);
-            } else {
-                // Tenta pegar uma entidade
-                EntityHitResult hit = rayTraceEntities(level, player, 10);
-                if (hit != null) {
-                    Entity target = hit.getEntity();
-                    if (target instanceof LivingEntity && target != player) {
-                        tag.putInt("heldEntityId", target.getId());
-                        player.displayClientMessage(Component.literal("Entidade agarrada!"), true);
-                    }
-                }
-            }
-        }
-
-        return InteractionResultHolder.success(stack);
-    }
-
-
-
-    // Faz a entidade ficar flutuando na frente do jogador
-    @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-        if (!level.isClientSide && selected && entity instanceof Player player) {
             CompoundTag tag = stack.getOrCreateTag();
-            if (tag.contains("heldEntityId")) {
-                Entity held = level.getEntity(tag.getInt("heldEntityId"));
-                if (held != null) {
-                    Vec3 offset = player.getLookAngle().normalize().scale(3).add(0, 1.5, 0);
-                    Vec3 targetPos = player.position().add(offset);
-                    held.setNoGravity(true);
-                    held.setDeltaMovement(Vec3.ZERO);
-                    held.teleportTo(targetPos.x, targetPos.y, targetPos.z);
+
+            if (tag.contains(TAG_ENTITY_ID)) {
+                int id = tag.getInt(TAG_ENTITY_ID);
+                Entity entity = level.getEntity(id);
+
+                if (entity != null) {
+                    // Solta a entidade
+                    tag.remove(TAG_ENTITY_ID);
+                }
+            } else {
+                // Tenta pegar entidade na frente
+                Vec3 look = player.getLookAngle();
+                Vec3 start = player.getEyePosition();
+                Vec3 end = start.add(look.scale(5));
+
+                List<Entity> entities = level.getEntities(player, new AABB(start, end), e -> e.isAlive() && !(e instanceof Player));
+
+                if (!entities.isEmpty()) {
+                    Entity target = entities.get(0);
+                    tag.putInt(TAG_ENTITY_ID, target.getId());
                 }
             }
         }
+
+        return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
     }
 
-    // Raycast de entidade
-    private EntityHitResult rayTraceEntities(Level level, Player player, double range) {
-        Vec3 start = player.getEyePosition();
-        Vec3 end = start.add(player.getLookAngle().scale(range));
-        AABB box = new AABB(start, end).inflate(1);
-        return ProjectileUtil.getEntityHitResult(level, player, start, end, box, e -> e instanceof LivingEntity && e != player);
+    @Override
+    public boolean onEntitySwing(ItemStack stack, net.minecraft.world.entity.LivingEntity entity) {
+        if (!(entity instanceof Player player)) return false;
+        if (player.level().isClientSide) return false;
+
+        CompoundTag tag = stack.getOrCreateTag();
+
+        if (tag.contains(TAG_ENTITY_ID)) {
+            int id = tag.getInt(TAG_ENTITY_ID);
+            Entity grabbed = player.level().getEntity(id);
+
+            if (grabbed != null) {
+                // Lança a entidade para frente
+                Vec3 direction = player.getLookAngle().normalize();
+                grabbed.setDeltaMovement(direction.scale(2.5));
+                tag.remove(TAG_ENTITY_ID);
+            }
+        }
+
+        return true;
+    }
+
+    @Override
+    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean isSelected) {
+        if (!level.isClientSide && isSelected && entity instanceof Player player) {
+            CompoundTag tag = stack.getOrCreateTag();
+            if (tag.contains(TAG_ENTITY_ID)) {
+                Entity grabbed = level.getEntity(tag.getInt(TAG_ENTITY_ID));
+                if (grabbed != null) {
+                    // Atualiza posição da entidade à frente do jogador
+                    Vec3 pos = player.position().add(player.getLookAngle().normalize().scale(2));
+                    grabbed.teleportTo(pos.x, pos.y, pos.z);
+                    grabbed.setDeltaMovement(0, 0, 0);
+                } else {
+                    // Se a entidade foi removida, limpa
+                    tag.remove(TAG_ENTITY_ID);
+                }
+            }
+        }
     }
 }
 
