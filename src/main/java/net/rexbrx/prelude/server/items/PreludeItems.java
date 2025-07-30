@@ -93,6 +93,14 @@ public class PreludeItems {
             () -> new ForgeSpawnEggItem(EntityInit.MUTADON,0x420006, 0x8a0a14,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> CERATOSAURUS_SPAWN_EGG = ITEMS.register("ceratosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.CERATOSAURUS,0x420006, 0x8a0a14,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> OURANOSAURUS_SPAWN_EGG = ITEMS.register("ouranosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.OURANOSAURUS,0x420006, 0x8a0a14,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 
@@ -153,6 +161,10 @@ public class PreludeItems {
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> COELACANTH_DNA = ITEMS.register("coelacanth_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CERATOSAURUS_DNA = ITEMS.register("ceratosaurus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> OURANOSAURUS_DNA = ITEMS.register("ouranosaurus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TEST_DNA = ITEMS.register("test_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
@@ -205,6 +217,9 @@ public class PreludeItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MECHANISM = ITEMS.register("mechanism",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAILGUN = ITEMS.register("railgun",
+            () -> new GravityGunItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

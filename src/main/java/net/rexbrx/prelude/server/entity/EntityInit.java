@@ -73,17 +73,27 @@ public class EntityInit {
     public static final RegistryObject<EntityType<TherizinosaurusEntity>> THERIZINOSAURUS = register("therizinosaurus",
             EntityType.Builder.<TherizinosaurusEntity>of(TherizinosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TherizinosaurusEntity::new)
 
-                    .sized(1.29f, 2.789f));
+                    .sized(1.789f, 3.1f));
 
     public static final RegistryObject<EntityType<TorvosaurusEntity>> TORVOSAURUS = register("torvosaurus",
             EntityType.Builder.<TorvosaurusEntity>of(TorvosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TorvosaurusEntity::new)
 
-                    .sized(1.29f, 2.789f));
+                    .sized(1.399f, 2.850f));
 
     public static final RegistryObject<EntityType<MutadonEntity>> MUTADON = register("mutadon",
             EntityType.Builder.<MutadonEntity>of(MutadonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MutadonEntity::new)
 
-                    .sized(1.29f, 2.789f));
+                    .sized(1.1f, 2.2f));
+
+    public static final RegistryObject<EntityType<CeratosaurusEntity>> CERATOSAURUS = register("ceratosaurus",
+            EntityType.Builder.<CeratosaurusEntity>of(CeratosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CeratosaurusEntity::new)
+
+                    .sized(1.04f, 2.12f));
+
+    public static final RegistryObject<EntityType<OuranosaurusEntity>> OURANOSAURUS = register("ouranosaurus",
+            EntityType.Builder.<OuranosaurusEntity>of(OuranosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OuranosaurusEntity::new)
+
+                    .sized(1.89f, 3.111f));
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -106,7 +116,8 @@ public class EntityInit {
             TherizinosaurusEntity.init();
             TorvosaurusEntity.init();
             MutadonEntity.init();
-
+            CeratosaurusEntity.init();
+            OuranosaurusEntity.init();
         });
     }
 
@@ -125,6 +136,8 @@ public class EntityInit {
         event.put(THERIZINOSAURUS.get(), TherizinosaurusEntity.createAttributes().build());
         event.put(TORVOSAURUS.get(), TorvosaurusEntity.createAttributes().build());
         event.put(MUTADON.get(), MutadonEntity.createAttributes().build());
+        event.put(CERATOSAURUS.get(), CeratosaurusEntity.createAttributes().build());
+        event.put(OURANOSAURUS.get(), OuranosaurusEntity.createAttributes().build());
 
     }
 

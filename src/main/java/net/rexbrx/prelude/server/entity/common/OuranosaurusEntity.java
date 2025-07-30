@@ -33,22 +33,22 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
+public class OuranosaurusEntity extends PathfinderMob implements GeoEntity
 {
-    public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(TherizinosaurusEntity.class, EntityDataSerializers.BOOLEAN);
-    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TherizinosaurusEntity.class, EntityDataSerializers.STRING);
-    public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(TherizinosaurusEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(OuranosaurusEntity.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(OuranosaurusEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(OuranosaurusEntity.class, EntityDataSerializers.STRING);
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private boolean swinging;
     private boolean lastloop;
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public TherizinosaurusEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(EntityInit.THERIZINOSAURUS.get(), world);
+    public OuranosaurusEntity(PlayMessages.SpawnEntity packet, Level world) {
+        this(EntityInit.OURANOSAURUS.get(), world);
     }
 
-    public TherizinosaurusEntity(EntityType<TherizinosaurusEntity> type, Level world) {
+    public OuranosaurusEntity(EntityType<OuranosaurusEntity> type, Level world) {
         super(type, world);
         xpReward = 5;
         setNoAi(false);
@@ -146,11 +146,11 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 67.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 28.0f);
+        builder = builder.add(Attributes.MAX_HEALTH, 78.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 17.0f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.167f);
-        builder = builder.add(Attributes.ARMOR, 1.5f);
+        builder = builder.add(Attributes.ARMOR, 2.5f);
         builder = builder.add(Attributes.FOLLOW_RANGE, 16.0f);
         builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2.5f);
         return builder;
@@ -203,7 +203,7 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
     protected void tickDeath() {
         ++this.deathTime;
         if (this.deathTime == 20) {
-            this.remove(TherizinosaurusEntity.RemovalReason.KILLED);
+            this.remove(OuranosaurusEntity.RemovalReason.KILLED);
             this.dropExperience();
         }
     }
@@ -227,4 +227,5 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
+
 }

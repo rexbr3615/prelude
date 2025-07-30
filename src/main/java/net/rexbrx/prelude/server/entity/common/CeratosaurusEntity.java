@@ -33,22 +33,22 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
+public class CeratosaurusEntity extends PathfinderMob implements GeoEntity
 {
-    public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(TherizinosaurusEntity.class, EntityDataSerializers.BOOLEAN);
-    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(TherizinosaurusEntity.class, EntityDataSerializers.STRING);
-    public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(TherizinosaurusEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(CeratosaurusEntity.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(CeratosaurusEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(CeratosaurusEntity.class, EntityDataSerializers.STRING);
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private boolean swinging;
     private boolean lastloop;
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public TherizinosaurusEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(EntityInit.THERIZINOSAURUS.get(), world);
+    public CeratosaurusEntity(PlayMessages.SpawnEntity packet, Level world) {
+        this(EntityInit.CERATOSAURUS.get(), world);
     }
 
-    public TherizinosaurusEntity(EntityType<TherizinosaurusEntity> type, Level world) {
+    public CeratosaurusEntity(EntityType<CeratosaurusEntity> type, Level world) {
         super(type, world);
         xpReward = 5;
         setNoAi(false);
@@ -93,7 +93,7 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
             }
         });
 
-        this.goalSelector.addGoal(1, new MoveToTaggedItemGoal(this, 1.2D, 10.0D, new ResourceLocation("prelude", "herbivore_food")));
+        this.goalSelector.addGoal(1, new MoveToTaggedItemGoal(this, 1.2D, 10.0D, new ResourceLocation("prelude", "carnivore_food")));
 
     }
 
@@ -146,8 +146,8 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 67.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 28.0f);
+        builder = builder.add(Attributes.MAX_HEALTH, 53.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 12.0f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.167f);
         builder = builder.add(Attributes.ARMOR, 1.5f);
@@ -161,9 +161,9 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
             if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
 
             ) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
+                return event.setAndContinue(RawAnimation.begin().thenLoop("walk2"));
             }
-            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+            return event.setAndContinue(RawAnimation.begin().thenLoop("idle2"));
         }
         return PlayState.STOP;
     }
@@ -203,7 +203,7 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
     protected void tickDeath() {
         ++this.deathTime;
         if (this.deathTime == 20) {
-            this.remove(TherizinosaurusEntity.RemovalReason.KILLED);
+            this.remove(CeratosaurusEntity.RemovalReason.KILLED);
             this.dropExperience();
         }
     }
@@ -228,3 +228,4 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
         return this.cache;
     }
 }
+

@@ -68,6 +68,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.PTERANODON_DNA.get());
                         pOutput.accept(PreludeItems.THERIZINOSAURUS_DNA.get());
                         pOutput.accept(PreludeItems.TORVOSAURUS_DNA.get());
+                        pOutput.accept(PreludeItems.CERATOSAURUS_DNA.get());
+                        pOutput.accept(PreludeItems.OURANOSAURUS_DNA.get());
 
                         pOutput.accept(PreludeItems.JURAVENATOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.ALLOSAURUS_SPAWN_EGG.get());
@@ -82,6 +84,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.THERIZINOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.TORVOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.MUTADON_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.CERATOSAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.OURANOSAURUS_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
                         pOutput.accept(PreludeItems.COAL_DUST.get());
@@ -134,6 +138,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.MARBLE_FLOOR.get());
                         pOutput.accept(PreludeBlocks.MARBLE_TILES.get());
 
+                        pOutput.accept(PreludeBlocks.GRAPHITE_BLOCK.get());
+
                         pOutput.accept(PreludeBlocks.CALAMITES_LOG.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_WOOD.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_PLANKS.get());
@@ -149,11 +155,11 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.CALAMITES_SAPLING2.get());
 
 
-                        pOutput.accept(PreludeBlocks.GRAPHITE_BLOCK.get());
 
 
 
                         pOutput.accept(PreludeItems.TEST_DNA.get());
+                        pOutput.accept(PreludeItems.RAILGUN.get());
 
 
                     })

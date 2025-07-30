@@ -1,9 +1,13 @@
 package net.rexbrx.prelude.client.CreaturesMR.torvosaurus;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.entity.common.TherizinosaurusEntity;
 import net.rexbrx.prelude.server.entity.common.TorvosaurusEntity;
+import net.rexbrx.prelude.server.entity.common.YutyrannusEntity;
+import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
+import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 
 public class TorvosaurusModel extends GeoModel<TorvosaurusEntity> {
