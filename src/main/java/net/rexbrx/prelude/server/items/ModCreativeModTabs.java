@@ -141,6 +141,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.MARBLE_TILES.get());
 
                         pOutput.accept(PreludeBlocks.GRAPHITE_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.GYPSUM_BLOCK.get());
 
                         pOutput.accept(PreludeBlocks.CALAMITES_LOG.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_WOOD.get());

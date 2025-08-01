@@ -155,7 +155,7 @@ dependencies {
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
 
     implementation fg.deobf("curse.maven:jei-238222:6075247")
-    //implementation fg.deobf("curse.maven:applied-energistics-2-223794:6629570")
+    implementation fg.deobf("curse.maven:construction-wand-399558:4684054")
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-80-FORGE:api")
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-80-FORGE")
     implementation fg.deobf("curse.maven:jade-324717:6271475")
