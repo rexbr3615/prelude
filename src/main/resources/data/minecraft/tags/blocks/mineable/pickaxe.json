@@ -20,6 +20,7 @@
     "prelude:marble_pillar",
     "prelude:security_block",
     "prelude:antenna_base",
-    "prelude:graphite_block"
+    "prelude:graphite_block",
+    "prelude:gypsum_block"
   ]
 }
