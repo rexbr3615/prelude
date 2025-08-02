@@ -60,6 +60,11 @@ public class VatRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return inputItems;
+    }
+
+    @Override
     public RecipeType<?> getType() {
         return Type.INSTANCE;
     }
