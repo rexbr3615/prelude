@@ -21,6 +21,8 @@
     "prelude:security_block",
     "prelude:antenna_base",
     "prelude:graphite_block",
-    "prelude:gypsum_block"
+    "prelude:gypsum_block",
+    "prelude:steel_block",
+    "prelude:crusher"
   ]
 }

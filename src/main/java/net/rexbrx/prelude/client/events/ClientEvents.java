@@ -4,6 +4,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Registry;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -78,7 +79,6 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
-
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.POWER_BOX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CABLE_BLOCK.get(), RenderType.translucent());

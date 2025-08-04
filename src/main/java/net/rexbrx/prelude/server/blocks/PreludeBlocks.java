@@ -15,6 +15,8 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -208,8 +210,7 @@ public class PreludeBlocks
                     BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));
 
     public static final RegistryObject<Block> COOKSONIA = registerBlock("cooksonia",
-            () -> new PinkPetalsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));
-
+            () -> new PinkPetalsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
 
 
 
