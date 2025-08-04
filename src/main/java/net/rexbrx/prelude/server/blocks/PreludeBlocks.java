@@ -207,6 +207,8 @@ public class PreludeBlocks
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
                     BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));
 
+    public static final RegistryObject<Block> COOKSONIA = registerBlock("cooksonia",
+            () -> new PinkPetalsBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));
 
 
 

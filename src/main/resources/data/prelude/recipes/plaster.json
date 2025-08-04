@@ -7,13 +7,13 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:clay_ball"
+      "item": "prelude:gypsum_powder"
     },
     "1": {
       "item": "minecraft:paper"
     },
     "2": {
-      "item": "minecraft:clay_ball"
+      "item": "prelude:gypsum_powder"
     },
     "3": {
       "item": "minecraft:paper"
@@ -25,13 +25,13 @@
       "item": "minecraft:paper"
     },
     "6": {
-      "item": "minecraft:clay_ball"
+      "item": "prelude:gypsum_powder"
     },
     "7": {
       "item": "minecraft:paper"
     },
     "8": {
-      "item": "minecraft:clay_ball"
+      "item": "prelude:gypsum_powder"
     }
   },
   "result": {

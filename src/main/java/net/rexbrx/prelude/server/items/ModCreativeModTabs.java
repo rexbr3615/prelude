@@ -25,6 +25,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.DNA_NUCLEOTIDES.get());
                         pOutput.accept(PreludeItems.NUCLEOTIDES.get());
 
+                        pOutput.accept(PreludeItems.AGAR.get());
+
                         pOutput.accept(PreludeItems.PETRI_DISH.get());
                         pOutput.accept(PreludeItems.PETRI_DISH_AGAR.get());
                         pOutput.accept(PreludeItems.PETRI_DISH_PLANT_CELLS.get());
@@ -71,6 +73,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.CERATOSAURUS_DNA.get());
                         pOutput.accept(PreludeItems.OURANOSAURUS_DNA.get());
                         pOutput.accept(PreludeItems.AVACERATOPS_DNA.get());
+                        pOutput.accept(PreludeItems.BAJADASAURUS_DNA.get());
+                        pOutput.accept(PreludeItems.DEINOCHEIRUS_DNA.get());
 
                         pOutput.accept(PreludeItems.JURAVENATOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.ALLOSAURUS_SPAWN_EGG.get());
@@ -88,6 +92,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.CERATOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.OURANOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.AVACERATOPS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.BAJADASAURUS_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
                         pOutput.accept(PreludeItems.COAL_DUST.get());
@@ -112,8 +117,11 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.VAT.get());
                         pOutput.accept(PreludeBlocks.ANALYZER.get());
                         pOutput.accept(PreludeBlocks.CRUSHER.get());
-                        pOutput.accept(PreludeBlocks.SWARTPUNTIA.get());
+
                         pOutput.accept(PreludeBlocks.COMMON_FENCE.get());
+
+                        pOutput.accept(PreludeBlocks.SWARTPUNTIA.get());
+                        pOutput.accept(PreludeBlocks.COOKSONIA.get());
                         pOutput.accept(PreludeBlocks.PROTOTAXITES_BLOCK.get());
                         pOutput.accept(PreludeBlocks.ENCRINUS_STEM.get());
                         pOutput.accept(PreludeBlocks.ENCRINUS.get());

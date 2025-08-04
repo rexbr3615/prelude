@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prelude:petri_dish"
+    },
+    {
+      "item": "prelude:agar"
+    }
+  ],
+  "result": {
+    "item": "prelude:petri_dish_agar",
+    "count": 1
+  }
+}

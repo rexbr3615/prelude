@@ -11,6 +11,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.rexbrx.prelude.client.CreaturesMR.allosaurus.AllosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.avaceratops.AvaceratopsRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.bajadasaurus.BajadasaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.ceratosaurus.CeratosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.coelacanth.blue.BlueCoelacanthRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.conodonta.ConodontaRenderer;
@@ -64,7 +65,7 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.CERATOSAURUS.get(), CeratosaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.OURANOSAURUS.get(), OuranosaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.AVACERATOPS.get(), AvaceratopsRenderer::new);
-
+        event.registerEntityRenderer(EntityInit.BAJADASAURUS.get(), BajadasaurusRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());
@@ -72,6 +73,7 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.ENCRINUS_STEM.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.COMMON_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.SWARTPUNTIA.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.COOKSONIA.get(), RenderType.cutoutMipped());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
