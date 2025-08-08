@@ -96,27 +96,27 @@ public class PreludeItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> MUTADON_SPAWN_EGG = ITEMS.register("mutadon_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.MUTADON,0x420006, 0x8a0a14,
+            () -> new ForgeSpawnEggItem(EntityInit.MUTADON,0xffffff, 0xffffff,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> CERATOSAURUS_SPAWN_EGG = ITEMS.register("ceratosaurus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.CERATOSAURUS,0x420006, 0x8a0a14,
+            () -> new ForgeSpawnEggItem(EntityInit.CERATOSAURUS,0xf7b76d, 0xe6e6aa,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> OURANOSAURUS_SPAWN_EGG = ITEMS.register("ouranosaurus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.OURANOSAURUS,0x420006, 0x8a0a14,
+            () -> new ForgeSpawnEggItem(EntityInit.OURANOSAURUS,0x065c09, 0x022e04,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> AVACERATOPS_SPAWN_EGG = ITEMS.register("avaceratops_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.AVACERATOPS,0x420006, 0x8a0a14,
+            () -> new ForgeSpawnEggItem(EntityInit.AVACERATOPS,0x04850a, 0xdb9340,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> BAJADASAURUS_SPAWN_EGG = ITEMS.register("bajadasaurus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.BAJADASAURUS,0x420006, 0x8a0a14,
+            () -> new ForgeSpawnEggItem(EntityInit.BAJADASAURUS,0x2b2218, 0x170f07,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> DEINOCHEIRUS_SPAWN_EGG = ITEMS.register("deinocheirus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.DEINOCHEIRUS,0x420006, 0x8a0a14,
+            () -> new ForgeSpawnEggItem(EntityInit.DEINOCHEIRUS,0x361602, 0x6b3818,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
