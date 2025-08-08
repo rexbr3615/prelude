@@ -115,6 +115,9 @@ public class PreludeBlocks
     public static final RegistryObject<Block> BASIC_PIPE = registerBlock("basic_pipe",
             () -> new PipeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(1f).noOcclusion()));
 
+    public static final RegistryObject<Block> COOKSONIA_PLANT = registerBlockWithoutBlockItem("cooksonia_plant",
+            () -> new CooksoniaPlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
+
     public static final RegistryObject<Block> HIGH_SECURITY_FENCE = registerBlock("high_security_fence",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 

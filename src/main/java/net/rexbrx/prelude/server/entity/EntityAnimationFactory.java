@@ -147,6 +147,14 @@ public class EntityAnimationFactory {
                 }
             }
 
+            if (event.getEntity() instanceof DeinocheirusEntity syncable) {
+                String animation = syncable.getSyncedAnimation();
+                if (!animation.equals("undefined")) {
+                    syncable.setAnimation("undefined");
+                    syncable.animationprocedure = animation;
+                }
+            }
+
         }
     }
 }

@@ -60,6 +60,11 @@ public class CrusherRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return inputItems;
+    }
+
+    @Override
     public RecipeType<?> getType() {
         return Type.INSTANCE;
     }

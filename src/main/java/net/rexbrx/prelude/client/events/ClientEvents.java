@@ -16,6 +16,7 @@ import net.rexbrx.prelude.client.CreaturesMR.bajadasaurus.BajadasaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.ceratosaurus.CeratosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.coelacanth.blue.BlueCoelacanthRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.conodonta.ConodontaRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.deinocheirus.DeinocheirusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.gallimimus.GallimimusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.juravenator.JuravenatorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.megaraptor.MegaraptorRenderer;
@@ -67,6 +68,7 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.OURANOSAURUS.get(), OuranosaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.AVACERATOPS.get(), AvaceratopsRenderer::new);
         event.registerEntityRenderer(EntityInit.BAJADASAURUS.get(), BajadasaurusRenderer::new);
+        event.registerEntityRenderer(EntityInit.DEINOCHEIRUS.get(), DeinocheirusRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());
@@ -75,6 +77,7 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.COMMON_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.SWARTPUNTIA.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.COOKSONIA.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.COOKSONIA_PLANT.get(), RenderType.cutoutMipped());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());

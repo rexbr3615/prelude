@@ -1,12 +1,15 @@
 package net.rexbrx.prelude.server.items;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbrx.prelude.prelude;
+import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 import net.rexbrx.prelude.server.entity.EntityInit;
 import net.rexbrx.prelude.server.items.common.*;
 
@@ -110,6 +113,10 @@ public class PreludeItems {
 
     public static final RegistryObject<Item> BAJADASAURUS_SPAWN_EGG = ITEMS.register("bajadasaurus_spawn_egg",
             () -> new ForgeSpawnEggItem(EntityInit.BAJADASAURUS,0x420006, 0x8a0a14,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> DEINOCHEIRUS_SPAWN_EGG = ITEMS.register("deinocheirus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.DEINOCHEIRUS,0x420006, 0x8a0a14,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
@@ -234,9 +241,14 @@ public class PreludeItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MECHANISM = ITEMS.register("mechanism",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TOKEN = ITEMS.register("token",
+            () -> new TokenItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> RAILGUN = ITEMS.register("railgun",
             () -> new GravityGunItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> COOKSONIA_SPORES = ITEMS.register("cooksonia_spores",
+            () -> new ItemNameBlockItem(PreludeBlocks.COOKSONIA_PLANT.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

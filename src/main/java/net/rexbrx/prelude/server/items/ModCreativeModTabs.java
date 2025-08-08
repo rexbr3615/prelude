@@ -17,7 +17,7 @@ public class ModCreativeModTabs
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, prelude.MODID);
 
     public static final RegistryObject<CreativeModeTab> PRELUDE_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(PreludeItems.DISC_DRIVE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(PreludeItems.TOKEN.get()))
                     .title(Component.translatable("creativetab.prelude_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(PreludeItems.DISC_DRIVE.get());
@@ -26,6 +26,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.NUCLEOTIDES.get());
 
                         pOutput.accept(PreludeItems.AGAR.get());
+                        pOutput.accept(PreludeItems.COOKSONIA_SPORES.get());
 
                         pOutput.accept(PreludeItems.PETRI_DISH.get());
                         pOutput.accept(PreludeItems.PETRI_DISH_AGAR.get());
@@ -93,6 +94,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.OURANOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.AVACERATOPS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.BAJADASAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.DEINOCHEIRUS_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
                         pOutput.accept(PreludeItems.COAL_DUST.get());
@@ -171,6 +173,9 @@ public class ModCreativeModTabs
 
                         pOutput.accept(PreludeItems.TEST_DNA.get());
                         pOutput.accept(PreludeItems.RAILGUN.get());
+                        pOutput.accept(PreludeItems.TOKEN.get());
+
+                        pOutput.accept(PreludeBlocks.COOKSONIA_PLANT.get());
 
 
                     })
