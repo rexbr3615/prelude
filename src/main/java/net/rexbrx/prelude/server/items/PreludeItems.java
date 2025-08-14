@@ -128,6 +128,9 @@ public class PreludeItems {
     public static final RegistryObject<Item> CPU = ITEMS.register("cpu",
             () -> new EssenceItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> DISKETTE = ITEMS.register("diskette",
+            () -> new EssenceItem(new Item.Properties()));
+
     public static final RegistryObject<Item> RAW_MARBLE = ITEMS.register("raw_marble",
             () -> new Item(new Item.Properties()));
 

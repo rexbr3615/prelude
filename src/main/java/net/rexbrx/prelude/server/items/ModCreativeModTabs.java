@@ -170,6 +170,7 @@ public class ModCreativeModTabs
 
 
 
+                        pOutput.accept(PreludeItems.DISKETTE.get());
 
                         pOutput.accept(PreludeItems.TEST_DNA.get());
                         pOutput.accept(PreludeItems.RAILGUN.get());

@@ -140,10 +140,7 @@
   "block.prelude.calamites_log": "Calamites Log",
   "block.prelude.calamites_wood": "Calamites Wood",
   "block.prelude.calamites_planks": "Calamites Planks",
-  "block.prelude.stripped_calamites_log": "Stripped Calamites Log",
-  "block.prelude.stripped_calamites_wood": "Stripped Calamites Wood",
   "block.prelude.calamites_leaves": "Calamites Leaves",
-  "block.prelude.calamites_sapling": "Calamites Sapling",
   "block.prelude.calamites_sapling1": "Calamites Sapling",
   "block.prelude.calamites_stairs": "Calamites Stairs",
   "block.prelude.calamites_slab": "Calamites Slab",
@@ -153,5 +150,6 @@
   "block.prelude.calamites_pressure_plate": "Calamites Pressure Plate",
   "block.prelude.calamites_door": "Calamites Door",
   "block.prelude.calamites_trapdoor": "Calamites Trapdoor",
-  "block.prelude.security_block": "security_block"
+  "block.prelude.security_block": "security_block",
+  "item.prelude.diskette": "Diskette"
 }
