@@ -119,6 +119,10 @@ public class PreludeItems {
             () -> new ForgeSpawnEggItem(EntityInit.DEINOCHEIRUS,0x361602, 0x6b3818,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> ALBERTOSAURUS_SPAWN_EGG = ITEMS.register("albertosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.ALBERTOSAURUS,0x361602, 0x6b3818,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 

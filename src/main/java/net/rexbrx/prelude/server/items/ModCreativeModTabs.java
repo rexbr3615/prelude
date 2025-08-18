@@ -95,6 +95,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.AVACERATOPS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.BAJADASAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.DEINOCHEIRUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.ALBERTOSAURUS_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
                         pOutput.accept(PreludeItems.COAL_DUST.get());
@@ -119,6 +120,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.VAT.get());
                         pOutput.accept(PreludeBlocks.ANALYZER.get());
                         pOutput.accept(PreludeBlocks.CRUSHER.get());
+                        pOutput.accept(PreludeBlocks.CONCRETE_BARRIER.get());
 
                         pOutput.accept(PreludeBlocks.COMMON_FENCE.get());
 

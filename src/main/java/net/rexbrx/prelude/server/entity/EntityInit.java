@@ -110,6 +110,11 @@ public class EntityInit {
 
                     .sized(2.18f, 2.44f));
 
+    public static final RegistryObject<EntityType<AlbertosaurusEntity>> ALBERTOSAURUS = register("albertosaurus",
+            EntityType.Builder.<AlbertosaurusEntity>of(AlbertosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AlbertosaurusEntity::new)
+
+                    .sized(1.29f, 2.789f));
+
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
     }
@@ -136,6 +141,7 @@ public class EntityInit {
             AvaceratopsEntity.init();
             BajadasaurusEntity.init();
             DeinocheirusEntity.init();
+            AlbertosaurusEntity.init();
         });
     }
 
@@ -159,6 +165,7 @@ public class EntityInit {
         event.put(AVACERATOPS.get(), AvaceratopsEntity.createAttributes().build());
         event.put(BAJADASAURUS.get(), BajadasaurusEntity.createAttributes().build());
         event.put(DEINOCHEIRUS.get(), DeinocheirusEntity.createAttributes().build());
+        event.put(ALBERTOSAURUS.get(), AlbertosaurusEntity.createAttributes().build());
 
     }
 

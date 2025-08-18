@@ -218,6 +218,14 @@ public class PreludeBlocks
 
 
 
+    public static final RegistryObject<Block> CONCRETE_BARRIER = registerBlock("concrete_barrier",
+            () -> new PreludeCustomRotateBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(1.89f, 8.6f).requiresCorrectToolForDrops()));
+
+
+
+
+
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
     }

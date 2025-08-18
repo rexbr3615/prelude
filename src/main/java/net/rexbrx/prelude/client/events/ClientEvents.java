@@ -10,6 +10,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.rexbrx.prelude.client.CreaturesMR.albertosaurus.AlbertosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.allosaurus.AllosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.avaceratops.AvaceratopsRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.bajadasaurus.BajadasaurusRenderer;
@@ -69,6 +70,7 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.AVACERATOPS.get(), AvaceratopsRenderer::new);
         event.registerEntityRenderer(EntityInit.BAJADASAURUS.get(), BajadasaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.DEINOCHEIRUS.get(), DeinocheirusRenderer::new);
+        event.registerEntityRenderer(EntityInit.ALBERTOSAURUS.get(), AlbertosaurusRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());
@@ -78,6 +80,8 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.SWARTPUNTIA.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.COOKSONIA.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.COOKSONIA_PLANT.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CONCRETE_BARRIER.get(), RenderType.cutoutMipped());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
