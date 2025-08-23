@@ -79,7 +79,7 @@ public class GravityGunItem extends Item {
             if (grabbed != null) {
                 // Lança a entidade para frente
                 Vec3 direction = player.getLookAngle().normalize();
-                grabbed.setDeltaMovement(direction.scale(2.5));
+                grabbed.setDeltaMovement(direction.scale(5.0));
                 tag.remove(TAG_ENTITY_ID);
             }
         }

@@ -76,6 +76,9 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.AVACERATOPS_DNA.get());
                         pOutput.accept(PreludeItems.BAJADASAURUS_DNA.get());
                         pOutput.accept(PreludeItems.DEINOCHEIRUS_DNA.get());
+                        pOutput.accept(PreludeItems.ALBERTOSAURUS_DNA.get());
+                        pOutput.accept(PreludeItems.PUERTASAURUS_DNA.get());
+
 
                         pOutput.accept(PreludeItems.JURAVENATOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.ALLOSAURUS_SPAWN_EGG.get());
@@ -96,6 +99,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.BAJADASAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.DEINOCHEIRUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.ALBERTOSAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.PUERTASAURUS_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
                         pOutput.accept(PreludeItems.COAL_DUST.get());

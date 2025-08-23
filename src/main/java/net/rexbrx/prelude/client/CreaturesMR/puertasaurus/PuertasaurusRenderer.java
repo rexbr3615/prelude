@@ -1,4 +1,4 @@
-package net.rexbrx.prelude.client.CreaturesMR.deinocheirus;
+package net.rexbrx.prelude.client.CreaturesMR.puertasaurus;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -7,26 +7,25 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.rexbrx.prelude.client.CreaturesMR.avaceratops.AvaceratopsModel;
-import net.rexbrx.prelude.server.entity.common.AvaceratopsEntity;
-import net.rexbrx.prelude.server.entity.common.DeinocheirusEntity;
+import net.rexbrx.prelude.server.entity.common.PuertasaurusEntity;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class DeinocheirusRenderer extends GeoEntityRenderer<DeinocheirusEntity> {
-    public DeinocheirusRenderer(EntityRendererProvider.Context renderManager) {
-        super(renderManager, new DeinocheirusModel());
-        this.shadowRadius = 0.967f;
+public class PuertasaurusRenderer extends GeoEntityRenderer<PuertasaurusEntity> {
+    public PuertasaurusRenderer(EntityRendererProvider.Context renderManager) {
+        super(renderManager, new PuertasaurusModel());
+        this.shadowRadius = 2.667f;
     }
 
     @Override
-    public RenderType getRenderType(DeinocheirusEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
+    public RenderType getRenderType(PuertasaurusEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
         return RenderType.entityTranslucent(getTextureLocation(animatable));
     }
 
     @Override
-    public void preRender(PoseStack poseStack, DeinocheirusEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
+    public void preRender(PoseStack poseStack, PuertasaurusEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
                           float blue, float alpha) {
-        float scale = 2.01f;
+        float scale = 3.33f;
         this.scaleHeight = scale;
         this.scaleWidth = scale;
         super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
