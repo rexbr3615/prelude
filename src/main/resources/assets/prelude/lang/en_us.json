@@ -151,5 +151,11 @@
   "block.prelude.calamites_door": "Calamites Door",
   "block.prelude.calamites_trapdoor": "Calamites Trapdoor",
   "block.prelude.security_block": "security_block",
-  "item.prelude.diskette": "Diskette"
+  "item.prelude.diskette": "Diskette",
+  "entity.prelude.albertosaurus": "Albertosaurus",
+  "entity.prelude.puertasaurus": "Puertasaurus",
+  "item.prelude.albertosaurus_dna": "Albertosaurus DNA",
+  "item.prelude.albertosaurus_spawn_egg": "Albertosaurus Spawn Egg",
+  "item.prelude.puertasaurus_dna": "Puertasaurus DNA",
+  "item.prelude.puertasaurus_spawn_egg": "Puertasaurus Spawn Egg"
 }

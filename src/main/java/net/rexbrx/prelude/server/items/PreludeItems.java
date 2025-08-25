@@ -120,11 +120,11 @@ public class PreludeItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> ALBERTOSAURUS_SPAWN_EGG = ITEMS.register("albertosaurus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.ALBERTOSAURUS,0x361602, 0x6b3818,
+            () -> new ForgeSpawnEggItem(EntityInit.ALBERTOSAURUS,0xfcf0cc, 0xe85a2e,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PUERTASAURUS_SPAWN_EGG = ITEMS.register("puertasaurus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.PUERTASAURUS,0x361602, 0x6b3818,
+            () -> new ForgeSpawnEggItem(EntityInit.PUERTASAURUS,0x3d312f, 0x917673,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
