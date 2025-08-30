@@ -25,6 +25,8 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.blocks.common.*;
 import net.rexbrx.prelude.server.blocks.common.PipeBlock;
+import net.rexbrx.prelude.server.blocks.other.barrier.BarrierBlock;
+import net.rexbrx.prelude.server.blocks.other.teeth.TeethBlock;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import net.rexbrx.prelude.server.items.common.ModRotatedPillarBlock;
 import net.rexbrx.prelude.server.procedurals.EncaseFossil;
@@ -223,6 +225,8 @@ public class PreludeBlocks
                     .strength(1.89f, 8.6f).requiresCorrectToolForDrops()));
 
 
+    public static final RegistryObject<Block> TEETH_BLOCK = registerBlock("teeth", () -> new TeethBlock());
+    public static final RegistryObject<Block> BARRIER_BLOCK = registerBlock("barrier", () -> new BarrierBlock());
 
 
 

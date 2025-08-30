@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "prelude:block/barrierv3",
+    "particle": "prelude:block/barrierv3"
+  },
+  "render_type": "solid"
+}

@@ -124,7 +124,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.VAT.get());
                         pOutput.accept(PreludeBlocks.ANALYZER.get());
                         pOutput.accept(PreludeBlocks.CRUSHER.get());
-                        pOutput.accept(PreludeBlocks.CONCRETE_BARRIER.get());
+                        pOutput.accept(PreludeBlocks.BARRIER_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.TEETH_BLOCK.get());
 
                         pOutput.accept(PreludeBlocks.COMMON_FENCE.get());
 

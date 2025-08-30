@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zzz:block/testd"
+    },
+    "facing=east": {
+      "model": "zzz:block/testd",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zzz:block/testd",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zzz:block/testd",
+      "y": 270
+    }
+  }
+}
