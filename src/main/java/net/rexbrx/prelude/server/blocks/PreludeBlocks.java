@@ -70,6 +70,12 @@ public class PreludeBlocks
     public static final RegistryObject<Block> SWARTPUNTIA = registerBlock("swartpuntia",
             () -> new BlockPreludeCustomWaterGrass(
                     BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion()));
+    public static final RegistryObject<Block> STROMATOLITES = registerBlock("stromatolites",
+            () -> new BlockPreludeCustomWaterGrass(
+                    BlockBehaviour.Properties.copy(Blocks.SEAGRASS).noOcclusion()));
+    public static final RegistryObject<Block> STROMATOLITES_FULL = registerBlock("stromatolite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<GrowingPlantHeadBlock> ENCRINUS = registerBlock("encrinus",
             () -> new BlockEncrinusTop(BlockBehaviour.Properties.copy(Blocks.KELP)

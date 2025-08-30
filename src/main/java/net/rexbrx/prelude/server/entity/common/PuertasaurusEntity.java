@@ -146,11 +146,11 @@ public class PuertasaurusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 34.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 7.5f);
+        builder = builder.add(Attributes.MAX_HEALTH, 234.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 27.5f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.142f);
-        builder = builder.add(Attributes.ARMOR, 3.5f);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.141f);
+        builder = builder.add(Attributes.ARMOR, 5.0f);
         builder = builder.add(Attributes.FOLLOW_RANGE, 16.0f);
         builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2.5f);
         return builder;

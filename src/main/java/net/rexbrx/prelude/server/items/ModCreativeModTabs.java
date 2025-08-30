@@ -131,6 +131,9 @@ public class ModCreativeModTabs
 
                         pOutput.accept(PreludeBlocks.SWARTPUNTIA.get());
                         pOutput.accept(PreludeBlocks.COOKSONIA.get());
+                        pOutput.accept(PreludeBlocks.STROMATOLITES.get());
+                        pOutput.accept(PreludeBlocks.STROMATOLITES_FULL.get());
+
                         pOutput.accept(PreludeBlocks.PROTOTAXITES_BLOCK.get());
                         pOutput.accept(PreludeBlocks.ENCRINUS_STEM.get());
                         pOutput.accept(PreludeBlocks.ENCRINUS.get());
