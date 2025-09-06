@@ -177,8 +177,20 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.CALAMITES_LEAVES.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_SAPLING2.get());
 
-
-
+                        pOutput.accept(PreludeBlocks.GINKGO_LOG.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_WOOD.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_PLANKS.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_DOOR.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_BUTTON.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_PRESSURE_PLATE.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_SLAB.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_STAIRS.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_FENCE.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_FENCE_GATE.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_TRAPDOOR.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_LEAVES.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_LEAVES_FRUIT.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_SAPLING.get());
 
                         pOutput.accept(PreludeItems.DISKETTE.get());
 

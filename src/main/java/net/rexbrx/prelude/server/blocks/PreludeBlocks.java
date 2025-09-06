@@ -220,6 +220,101 @@ public class PreludeBlocks
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
                     BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));
 
+
+
+    public static final RegistryObject<Block> GINKGO_LOG = registerBlock("ginkgo_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> GINKGO_WOOD = registerBlock("ginkgo_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> GINKGO_PLANKS = registerBlock("ginkgo_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
+    public static final RegistryObject<Block> GINKGO_LEAVES = registerBlock("ginkgo_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            });
+    public static final RegistryObject<Block> GINKGO_LEAVES_FRUIT = registerBlock("ginkgo_leaves_fruit",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            });
+    public static final RegistryObject<Block> GINKGO_STAIRS = registerBlock("ginkgo_stairs",
+            () -> new StairBlock(() -> PreludeBlocks.CALAMITES_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+    public static final RegistryObject<Block> GINKGO_SLAB = registerBlock("ginkgo_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+    public static final RegistryObject<Block> GINKGO_FENCE = registerBlock("ginkgo_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+    public static final RegistryObject<Block> GINKGO_FENCE_GATE = registerBlock("ginkgo_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE).sound(SoundType.AMETHYST), SoundEvents.CHAIN_PLACE, SoundEvents.ANVIL_BREAK));
+    public static final RegistryObject<Block> GINKGO_BUTTON = registerBlock("ginkgo_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)
+                    .noCollission().noCollission(),
+                    BlockSetType.OAK, 10, true));
+    public static final RegistryObject<Block> GINKGO_PRESSURE_PLATE = registerBlock("ginkgo_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE),
+    BlockSetType.IRON));
+    public static final RegistryObject<Block> GINKGO_DOOR = registerBlock("ginkgo_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)
+                    .noOcclusion(), BlockSetType.OAK));
+    public static final RegistryObject<Block> GINKGO_TRAPDOOR = registerBlock("ginkgo_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)
+                    .noOcclusion(), BlockSetType.OAK));
+    public static final RegistryObject<Block> GINKGO_SAPLING = registerBlock("ginkgo_sapling",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 8,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static final RegistryObject<Block> COOKSONIA = registerBlock("cooksonia",
             () -> new PinkPetalsBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
 

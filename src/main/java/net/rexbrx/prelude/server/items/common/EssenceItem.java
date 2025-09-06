@@ -98,6 +98,66 @@ public class EssenceItem extends Item {
                     return InteractionResult.SUCCESS;
                 }
             }
+
+            if (state.is(PreludeBlocks.GINKGO_SAPLING.get())) {
+                ServerLevel serverLevel = (ServerLevel) level;
+                StructureTemplateManager manager = serverLevel.getStructureManager();
+
+                // Sorteia qual estrutura será usada
+                int choice = serverLevel.random.nextInt(5); //trocar para 6
+                ResourceLocation structureRL;
+                BlockPos offset;
+
+                if (choice == 0) {
+                    structureRL = new ResourceLocation("prelude", "ginkgo1");
+                    offset = new BlockPos(-1, 0, -1); // ex: estrutura 7x7
+                } else if (choice == 1) {
+                    structureRL = new ResourceLocation("prelude", "ginkgo2");
+                    offset = new BlockPos(-2, 0, -2);
+                } else if (choice == 2){
+                    structureRL = new ResourceLocation("prelude", "ginkgo3");
+                    offset = new BlockPos(-4, 0, -4); // ex: estrutura 11x5 (formato estranho)
+                } else if (choice == 3) {
+                    structureRL = new ResourceLocation("prelude", "ginkgo5");
+                    offset = new BlockPos(-2, 0, -2); // ex: estrutura 11x5 (formato estranho)
+                } else {
+                    structureRL = new ResourceLocation("prelude", "ginkgo4");
+                    offset = new BlockPos(-4, 0, -4);
+                }
+
+                Optional<StructureTemplate> templateOptional = manager.get(structureRL);
+                if (templateOptional.isPresent()) {
+                    // Remove o bloco original
+                    level.setBlock(clickedPos, Blocks.AIR.defaultBlockState(), 3);
+
+                    // Calcula a posição onde a estrutura deve ser colocada
+                    BlockPos structurePos = clickedPos.offset(offset);
+
+                    StructureTemplate template = templateOptional.get();
+                    StructurePlaceSettings settings = new StructurePlaceSettings()
+                            .setMirror(Mirror.NONE)
+                            .setRotation(Rotation.NONE)
+                            .setIgnoreEntities(false)
+                            .setKnownShape(true)
+                            .setFinalizeEntities(true);
+
+                    template.placeInWorld(
+                            serverLevel,
+                            structurePos,
+                            structurePos,
+                            settings,
+                            serverLevel.random,
+                            2
+                    );
+
+                    // Opcional: desgastar o item
+                    if (player != null) {
+                        stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
+                    }
+
+                    return InteractionResult.SUCCESS;
+                }
+            }
         }
 
         return InteractionResult.PASS;
