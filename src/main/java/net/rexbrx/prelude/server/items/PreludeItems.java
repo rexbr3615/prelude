@@ -259,6 +259,9 @@ public class PreludeItems {
     public static final RegistryObject<Item> TOKEN = ITEMS.register("token",
             () -> new TokenItem(new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> GINKGO_NUTS = ITEMS.register("ginkgo_nuts",
+            () -> new Item(new Item.Properties().food(ModFoods.GINKGO_NUTS)));
+
     public static final RegistryObject<Item> RAILGUN = ITEMS.register("railgun",
             () -> new GravityGunItem(new Item.Properties().stacksTo(1)));
 

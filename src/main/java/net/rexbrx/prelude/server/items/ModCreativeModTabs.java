@@ -57,6 +57,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.TEST_TUBE.get());
 
                         pOutput.accept(PreludeItems.CPU.get());
+                        pOutput.accept(PreludeItems.GINKGO_NUTS.get());
+
 
                         pOutput.accept(PreludeItems.ALLOSAURUS_DNA.get());
                         pOutput.accept(PreludeItems.GALLIMIMUS_DNA.get());

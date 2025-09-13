@@ -23,6 +23,8 @@
     "prelude:graphite_block",
     "prelude:gypsum_block",
     "prelude:steel_block",
-    "prelude:crusher"
+    "prelude:crusher",
+    "prelude:teeth",
+    "prelude:barrier"
   ]
 }

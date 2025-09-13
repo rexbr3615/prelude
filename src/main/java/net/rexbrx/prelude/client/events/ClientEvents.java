@@ -89,6 +89,10 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
 
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_DOOR.get(), RenderType.translucent());
+
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.POWER_BOX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CABLE_BLOCK.get(), RenderType.translucent());
 
