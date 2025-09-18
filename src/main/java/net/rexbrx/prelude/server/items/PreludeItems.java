@@ -127,6 +127,10 @@ public class PreludeItems {
             () -> new ForgeSpawnEggItem(EntityInit.PUERTASAURUS,0x3d312f, 0x917673,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> TANYSTROPHEUS_SPAWN_EGG = ITEMS.register("tanystropheus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.TANYSTROPHEUS,0x000000, 0xffffff,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 
@@ -203,6 +207,10 @@ public class PreludeItems {
     public static final RegistryObject<Item> ALBERTOSAURUS_DNA = ITEMS.register("albertosaurus_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> PUERTASAURUS_DNA = ITEMS.register("puertasaurus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TANYSTROPHEUS_DNA = ITEMS.register("tanystropheus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SIGILMASSASAURUS_DNA = ITEMS.register("sigilmassasaurus_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TEST_DNA = ITEMS.register("test_dna",

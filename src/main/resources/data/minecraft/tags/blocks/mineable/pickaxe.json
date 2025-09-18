@@ -25,6 +25,8 @@
     "prelude:steel_block",
     "prelude:crusher",
     "prelude:teeth",
-    "prelude:barrier"
+    "prelude:barrier",
+    "prelude:stromatolites",
+    "prelude:stromatolite_block"
   ]
 }

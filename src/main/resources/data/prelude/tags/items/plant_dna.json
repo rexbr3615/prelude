@@ -4,6 +4,8 @@
     "prelude:encrinus",
     "prelude:swartpuntia",
     "prelude:cooksonia_spores",
-    "prelude:ginkgo_sapling"
+    "prelude:ginkgo_sapling",
+    "prelude:stromatolites",
+    "prelude:stromatolite_block"
   ]
 }
