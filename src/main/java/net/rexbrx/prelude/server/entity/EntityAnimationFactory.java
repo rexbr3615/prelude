@@ -179,6 +179,14 @@ public class EntityAnimationFactory {
                 }
             }
 
+            if (event.getEntity() instanceof SigilmassasaurusEntity syncable) {
+                String animation = syncable.getSyncedAnimation();
+                if (!animation.equals("undefined")) {
+                    syncable.setAnimation("undefined");
+                    syncable.animationprocedure = animation;
+                }
+            }
+
         }
     }
 }

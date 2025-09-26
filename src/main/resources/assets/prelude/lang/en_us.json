@@ -157,5 +157,22 @@
   "item.prelude.albertosaurus_dna": "Albertosaurus DNA",
   "item.prelude.albertosaurus_spawn_egg": "Albertosaurus Spawn Egg",
   "item.prelude.puertasaurus_dna": "Puertasaurus DNA",
-  "item.prelude.puertasaurus_spawn_egg": "Puertasaurus Spawn Egg"
+  "item.prelude.puertasaurus_spawn_egg": "Puertasaurus Spawn Egg",
+  "item.prelude.ginkgo_nuts": "Ginkgo Nuts",
+  "block.prelude.ginkgo_log": "Ginkgo Log",
+  "block.prelude.ginkgo_wood": "Ginkgo Wood",
+  "block.prelude.ginkgo_planks": "Ginkgo Planks",
+  "block.prelude.ginkgo_leaves": "Ginkgo Leaves",
+  "block.prelude.ginkgo_sapling": "Ginkgo Sapling",
+  "block.prelude.ginkgo_leaves_fruit": "Ginkgo Fruit Leaves",
+  "block.prelude.ginkgo_stairs": "Ginkgo Stairs",
+  "block.prelude.ginkgo_slab": "Ginkgo Slab",
+  "block.prelude.ginkgo_fence": "Ginkgo Fence",
+  "block.prelude.ginkgo_fence_gate": "Ginkgo Fence Gate",
+  "block.prelude.ginkgo_button": "Ginkgo Button",
+  "block.prelude.ginkgo_pressure_plate": "Ginkgo Pressure Plate",
+  "block.prelude.ginkgo_door": "Ginkgo Door",
+  "block.prelude.ginkgo_trapdoor": "Ginkgo Trapdoor",
+  "entity.prelude.tanystropheus": "Tanystropheus",
+  "entity.prelude.sigilmassasaurus": "Sigilmassasaurus"
 }

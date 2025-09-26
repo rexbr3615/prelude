@@ -104,6 +104,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.ALBERTOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.PUERTASAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.TANYSTROPHEUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.SIGILMASSASAURUS_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.ESSENCE.get());
                         pOutput.accept(PreludeItems.COAL_DUST.get());
