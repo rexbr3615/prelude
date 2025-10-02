@@ -128,7 +128,7 @@ public class EntityInit {
     public static final RegistryObject<EntityType<SigilmassasaurusEntity>> SIGILMASSASAURUS = register("sigilmassasaurus",
             EntityType.Builder.<SigilmassasaurusEntity>of(SigilmassasaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SigilmassasaurusEntity::new)
 
-                    .sized(4.78f, 1.8892f));
+                    .sized(1.81273f, 3.26242f));
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

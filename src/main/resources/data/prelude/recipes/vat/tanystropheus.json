@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:tanystropheus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:tanystropheus_spawn_egg"
+  }
+}

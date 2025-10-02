@@ -132,7 +132,7 @@ public class PreludeItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> SIGILMASSASAURUS_SPAWN_EGG = ITEMS.register("sigilmassasaurus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.SIGILMASSASAURUS,0x000000, 0xffffff,
+            () -> new ForgeSpawnEggItem(EntityInit.SIGILMASSASAURUS,0x401909, 0x6e3117,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",

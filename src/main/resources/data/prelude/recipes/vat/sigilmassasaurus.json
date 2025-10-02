@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:sigilmassasaurus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:sigilmassasaurus_spawn_egg"
+  }
+}

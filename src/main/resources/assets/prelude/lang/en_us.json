@@ -174,5 +174,13 @@
   "block.prelude.ginkgo_door": "Ginkgo Door",
   "block.prelude.ginkgo_trapdoor": "Ginkgo Trapdoor",
   "entity.prelude.tanystropheus": "Tanystropheus",
-  "entity.prelude.sigilmassasaurus": "Sigilmassasaurus"
+  "entity.prelude.sigilmassasaurus": "Sigilmassasaurus",
+  "block.prelude.stromatolites": "Stromatolite Extension",
+  "block.prelude.stromatolite_block": "Stromatolite Block",
+  "block.prelude.teeth": "Teeth Exibition [Otodus obliquus]",
+  "block.prelude.barrier": "Ground Barrier",
+  "item.prelude.tanystropheus_dna": "Tanystropheus DNA",
+  "item.prelude.sigilmassasaurus_dna": "Sigilmassasaurus DNA",
+  "item.prelude.tanystropheus_spawn_egg": "Tanystropheus Spawn Egg",
+  "item.prelude.sigilmassasaurus_spawn_egg": "Sigilmassasaurus Spawn Egg"
 }
