@@ -135,6 +135,10 @@ public class PreludeItems {
             () -> new ForgeSpawnEggItem(EntityInit.SIGILMASSASAURUS,0x401909, 0x6e3117,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> ORODROMEUS_SPAWN_EGG = ITEMS.register("orodromeus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.ORODROMEUS,0xffffff, 0xffffff,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 
@@ -216,6 +220,10 @@ public class PreludeItems {
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SIGILMASSASAURUS_DNA = ITEMS.register("sigilmassasaurus_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MUTADON_DNA = ITEMS.register("mutadon_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ORODROMEUS_DNA = ITEMS.register("orodromeus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TEST_DNA = ITEMS.register("test_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
@@ -270,6 +278,8 @@ public class PreludeItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TOKEN = ITEMS.register("token",
             () -> new TokenItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> HYBRIDIZER = ITEMS.register("hybridizer",
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> GINKGO_NUTS = ITEMS.register("ginkgo_nuts",
             () -> new Item(new Item.Properties().food(ModFoods.GINKGO_NUTS)));

@@ -82,6 +82,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.PUERTASAURUS_DNA.get());
                         pOutput.accept(PreludeItems.TANYSTROPHEUS_DNA.get());
                         pOutput.accept(PreludeItems.SIGILMASSASAURUS_DNA.get());
+                        pOutput.accept(PreludeItems.MUTADON_DNA.get());
+                        pOutput.accept(PreludeItems.ORODROMEUS_DNA.get());
 
                         pOutput.accept(PreludeItems.JURAVENATOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.ALLOSAURUS_SPAWN_EGG.get());
@@ -95,7 +97,6 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.PTERANODON_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.THERIZINOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.TORVOSAURUS_SPAWN_EGG.get());
-                        pOutput.accept(PreludeItems.MUTADON_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.CERATOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.OURANOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.AVACERATOPS_SPAWN_EGG.get());
@@ -105,7 +106,10 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.PUERTASAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.TANYSTROPHEUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.SIGILMASSASAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.MUTADON_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.ORODROMEUS_SPAWN_EGG.get());
 
+                        pOutput.accept(PreludeItems.HYBRIDIZER.get());
                         pOutput.accept(PreludeItems.ESSENCE.get());
                         pOutput.accept(PreludeItems.COAL_DUST.get());
                         pOutput.accept(PreludeItems.CARBON_FIBRE_PLATE.get());

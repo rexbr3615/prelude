@@ -22,6 +22,7 @@ import net.rexbrx.prelude.client.CreaturesMR.gallimimus.GallimimusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.juravenator.JuravenatorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.megaraptor.MegaraptorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.mutadon.MutadonRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.orodromeus.OrodromeusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.ouranosaurus.OuranosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.proterosuchus.ProterosuchusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.pteranodon.PteranodonRenderer;
@@ -77,6 +78,7 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.PUERTASAURUS.get(), PuertasaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.TANYSTROPHEUS.get(), TanystropheusRenderer::new);
         event.registerEntityRenderer(EntityInit.SIGILMASSASAURUS.get(), SigilmassasaurusRenderer::new);
+        event.registerEntityRenderer(EntityInit.ORODROMEUS.get(), OrodromeusRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());

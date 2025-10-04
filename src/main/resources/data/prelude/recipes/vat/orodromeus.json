@@ -2,10 +2,10 @@
   "type": "prelude:vat",
   "ingredients": [
     {
-      "item": "prelude:mutadon_dna"
+      "item": "prelude:orodromeus_dna"
     }
   ],
   "output": {
-    "item": "prelude:mutadon_spawn_egg"
+    "item": "prelude:orodromeus_spawn_egg"
   }
 }
