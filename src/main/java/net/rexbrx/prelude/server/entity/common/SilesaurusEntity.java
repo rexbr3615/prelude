@@ -33,22 +33,22 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class OrodromeusEntity extends PathfinderMob implements GeoEntity
+public class SilesaurusEntity extends PathfinderMob implements GeoEntity
 {
-    public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(OrodromeusEntity.class, EntityDataSerializers.BOOLEAN);
-    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(OrodromeusEntity.class, EntityDataSerializers.STRING);
-    public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(OrodromeusEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SilesaurusEntity.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SilesaurusEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SilesaurusEntity.class, EntityDataSerializers.STRING);
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private boolean swinging;
     private boolean lastloop;
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public OrodromeusEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(EntityInit.ORODROMEUS.get(), world);
+    public SilesaurusEntity(PlayMessages.SpawnEntity packet, Level world) {
+        this(EntityInit.SILESAURUS.get(), world);
     }
 
-    public OrodromeusEntity(EntityType<OrodromeusEntity> type, Level world) {
+    public SilesaurusEntity(EntityType<SilesaurusEntity> type, Level world) {
         super(type, world);
         xpReward = 5;
         setNoAi(false);
@@ -149,7 +149,7 @@ public class OrodromeusEntity extends PathfinderMob implements GeoEntity
         builder = builder.add(Attributes.MAX_HEALTH, 34.0f);
         builder = builder.add(Attributes.ATTACK_DAMAGE, 7.5f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.136f);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.142f);
         builder = builder.add(Attributes.ARMOR, 3.5f);
         builder = builder.add(Attributes.FOLLOW_RANGE, 16.0f);
         builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2.5f);
@@ -163,7 +163,7 @@ public class OrodromeusEntity extends PathfinderMob implements GeoEntity
             ) {
                 return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
             }
-            return event.setAndContinue(RawAnimation.begin().thenLoop("idle1"));
+            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
         }
         return PlayState.STOP;
     }
@@ -203,7 +203,7 @@ public class OrodromeusEntity extends PathfinderMob implements GeoEntity
     protected void tickDeath() {
         ++this.deathTime;
         if (this.deathTime == 20) {
-            this.remove(OrodromeusEntity.RemovalReason.KILLED);
+            this.remove(SilesaurusEntity.RemovalReason.KILLED);
             this.dropExperience();
         }
     }
@@ -229,4 +229,3 @@ public class OrodromeusEntity extends PathfinderMob implements GeoEntity
     }
 
 }
-

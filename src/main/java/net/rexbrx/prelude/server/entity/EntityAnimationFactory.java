@@ -195,6 +195,22 @@ public class EntityAnimationFactory {
                 }
             }
 
+            if (event.getEntity() instanceof DryosaurusEntity syncable) {
+                String animation = syncable.getSyncedAnimation();
+                if (!animation.equals("undefined")) {
+                    syncable.setAnimation("undefined");
+                    syncable.animationprocedure = animation;
+                }
+            }
+
+            if (event.getEntity() instanceof SilesaurusEntity syncable) {
+                String animation = syncable.getSyncedAnimation();
+                if (!animation.equals("undefined")) {
+                    syncable.setAnimation("undefined");
+                    syncable.animationprocedure = animation;
+                }
+            }
+
         }
     }
 }

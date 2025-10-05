@@ -96,7 +96,7 @@ public class PreludeItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> MUTADON_SPAWN_EGG = ITEMS.register("mutadon_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.MUTADON,0xffffff, 0xffffff,
+            () -> new ForgeSpawnEggItem(EntityInit.MUTADON,0x30302c, 0x7d7a6d,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> CERATOSAURUS_SPAWN_EGG = ITEMS.register("ceratosaurus_spawn_egg",
@@ -136,7 +136,15 @@ public class PreludeItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> ORODROMEUS_SPAWN_EGG = ITEMS.register("orodromeus_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.ORODROMEUS,0xffffff, 0xffffff,
+            () -> new ForgeSpawnEggItem(EntityInit.ORODROMEUS,0x080300, 0x291001,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> DRYOSAURUS_SPAWN_EGG = ITEMS.register("dryosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.DRYOSAURUS,0x1c9416, 0x022400,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> SILESAURUS_SPAWN_EGG = ITEMS.register("silesaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.SILESAURUS,0xe8e8e8, 0x6e6e6e,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
@@ -223,6 +231,10 @@ public class PreludeItems {
     public static final RegistryObject<Item> MUTADON_DNA = ITEMS.register("mutadon_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> ORODROMEUS_DNA = ITEMS.register("orodromeus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> DRYOSAURUS_DNA = ITEMS.register("dryosaurus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SILESAURUS_DNA = ITEMS.register("silesaurus_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TEST_DNA = ITEMS.register("test_dna",

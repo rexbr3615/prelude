@@ -133,7 +133,17 @@ public class EntityInit {
     public static final RegistryObject<EntityType<OrodromeusEntity>> ORODROMEUS = register("orodromeus",
             EntityType.Builder.<OrodromeusEntity>of(OrodromeusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OrodromeusEntity::new)
 
-                    .sized(1.18f, 1.34f));
+                    .sized(0.6911f, 0.812451f));
+
+    public static final RegistryObject<EntityType<DryosaurusEntity>> DRYOSAURUS = register("dryosaurus",
+            EntityType.Builder.<DryosaurusEntity>of(DryosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DryosaurusEntity::new)
+
+                    .sized(0.69f, 0.78f));
+
+    public static final RegistryObject<EntityType<SilesaurusEntity>> SILESAURUS = register("silesaurus",
+            EntityType.Builder.<SilesaurusEntity>of(SilesaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilesaurusEntity::new)
+
+                    .sized(0.69f, 0.78f));
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -166,7 +176,8 @@ public class EntityInit {
             TanystropheusEntity.init();
             SigilmassasaurusEntity.init();
             OrodromeusEntity.init();
-
+            DryosaurusEntity.init();
+            SilesaurusEntity.init();
         });
     }
 
@@ -195,7 +206,8 @@ public class EntityInit {
         event.put(TANYSTROPHEUS.get(), TanystropheusEntity.createAttributes().build());
         event.put(SIGILMASSASAURUS.get(), SigilmassasaurusEntity.createAttributes().build());
         event.put(ORODROMEUS.get(), OrodromeusEntity.createAttributes().build());
-
+        event.put(DRYOSAURUS.get(), DryosaurusEntity.createAttributes().build());
+        event.put(SILESAURUS.get(), SilesaurusEntity.createAttributes().build());
     }
 
 }
