@@ -1,8 +1,10 @@
 package net.rexbrx.prelude.server.items;
 
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -256,6 +258,11 @@ public class PreludeItems {
     public static final RegistryObject<Item> LIGNITE = ITEMS.register("lignite",
             () -> new PreludeFuelItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> BITUMEN = ITEMS.register("bitumen",
+            () -> new PreludeFuelItem(new Item.Properties()));
+    public static final RegistryObject<Item> BITUMEN_NUGGET = ITEMS.register("bitumen_nugget",
+            () -> new PreludeFuelItem(new Item.Properties()));
+
     public static final RegistryObject<Item> COAL_DUST = ITEMS.register("coal_dust",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARBON_FIBRE_PLATE = ITEMS.register("carbon_fibre_plate",
@@ -301,6 +308,15 @@ public class PreludeItems {
 
     public static final RegistryObject<Item> COOKSONIA_SPORES = ITEMS.register("cooksonia_spores",
             () -> new ItemNameBlockItem(PreludeBlocks.COOKSONIA_PLANT.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> SIMPLE_BOTTLE = ITEMS.register("gasbottle",
+            () -> new GasBottle(new Item.Properties().stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).food(
+                    new FoodProperties.Builder()
+                            .alwaysEat()
+                            .nutrition(0)
+                            .saturationMod(0.0F)
+                            .build()
+            )));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -1,9 +1,9 @@
 {
-  "feature": "prelude:fossil_spawn",
+  "feature": "prelude:relic_gen",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 18
+      "count": 9
     },
     {
       "type": "minecraft:in_square"
@@ -11,9 +11,9 @@
     {
       "type": "minecraft:height_range",
       "height": {
-        "type": "minecraft:trapezoid",
+        "type": "minecraft:uniform",
         "min_inclusive": {
-          "absolute": -56
+          "absolute": -32
         },
         "max_inclusive": {
           "absolute": 255

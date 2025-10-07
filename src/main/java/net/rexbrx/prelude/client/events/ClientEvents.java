@@ -1,15 +1,18 @@
 package net.rexbrx.prelude.client.events;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.rexbrx.prelude.client.CreaturesMR.albertosaurus.AlbertosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.allosaurus.AllosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.avaceratops.AvaceratopsRenderer;
@@ -45,6 +48,7 @@ import net.rexbrx.prelude.server.entity.common.DryosaurusEntity;
 import net.rexbrx.prelude.server.entity.common.RugopsEntity;
 import net.rexbrx.prelude.server.entity.common.SilesaurusEntity;
 import net.rexbrx.prelude.server.entity.common.YutyrannusEntity;
+import net.rexbrx.prelude.server.items.PreludeItems;
 import net.rexbrx.prelude.server.recipes.common.AnalyzerRecipe;
 import net.rexbrx.prelude.server.recipes.common.VatRecipe;
 import net.rexbrx.prelude.server.screens.ModMenuTypes;
@@ -107,6 +111,9 @@ public class ClientEvents {
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.POWER_BOX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CABLE_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.STEEL_GRATE_BLOCK.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.ANCIENT_RELIC.get(), RenderType.translucent());
 
 
         MenuScreens.register(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
@@ -114,6 +121,18 @@ public class ClientEvents {
         MenuScreens.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
 
 
+    }
+
+
+    @SubscribeEvent
+    public static void onClientSetup(FMLClientSetupEvent event) {
+        Minecraft.getInstance().getItemColors().register((stack, tintIndex) -> {
+            if (tintIndex == 1) {
+                // Cor do líquido (RGB em hexadecimal)
+                return 0xe9f7f4; // Azul claro, por exemplo
+            }
+            return 0xFFFFFF; // Base sem cor
+        }, PreludeItems.SIMPLE_BOTTLE.get());
     }
 
 

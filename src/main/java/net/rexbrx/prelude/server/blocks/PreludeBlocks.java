@@ -330,6 +330,41 @@ public class PreludeBlocks
     public static final RegistryObject<Block> BARRIER_BLOCK = registerBlock("barrier", () -> new BarrierBlock());
 
 
+    public static final RegistryObject<Block> ADOBE_BLOCK = registerBlock("adobe_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ADOBE_BLOCK_BRICKS = registerBlock("adobe_block_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> STEEL_GRATE_BLOCK = registerBlock("steel_grate_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.CHAIN)
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> VOLCANO_BLOCK = registerBlock("volcano_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.BASALT)
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_DECORATIVE_BLOCK = registerBlock("tuff_decorative",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).sound(SoundType.TUFF)
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ASPHALT_BLOCK = registerBlock("asphalt_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.DEEPSLATE)
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> REINFORCED_ASPHALT_BLOCK = registerBlock("reinforced_asphalt_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.DEEPSLATE)
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ANCIENT_RELIC = registerBlock("ancient_relic",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BITUMEN_STONE = registerBlock("bitumen_stone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)
+                    .strength(3f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);

@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "prelude:item/stuffs/big_bottle",
+    "layer1": "prelude:item/stuffs/alchemy_bottle_warded_contents_gyre"
+  }
+}

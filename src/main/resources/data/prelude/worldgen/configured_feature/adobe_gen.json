@@ -1,7 +1,7 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 16,
+    "size": 11,
     "discard_chance_on_air_exposure": 0,
     "targets": [
       {
@@ -10,16 +10,7 @@
           "tag": "stone_ore_replaceables"
         },
         "state": {
-          "Name": "prelude:fossil_ore"
-        }
-      },
-      {
-        "target": {
-          "predicate_type": "tag_match",
-          "tag": "deepslate_ore_replaceables"
-        },
-        "state": {
-          "Name": "prelude:deep_fossil_ore"
+          "Name": "prelude:adobe_block"
         }
       }
     ]

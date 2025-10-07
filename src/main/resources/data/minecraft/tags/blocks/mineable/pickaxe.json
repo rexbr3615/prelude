@@ -27,6 +27,15 @@
     "prelude:teeth",
     "prelude:barrier",
     "prelude:stromatolites",
-    "prelude:stromatolite_block"
+    "prelude:stromatolite_block",
+    "prelude:steel_grate_block",
+    "prelude:adobe_block",
+    "prelude:adobe_block_bricks",
+    "prelude:volcano_block",
+    "prelude:tuff_decorative",
+    "prelude:asphalt_block",
+    "prelude:reinforced_asphalt_block",
+    "prelude:ancient_relic",
+    "prelude:bitumen_stone"
   ]
 }

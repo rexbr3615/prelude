@@ -36,6 +36,8 @@ public class ModCreativeModTabs
 
                         pOutput.accept(PreludeItems.COKE.get());
                         pOutput.accept(PreludeItems.LIGNITE.get());
+                        pOutput.accept(PreludeItems.BITUMEN.get());
+                        pOutput.accept(PreludeItems.BITUMEN_NUGGET.get());
                         pOutput.accept(PreludeItems.WIRE.get());
                         pOutput.accept(PreludeItems.NUTRIENTS.get());
                         pOutput.accept(PreludeItems.TINTED_ROD.get());
@@ -175,6 +177,17 @@ public class ModCreativeModTabs
 
                         pOutput.accept(PreludeBlocks.GRAPHITE_BLOCK.get());
                         pOutput.accept(PreludeBlocks.GYPSUM_BLOCK.get());
+
+                        pOutput.accept(PreludeBlocks.STEEL_GRATE_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.ADOBE_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.ADOBE_BLOCK_BRICKS.get());
+                        pOutput.accept(PreludeBlocks.VOLCANO_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.TUFF_DECORATIVE_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.ASPHALT_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.REINFORCED_ASPHALT_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.ANCIENT_RELIC.get());
+                        pOutput.accept(PreludeBlocks.BITUMEN_STONE.get());
+
 
                         pOutput.accept(PreludeBlocks.CALAMITES_LOG.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_WOOD.get());
