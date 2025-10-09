@@ -10,6 +10,7 @@ import net.rexbrx.prelude.server.blocks.other.barrier.BarrierBlockEntity;
 import net.rexbrx.prelude.server.blocks.other.teeth.TeethBlockEntity;
 import net.rexbrx.prelude.server.blocks.tile.AnalyzerEntity;
 import net.rexbrx.prelude.server.blocks.tile.CrusherEntity;
+import net.rexbrx.prelude.server.blocks.tile.IncubatorEntity;
 import net.rexbrx.prelude.server.blocks.tile.VatEntity;
 
 
@@ -35,7 +36,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(CrusherEntity::new,
                             PreludeBlocks.CRUSHER.get()).build(null));
 
-
+    public static final RegistryObject<BlockEntityType<IncubatorEntity>> INCUBATOR_ENTITY =
+            BLOCK_ENTITIES.register("incubator_entity", () ->
+                    BlockEntityType.Builder.of(IncubatorEntity::new,
+                            PreludeBlocks.INCUBATOR.get()).build(null));
 
 
 

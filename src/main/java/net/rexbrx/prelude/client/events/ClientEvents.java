@@ -40,6 +40,7 @@ import net.rexbrx.prelude.client.CreaturesMR.torvosaurus.TorvosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.yutyrannus.YutyrannusRenderer;
 import net.rexbrx.prelude.client.menu.AnalyzerScreen;
 import net.rexbrx.prelude.client.menu.CrusherScreen;
+import net.rexbrx.prelude.client.menu.IncubatorScreen;
 import net.rexbrx.prelude.client.menu.VatScreen;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.blocks.PreludeBlocks;
@@ -119,6 +120,7 @@ public class ClientEvents {
         MenuScreens.register(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
         MenuScreens.register(ModMenuTypes.VAT_MENU.get(), VatScreen::new);
         MenuScreens.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
+        MenuScreens.register(ModMenuTypes.INCUBATOR_MENU.get(), IncubatorScreen::new);
 
 
     }

@@ -10,6 +10,7 @@ import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.recipes.common.AnalyzerRecipe;
 import net.rexbrx.prelude.server.recipes.common.CrusherRecipe;
 import net.rexbrx.prelude.server.recipes.common.VatRecipe;
+import net.rexbrx.prelude.server.recipes.common.incubatorRecipe;
 
 
 public class ModRecipes {
@@ -23,7 +24,8 @@ public class ModRecipes {
             SERIALIZERS.register("vat", () -> VatRecipe.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<CrusherRecipe>> CRUSHER_SERIALIZER =
             SERIALIZERS.register("crusher", () -> CrusherRecipe.Serializer.INSTANCE);
-
+    public static final RegistryObject<RecipeSerializer<incubatorRecipe>> INCUBATOR_SERIALIZER =
+            SERIALIZERS.register("incubator", () -> incubatorRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

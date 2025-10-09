@@ -11,6 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.screens.menu.AnalyzerMenu;
 import net.rexbrx.prelude.server.screens.menu.CrusherMenu;
+import net.rexbrx.prelude.server.screens.menu.IncubatorMenu;
 import net.rexbrx.prelude.server.screens.menu.VatMenu;
 
 
@@ -28,6 +29,8 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<CrusherMenu>> CRUSHER_MENU =
             registerMenuType("crusher_menu", CrusherMenu::new);
 
+    public static final RegistryObject<MenuType<IncubatorMenu>> INCUBATOR_MENU =
+            registerMenuType("incubator_menu", IncubatorMenu::new);
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

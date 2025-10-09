@@ -382,6 +382,9 @@ public class PreludeBlocks
     public static final RegistryObject<Block> CRUSHER = registerBlock("crusher",
             () -> new CrusherBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> INCUBATOR = registerBlock("bacteriological_incubator",
+            () -> new IncubatorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
     //==================================================================================
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
