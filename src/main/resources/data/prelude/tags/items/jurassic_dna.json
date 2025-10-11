@@ -4,6 +4,7 @@
     "prelude:allosaurus_dna",
     "prelude:coelacanth_dna",
     "prelude:torvosaurus_dna",
-    "prelude:ceratosaurus_dna"
+    "prelude:ceratosaurus_dna",
+    "prelude:dryosaurus_dna"
   ]
 }

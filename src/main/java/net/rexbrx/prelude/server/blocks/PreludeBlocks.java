@@ -2,22 +2,16 @@ package net.rexbrx.prelude.server.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,14 +19,12 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.blocks.common.*;
 import net.rexbrx.prelude.server.blocks.common.PipeBlock;
+import net.rexbrx.prelude.server.blocks.other.EolicgeneratorBlock;
 import net.rexbrx.prelude.server.blocks.other.barrier.BarrierBlock;
 import net.rexbrx.prelude.server.blocks.other.teeth.TeethBlock;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import net.rexbrx.prelude.server.items.common.ModRotatedPillarBlock;
-import net.rexbrx.prelude.server.procedurals.EncaseFossil;
 
-import javax.annotation.Nullable;
-import java.util.List;
 import java.util.function.Supplier;
 
 public class PreludeBlocks
@@ -328,6 +320,7 @@ public class PreludeBlocks
 
     public static final RegistryObject<Block> TEETH_BLOCK = registerBlock("teeth", () -> new TeethBlock());
     public static final RegistryObject<Block> BARRIER_BLOCK = registerBlock("barrier", () -> new BarrierBlock());
+    public static final RegistryObject<Block> EO_GEN = registerBlock("eolicgenerator", () -> new EolicgeneratorBlock());
 
 
     public static final RegistryObject<Block> ADOBE_BLOCK = registerBlock("adobe_block",

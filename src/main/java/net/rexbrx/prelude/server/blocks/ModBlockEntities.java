@@ -6,12 +6,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rexbrx.prelude.prelude;
+import net.rexbrx.prelude.server.blocks.other.EolicgeneratorBlockEntity;
 import net.rexbrx.prelude.server.blocks.other.barrier.BarrierBlockEntity;
 import net.rexbrx.prelude.server.blocks.other.teeth.TeethBlockEntity;
-import net.rexbrx.prelude.server.blocks.tile.AnalyzerEntity;
-import net.rexbrx.prelude.server.blocks.tile.CrusherEntity;
-import net.rexbrx.prelude.server.blocks.tile.IncubatorEntity;
-import net.rexbrx.prelude.server.blocks.tile.VatEntity;
+import net.rexbrx.prelude.server.blocks.tile.*;
 
 
 public class ModBlockEntities {
@@ -53,6 +51,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("barrier_entity", () ->
                     BlockEntityType.Builder.of(BarrierBlockEntity::new,
                             PreludeBlocks.BARRIER_BLOCK.get()).build(null));
+    public static final RegistryObject<BlockEntityType<EolicgeneratorBlockEntity>> EOLICGENERATOR =
+            BLOCK_ENTITIES.register("eolic_entity", () ->
+                    BlockEntityType.Builder.of(EolicgeneratorBlockEntity::new,
+                            PreludeBlocks.EO_GEN.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

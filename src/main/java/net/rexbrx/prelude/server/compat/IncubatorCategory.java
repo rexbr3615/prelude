@@ -11,36 +11,34 @@ import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.blocks.PreludeBlocks;
-import net.rexbrx.prelude.server.items.PreludeItems;
-import net.rexbrx.prelude.server.recipes.common.CrusherRecipe;
+import net.rexbrx.prelude.server.recipes.common.incubatorRecipe;
 
-public class CrusherCategory implements IRecipeCategory<CrusherRecipe> {
-    public static final ResourceLocation UID = new ResourceLocation(prelude.MODID, "crusher");
+public class IncubatorCategory implements IRecipeCategory<incubatorRecipe> {
+    public static final ResourceLocation UID = new ResourceLocation(prelude.MODID, "incubator");
     public static final ResourceLocation TEXTURE = new ResourceLocation(prelude.MODID,
-            "textures/gui/crusher.png");
+            "textures/gui/incubator.png");
 
-    public static final RecipeType<CrusherRecipe> CRUSHER_TYPE =
-            new RecipeType<>(UID, CrusherRecipe.class);
+    public static final RecipeType<incubatorRecipe> INCUBATOR_TYPE =
+            new RecipeType<>(UID, incubatorRecipe.class);
 
     private final IDrawable background;
     private final IDrawable icon;
 
-    public CrusherCategory(IGuiHelper helper) {
+    public IncubatorCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 85);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(PreludeBlocks.CRUSHER.get()));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(PreludeBlocks.INCUBATOR.get()));
     }
 
     @Override
-    public RecipeType<CrusherRecipe> getRecipeType() {
-        return CRUSHER_TYPE;
+    public RecipeType<incubatorRecipe> getRecipeType() {
+        return INCUBATOR_TYPE;
     }
 
     @Override
     public Component getTitle() {
-        return Component.translatable("block.prelude.crusher");
+        return Component.translatable("block.prelude.incubator");
     }
 
     @Override
@@ -54,7 +52,7 @@ public class CrusherCategory implements IRecipeCategory<CrusherRecipe> {
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, CrusherRecipe recipe, IFocusGroup focuses) {
+    public void setRecipe(IRecipeLayoutBuilder builder, incubatorRecipe recipe, IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 80, 11).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 59).addItemStack(recipe.getResultItem(null));
     }

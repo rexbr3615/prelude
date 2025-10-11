@@ -10,11 +10,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.rexbrx.prelude.client.menu.AnalyzerScreen;
 import net.rexbrx.prelude.client.menu.CrusherScreen;
+import net.rexbrx.prelude.client.menu.IncubatorScreen;
 import net.rexbrx.prelude.client.menu.VatScreen;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.recipes.common.AnalyzerRecipe;
 import net.rexbrx.prelude.server.recipes.common.CrusherRecipe;
 import net.rexbrx.prelude.server.recipes.common.VatRecipe;
+import net.rexbrx.prelude.server.recipes.common.incubatorRecipe;
 
 import java.util.List;
 
@@ -30,6 +32,7 @@ public class JEIPreludePlugin implements IModPlugin {
         registration.addRecipeCategories(new AnalyzerCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new VatCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new CrusherCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new IncubatorCategory(registration.getJeiHelpers().getGuiHelper()));
 
     }
 
@@ -43,6 +46,8 @@ public class JEIPreludePlugin implements IModPlugin {
         registration.addRecipes(VatCategory.VAT_TYPE, VatRecipes);
         List<CrusherRecipe> CrusherRecipes = recipeManager.getAllRecipesFor(CrusherRecipe.Type.INSTANCE);
         registration.addRecipes(CrusherCategory.CRUSHER_TYPE, CrusherRecipes);
+        List<incubatorRecipe> IncubatorRecipes = recipeManager.getAllRecipesFor(incubatorRecipe.Type.INSTANCE);
+        registration.addRecipes(IncubatorCategory.INCUBATOR_TYPE, IncubatorRecipes);
     }
 
     @Override
@@ -53,5 +58,7 @@ public class JEIPreludePlugin implements IModPlugin {
                 VatCategory.VAT_TYPE);
         registration.addRecipeClickArea(CrusherScreen.class, 60, 30, 20, 30,
                 CrusherCategory.CRUSHER_TYPE);
+        registration.addRecipeClickArea(IncubatorScreen.class, 60, 30, 20, 30,
+                IncubatorCategory.INCUBATOR_TYPE);
     }
 }
