@@ -138,12 +138,17 @@ public class EntityInit {
     public static final RegistryObject<EntityType<DryosaurusEntity>> DRYOSAURUS = register("dryosaurus",
             EntityType.Builder.<DryosaurusEntity>of(DryosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DryosaurusEntity::new)
 
-                    .sized(0.69f, 0.78f));
+                    .sized(0.811f, 1.2783f));
 
     public static final RegistryObject<EntityType<SilesaurusEntity>> SILESAURUS = register("silesaurus",
             EntityType.Builder.<SilesaurusEntity>of(SilesaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilesaurusEntity::new)
 
-                    .sized(0.69f, 0.78f));
+                    .sized(0.75f, 1.12f));
+
+    public static final RegistryObject<EntityType<AustroraptorEntity>> AUSTRORAPTOR = register("austroraptor",
+            EntityType.Builder.<AustroraptorEntity>of(AustroraptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AustroraptorEntity::new)
+
+                    .sized(0.87f, 1.68f));
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -178,6 +183,7 @@ public class EntityInit {
             OrodromeusEntity.init();
             DryosaurusEntity.init();
             SilesaurusEntity.init();
+            AustroraptorEntity.init();
         });
     }
 
@@ -208,6 +214,8 @@ public class EntityInit {
         event.put(ORODROMEUS.get(), OrodromeusEntity.createAttributes().build());
         event.put(DRYOSAURUS.get(), DryosaurusEntity.createAttributes().build());
         event.put(SILESAURUS.get(), SilesaurusEntity.createAttributes().build());
+        event.put(AUSTRORAPTOR.get(), AustroraptorEntity.createAttributes().build());
+
     }
 
 }

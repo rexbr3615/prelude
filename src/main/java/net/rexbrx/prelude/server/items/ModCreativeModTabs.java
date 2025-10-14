@@ -88,6 +88,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.ORODROMEUS_DNA.get());
                         pOutput.accept(PreludeItems.DRYOSAURUS_DNA.get());
                         pOutput.accept(PreludeItems.SILESAURUS_DNA.get());
+                        pOutput.accept(PreludeItems.AUSTRORAPTOR_DNA.get());
+
 
                         pOutput.accept(PreludeItems.JURAVENATOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.ALLOSAURUS_SPAWN_EGG.get());
@@ -114,6 +116,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.ORODROMEUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.DRYOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.SILESAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.AUSTRORAPTOR_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.HYBRIDIZER.get());
                         pOutput.accept(PreludeItems.ESSENCE.get());
@@ -220,6 +223,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.GINKGO_SAPLING.get());
 
                         pOutput.accept(PreludeItems.DISKETTE.get());
+                        pOutput.accept(PreludeItems.SIMPLE_BOTTLE.get());
+                        pOutput.accept(PreludeBlocks.EO_GEN.get());
 
                         pOutput.accept(PreludeItems.TEST_DNA.get());
                         pOutput.accept(PreludeItems.RAILGUN.get());

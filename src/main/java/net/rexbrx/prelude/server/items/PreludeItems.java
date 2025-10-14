@@ -149,6 +149,10 @@ public class PreludeItems {
             () -> new ForgeSpawnEggItem(EntityInit.SILESAURUS,0xe8e8e8, 0x6e6e6e,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> AUSTRORAPTOR_SPAWN_EGG = ITEMS.register("austroraptor_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.AUSTRORAPTOR,0x6b3818, 0x6e6e6e,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 
@@ -238,6 +242,8 @@ public class PreludeItems {
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SILESAURUS_DNA = ITEMS.register("silesaurus_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> AUSTRORAPTOR_DNA = ITEMS.register("austroraptor_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TEST_DNA = ITEMS.register("test_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
@@ -309,12 +315,15 @@ public class PreludeItems {
     public static final RegistryObject<Item> COOKSONIA_SPORES = ITEMS.register("cooksonia_spores",
             () -> new ItemNameBlockItem(PreludeBlocks.COOKSONIA_PLANT.get(), new Item.Properties()));
 
+
+
+
     public static final RegistryObject<Item> SIMPLE_BOTTLE = ITEMS.register("gasbottle",
             () -> new GasBottle(new Item.Properties().stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).food(
                     new FoodProperties.Builder()
                             .alwaysEat()
                             .nutrition(0)
-                            .saturationMod(0.0F)
+                            .saturationMod(20.0F)
                             .build()
             )));
 

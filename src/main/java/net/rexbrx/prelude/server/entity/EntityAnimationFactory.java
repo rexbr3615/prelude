@@ -211,6 +211,14 @@ public class EntityAnimationFactory {
                 }
             }
 
+            if (event.getEntity() instanceof AustroraptorEntity syncable) {
+                String animation = syncable.getSyncedAnimation();
+                if (!animation.equals("undefined")) {
+                    syncable.setAnimation("undefined");
+                    syncable.animationprocedure = animation;
+                }
+            }
+
         }
     }
 }
