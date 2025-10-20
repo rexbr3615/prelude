@@ -232,6 +232,9 @@ public class ModCreativeModTabs
 
                         pOutput.accept(PreludeBlocks.COOKSONIA_PLANT.get());
 
+                        pOutput.accept(PreludeBlocks.HYPER_CALAMITES_LOG.get());
+                        pOutput.accept(PreludeBlocks.HYPER_CALAMITES_WOOD.get());
+                        pOutput.accept(PreludeBlocks.HYPER_CALAMITES_LEAVES.get());
 
                     })
                     .build());

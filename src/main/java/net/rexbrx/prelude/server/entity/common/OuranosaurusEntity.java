@@ -146,7 +146,7 @@ public class OuranosaurusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 78.0f);
+        builder = builder.add(Attributes.MAX_HEALTH, 81.0f);
         builder = builder.add(Attributes.ATTACK_DAMAGE, 17.0f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.167f);

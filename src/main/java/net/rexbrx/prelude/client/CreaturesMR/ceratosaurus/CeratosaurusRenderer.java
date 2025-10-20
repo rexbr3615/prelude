@@ -15,7 +15,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 public class CeratosaurusRenderer extends GeoEntityRenderer<CeratosaurusEntity> {
     public CeratosaurusRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new CeratosaurusModel());
-        this.shadowRadius = 1.78f;
+        this.shadowRadius = 1.18f;
     }
 
     @Override

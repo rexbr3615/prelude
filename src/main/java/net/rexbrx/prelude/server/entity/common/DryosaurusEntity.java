@@ -146,8 +146,8 @@ public class DryosaurusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 34.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 7.5f);
+        builder = builder.add(Attributes.MAX_HEALTH, 35.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 2.5f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.167f);
         builder = builder.add(Attributes.ARMOR, 3.5f);

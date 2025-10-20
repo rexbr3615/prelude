@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "prelude:block/trees/calamites/hyper/hyper_calamites_top",
+    "side": "prelude:block/trees/calamites/hyper/hyper_calamites_side"
+  }
+}

@@ -15,7 +15,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 public class SigilmassasaurusRenderer extends GeoEntityRenderer<SigilmassasaurusEntity> {
     public SigilmassasaurusRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new SigilmassasaurusModel());
-        this.shadowRadius = 0.3f;
+        this.shadowRadius = 0.67f;
     }
 
     @Override

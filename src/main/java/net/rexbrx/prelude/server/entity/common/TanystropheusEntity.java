@@ -146,8 +146,8 @@ public class TanystropheusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 43.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 5.5f);
+        builder = builder.add(Attributes.MAX_HEALTH, 41.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 2.5f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.161f);
         builder = builder.add(Attributes.ARMOR, 1.5f);

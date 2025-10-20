@@ -146,8 +146,8 @@ public class CeratosaurusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 53.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 12.0f);
+        builder = builder.add(Attributes.MAX_HEALTH, 58.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 14.0f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.167f);
         builder = builder.add(Attributes.ARMOR, 1.5f);

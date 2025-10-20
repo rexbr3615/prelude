@@ -146,8 +146,8 @@ public class GallimimusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 38.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 9.0f);
+        builder = builder.add(Attributes.MAX_HEALTH, 46.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 5.0f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.167f);
         builder = builder.add(Attributes.ARMOR, 1.5f);

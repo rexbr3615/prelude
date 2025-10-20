@@ -146,7 +146,7 @@ public class TherizinosaurusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 67.0f);
+        builder = builder.add(Attributes.MAX_HEALTH, 72.0f);
         builder = builder.add(Attributes.ATTACK_DAMAGE, 28.0f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.167f);
