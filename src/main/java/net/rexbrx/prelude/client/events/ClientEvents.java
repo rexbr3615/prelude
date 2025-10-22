@@ -29,10 +29,12 @@ import net.rexbrx.prelude.client.CreaturesMR.megaraptor.MegaraptorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.mutadon.MutadonRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.orodromeus.OrodromeusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.ouranosaurus.OuranosaurusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.parasaurolophus.ParasaurolophusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.proterosuchus.ProterosuchusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.pteranodon.PteranodonRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.puertasaurus.PuertasaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.rugops.RugopsRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.sclerocephalus.SclerocephalusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.sigilmassasaurus.SigilmassasaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.silesaurus.SilesaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.tanystropheus.TanystropheusRenderer;
@@ -92,6 +94,8 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.DRYOSAURUS.get(), DryosaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.SILESAURUS.get(), SilesaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.AUSTRORAPTOR.get(), AustroraptorRenderer::new);
+        event.registerEntityRenderer(EntityInit.PARASAUROLOPHUS.get(), ParasaurolophusRenderer::new);
+        event.registerEntityRenderer(EntityInit.SCLEROCEPHALUS.get(), SclerocephalusRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());

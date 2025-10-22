@@ -150,6 +150,19 @@ public class EntityInit {
 
                     .sized(0.87f, 1.68f));
 
+    public static final RegistryObject<EntityType<ParasaurolophusEntity>> PARASAUROLOPHUS = register("parasaurolophus",
+            EntityType.Builder.<ParasaurolophusEntity>of(ParasaurolophusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ParasaurolophusEntity::new)
+
+                    .sized(2.27f, 2.88f));
+
+    public static final RegistryObject<EntityType<SclerocephalusEntity>> SCLEROCEPHALUS = register("sclerocephalus",
+            EntityType.Builder.<SclerocephalusEntity>of(SclerocephalusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SclerocephalusEntity::new)
+
+                    .sized(0.56f, 0.23f));
+
+
+
+
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
     }
@@ -184,6 +197,9 @@ public class EntityInit {
             DryosaurusEntity.init();
             SilesaurusEntity.init();
             AustroraptorEntity.init();
+            ParasaurolophusEntity.init();
+            SclerocephalusEntity.init();
+
         });
     }
 
@@ -215,6 +231,8 @@ public class EntityInit {
         event.put(DRYOSAURUS.get(), DryosaurusEntity.createAttributes().build());
         event.put(SILESAURUS.get(), SilesaurusEntity.createAttributes().build());
         event.put(AUSTRORAPTOR.get(), AustroraptorEntity.createAttributes().build());
+        event.put(PARASAUROLOPHUS.get(), ParasaurolophusEntity.createAttributes().build());
+        event.put(SCLEROCEPHALUS.get(), SclerocephalusEntity.createAttributes().build());
 
     }
 

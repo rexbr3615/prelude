@@ -117,6 +117,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.DRYOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.SILESAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.AUSTRORAPTOR_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.PARASAUROLOPHUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.SCLEROCEPHALUS_SPAWN_EGG.get());
 
                         pOutput.accept(PreludeItems.HYBRIDIZER.get());
                         pOutput.accept(PreludeItems.ESSENCE.get());
