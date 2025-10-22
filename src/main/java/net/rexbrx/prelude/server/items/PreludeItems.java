@@ -335,6 +335,25 @@ public class PreludeItems {
                             .build()
             )));
 
+
+
+
+    public static final RegistryObject<Item> SKULL_JURAVENATOR = ITEMS.register("skull_juravenator",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_ALOSAURUS = ITEMS.register("skull_alosaurus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_GALLIMIMUS = ITEMS.register("skull_gallimimus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_RUGOPS = ITEMS.register("skull_rugops",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_PROTEROSUCHUS = ITEMS.register("skull_proterosuchus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_MEGARAPTOR = ITEMS.register("skull_megaraptor",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_YUTYRANNUS = ITEMS.register("skull_yutyrannus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
