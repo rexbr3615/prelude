@@ -238,6 +238,16 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.HYPER_CALAMITES_WOOD.get());
                         pOutput.accept(PreludeBlocks.HYPER_CALAMITES_LEAVES.get());
 
+
+
+                        pOutput.accept(PreludeItems.SKULL_JURAVENATOR.get());
+                        pOutput.accept(PreludeItems.SKULL_ALOSAURUS.get());
+                        pOutput.accept(PreludeItems.SKULL_GALLIMIMUS.get());
+                        pOutput.accept(PreludeItems.SKULL_RUGOPS.get());
+                        pOutput.accept(PreludeItems.SKULL_PROTEROSUCHUS.get());
+                        pOutput.accept(PreludeItems.SKULL_MEGARAPTOR.get());
+                        pOutput.accept(PreludeItems.SKULL_YUTYRANNUS.get());
+
                     })
                     .build());
 

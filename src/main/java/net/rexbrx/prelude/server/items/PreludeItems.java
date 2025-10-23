@@ -352,7 +352,20 @@ public class PreludeItems {
             () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SKULL_YUTYRANNUS = ITEMS.register("skull_yutyrannus",
             () -> new Item(new Item.Properties().stacksTo(1)));
-
+    public static final RegistryObject<Item> SKULL_TORVOSAURUS = ITEMS.register("skull_torvosaurus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_CERATOSAURUS = ITEMS.register("skull_ceratosaurus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_AVACERATOPS = ITEMS.register("skull_avaceratops",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_ALBERTOSAURUS = ITEMS.register("skull_albertosaurus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_ORODROMEUS = ITEMS.register("skull_orodromeus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_DRYOSAURUS = ITEMS.register("skull_dryosaurus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SKULL_SILESAURUS = ITEMS.register("skull_silesaurus",
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
