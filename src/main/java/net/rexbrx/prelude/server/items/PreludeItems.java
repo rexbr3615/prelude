@@ -161,6 +161,14 @@ public class PreludeItems {
             () -> new ForgeSpawnEggItem(EntityInit.SCLEROCEPHALUS,0x949da8, 0xc8d2de,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> KENTROSAURUS_SPAWN_EGG = ITEMS.register("kentrosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.KENTROSAURUS,0x949da8, 0xc8d2de,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> SIATS_SPAWN_EGG = ITEMS.register("siats_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.KENTROSAURUS,0x949da8, 0xc8d2de,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 

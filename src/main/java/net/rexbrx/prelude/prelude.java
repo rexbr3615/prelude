@@ -1,7 +1,7 @@
 package net.rexbrx.prelude;
 
-
 import com.mojang.logging.LogUtils;
+import net.minecraft.core.registries.Registries;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegisterEvent;
 import net.rexbrx.prelude.server.blocks.ModBlockEntities;
 import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 import net.rexbrx.prelude.server.entity.EntityInit;
@@ -37,6 +38,7 @@ public class prelude
         PreludeBlocks.register(modEventBus);
         ModRecipes.register(modEventBus);
 
+
         GeckoLib.initialize();
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -49,5 +51,7 @@ public class prelude
 
         }
     }
+
+
 
 }

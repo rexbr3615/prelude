@@ -119,6 +119,9 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.AUSTRORAPTOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.PARASAUROLOPHUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.SCLEROCEPHALUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.KENTROSAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.SIATS_SPAWN_EGG.get());
+
 
                         pOutput.accept(PreludeItems.HYBRIDIZER.get());
                         pOutput.accept(PreludeItems.ESSENCE.get());
@@ -139,6 +142,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.STEEL_COGWHEEL.get());
                         pOutput.accept(PreludeItems.MECHANISM.get());
                         pOutput.accept(PreludeBlocks.STEEL_BLOCK.get());
+                        pOutput.accept(PreludeBlocks.METAL_PILLAR.get());
 
 
                         pOutput.accept(PreludeBlocks.VAT.get());
@@ -247,6 +251,13 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.SKULL_PROTEROSUCHUS.get());
                         pOutput.accept(PreludeItems.SKULL_MEGARAPTOR.get());
                         pOutput.accept(PreludeItems.SKULL_YUTYRANNUS.get());
+                        pOutput.accept(PreludeItems.SKULL_TORVOSAURUS.get());
+                        pOutput.accept(PreludeItems.SKULL_CERATOSAURUS.get());
+                        pOutput.accept(PreludeItems.SKULL_AVACERATOPS.get());
+                        pOutput.accept(PreludeItems.SKULL_ALBERTOSAURUS.get());
+                        pOutput.accept(PreludeItems.SKULL_ORODROMEUS.get());
+                        pOutput.accept(PreludeItems.SKULL_DRYOSAURUS.get());
+                        pOutput.accept(PreludeItems.SKULL_SILESAURUS.get());
 
                     })
                     .build());

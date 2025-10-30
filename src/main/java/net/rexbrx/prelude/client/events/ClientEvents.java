@@ -5,6 +5,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.block.Block;
@@ -13,6 +14,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.registries.RegisterEvent;
 import net.rexbrx.prelude.client.CreaturesMR.albertosaurus.AlbertosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.allosaurus.AllosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.austroraptor.AustroraptorRenderer;
@@ -25,6 +27,7 @@ import net.rexbrx.prelude.client.CreaturesMR.deinocheirus.DeinocheirusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.dryosaurus.DryosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.gallimimus.GallimimusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.juravenator.JuravenatorRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.kentrosaurus.KentrosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.megaraptor.MegaraptorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.mutadon.MutadonRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.orodromeus.OrodromeusRenderer;
@@ -96,6 +99,7 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.AUSTRORAPTOR.get(), AustroraptorRenderer::new);
         event.registerEntityRenderer(EntityInit.PARASAUROLOPHUS.get(), ParasaurolophusRenderer::new);
         event.registerEntityRenderer(EntityInit.SCLEROCEPHALUS.get(), SclerocephalusRenderer::new);
+        event.registerEntityRenderer(EntityInit.KENTROSAURUS.get(), KentrosaurusRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());
@@ -128,6 +132,7 @@ public class ClientEvents {
         MenuScreens.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
         MenuScreens.register(ModMenuTypes.INCUBATOR_MENU.get(), IncubatorScreen::new);
 
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.METAL_PILLAR.get(), RenderType.translucent());
 
     }
 
@@ -142,6 +147,7 @@ public class ClientEvents {
             return 0xFFFFFF; // Base sem cor
         }, PreludeItems.SIMPLE_BOTTLE.get());
     }
+
 
 
 }

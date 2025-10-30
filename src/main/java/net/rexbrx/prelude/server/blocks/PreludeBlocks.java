@@ -378,12 +378,17 @@ public class PreludeBlocks
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)
                     .strength(3f).requiresCorrectToolForDrops()));
 
+
+
+    public static final RegistryObject<Block> METAL_PILLAR = registerBlock("metal_pillar",
+            () -> new PreludeMetalScaffoldingType(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)
+                    .strength(3f).requiresCorrectToolForDrops().noOcclusion()));
+
+
+
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
     }
-
-
-
 
     public static final RegistryObject<Block> ANALYZER = registerBlock("analyzer",
             () -> new AnalyzerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
@@ -396,6 +401,7 @@ public class PreludeBlocks
 
     public static final RegistryObject<Block> INCUBATOR = registerBlock("bacteriological_incubator",
             () -> new IncubatorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
 
     //==================================================================================
 

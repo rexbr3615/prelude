@@ -160,7 +160,10 @@ public class EntityInit {
 
                     .sized(0.56f, 0.23f));
 
+    public static final RegistryObject<EntityType<KentrosaurusEntity>> KENTROSAURUS = register("kentrosaurus",
+            EntityType.Builder.<KentrosaurusEntity>of(KentrosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KentrosaurusEntity::new)
 
+                    .sized(1.27f, 1.98f));
 
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
@@ -199,6 +202,7 @@ public class EntityInit {
             AustroraptorEntity.init();
             ParasaurolophusEntity.init();
             SclerocephalusEntity.init();
+            KentrosaurusEntity.init();
 
         });
     }
@@ -233,6 +237,7 @@ public class EntityInit {
         event.put(AUSTRORAPTOR.get(), AustroraptorEntity.createAttributes().build());
         event.put(PARASAUROLOPHUS.get(), ParasaurolophusEntity.createAttributes().build());
         event.put(SCLEROCEPHALUS.get(), SclerocephalusEntity.createAttributes().build());
+        event.put(KENTROSAURUS.get(), KentrosaurusEntity.createAttributes().build());
 
     }
 

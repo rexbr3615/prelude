@@ -15,7 +15,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
@@ -34,22 +33,22 @@ import software.bernie.geckolib.core.animation.RawAnimation;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-public class SclerocephalusEntity extends PathfinderMob implements GeoEntity
+public class KentrosaurusEntity extends PathfinderMob implements GeoEntity
 {
-    public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SclerocephalusEntity.class, EntityDataSerializers.BOOLEAN);
-    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SclerocephalusEntity.class, EntityDataSerializers.STRING);
-    public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SclerocephalusEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(KentrosaurusEntity.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(KentrosaurusEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(KentrosaurusEntity.class, EntityDataSerializers.STRING);
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private boolean swinging;
     private boolean lastloop;
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public SclerocephalusEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(EntityInit.SCLEROCEPHALUS.get(), world);
+    public KentrosaurusEntity(PlayMessages.SpawnEntity packet, Level world) {
+        this(EntityInit.KENTROSAURUS.get(), world);
     }
 
-    public SclerocephalusEntity(EntityType<SclerocephalusEntity> type, Level world) {
+    public KentrosaurusEntity(EntityType<KentrosaurusEntity> type, Level world) {
         super(type, world);
         xpReward = 5;
         setNoAi(false);
@@ -83,7 +82,7 @@ public class SclerocephalusEntity extends PathfinderMob implements GeoEntity
         this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1));
         this.goalSelector.addGoal(1, new TemptGoal(this, (double)1.25F, Ingredient.of(new ItemLike[]{PreludeItems.FLARE.get()}), false));
         this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        //this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(5, (new HurtByTargetGoal(this)).setAlertOthers());
 
@@ -147,11 +146,11 @@ public class SclerocephalusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 27.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 1.0f);
+        builder = builder.add(Attributes.MAX_HEALTH, 81.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 17.0f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.101f);
-        builder = builder.add(Attributes.ARMOR, 3.5f);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.167f);
+        builder = builder.add(Attributes.ARMOR, 2.5f);
         builder = builder.add(Attributes.FOLLOW_RANGE, 16.0f);
         builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2.5f);
         return builder;
@@ -159,7 +158,7 @@ public class SclerocephalusEntity extends PathfinderMob implements GeoEntity
 
     private PlayState movementPredicate(software.bernie.geckolib.core.animation.AnimationState event) {
         if (this.animationprocedure.equals("empty")) {
-            if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.25F && event.getLimbSwingAmount() < 0.25F))
+            if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
 
             ) {
                 return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
@@ -204,7 +203,7 @@ public class SclerocephalusEntity extends PathfinderMob implements GeoEntity
     protected void tickDeath() {
         ++this.deathTime;
         if (this.deathTime == 20) {
-            this.remove(SclerocephalusEntity.RemovalReason.KILLED);
+            this.remove(KentrosaurusEntity.RemovalReason.KILLED);
             this.dropExperience();
         }
     }
@@ -229,14 +228,4 @@ public class SclerocephalusEntity extends PathfinderMob implements GeoEntity
         return this.cache;
     }
 
-
-    @Override
-    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHit) {
-        super.dropCustomDeathLoot(source, looting, recentlyHit);
-
-        // Dropa um item customizado
-        this.spawnAtLocation(new ItemStack(PreludeItems.FLARE.get(), 2));
-    }
-
 }
-
