@@ -99,6 +99,60 @@ public class EssenceItem extends Item {
                 }
             }
 
+            if (state.is(PreludeBlocks.HYPER_CALAMITES_SAPLING.get())) {
+                ServerLevel serverLevel = (ServerLevel) level;
+                StructureTemplateManager manager = serverLevel.getStructureManager();
+
+                // Sorteia qual estrutura será usada
+                int choice = serverLevel.random.nextInt(3);
+                ResourceLocation structureRL;
+                BlockPos offset;
+
+                if (choice == 0) {
+                    structureRL = new ResourceLocation("prelude", "hyperflora_calamites_var1");
+                    offset = new BlockPos(-5, 0, -5); // ex: estrutura 7x7
+                } else if (choice == 1) {
+                    structureRL = new ResourceLocation("prelude", "hyperflora_calamites_var2");
+                    offset = new BlockPos(-5, 0, -5); // correto
+                } else {
+                    structureRL = new ResourceLocation("prelude", "hyperflora_calamites_var3");
+                    offset = new BlockPos(-2, 0, -2); // ex: estrutura 11x5 (formato estranho)
+                }
+
+                Optional<StructureTemplate> templateOptional = manager.get(structureRL);
+                if (templateOptional.isPresent()) {
+                    // Remove o bloco original
+                    level.setBlock(clickedPos, Blocks.AIR.defaultBlockState(), 3);
+
+                    // Calcula a posição onde a estrutura deve ser colocada
+                    BlockPos structurePos = clickedPos.offset(offset);
+
+                    StructureTemplate template = templateOptional.get();
+                    StructurePlaceSettings settings = new StructurePlaceSettings()
+                            .setMirror(Mirror.NONE)
+                            .setRotation(Rotation.NONE)
+                            .setIgnoreEntities(false)
+                            .setKnownShape(true)
+                            .setFinalizeEntities(true);
+
+                    template.placeInWorld(
+                            serverLevel,
+                            structurePos,
+                            structurePos,
+                            settings,
+                            serverLevel.random,
+                            2
+                    );
+
+                    // Opcional: desgastar o item
+                    if (player != null) {
+                        stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
+                    }
+
+                    return InteractionResult.SUCCESS;
+                }
+            }
+
             if (state.is(PreludeBlocks.GINKGO_SAPLING.get())) {
                 ServerLevel serverLevel = (ServerLevel) level;
                 StructureTemplateManager manager = serverLevel.getStructureManager();

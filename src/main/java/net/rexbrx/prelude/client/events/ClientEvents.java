@@ -21,11 +21,13 @@ import net.rexbrx.prelude.client.CreaturesMR.austroraptor.AustroraptorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.avaceratops.AvaceratopsRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.bajadasaurus.BajadasaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.ceratosaurus.CeratosaurusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.cladoselache.CladoselacheRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.coelacanth.blue.BlueCoelacanthRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.conodonta.ConodontaRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.deinocheirus.DeinocheirusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.dryosaurus.DryosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.gallimimus.GallimimusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.jinfengopteryx.JinfengopteryxRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.juravenator.JuravenatorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.kentrosaurus.KentrosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.megaraptor.MegaraptorRenderer;
@@ -38,6 +40,7 @@ import net.rexbrx.prelude.client.CreaturesMR.pteranodon.PteranodonRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.puertasaurus.PuertasaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.rugops.RugopsRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.sclerocephalus.SclerocephalusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.siats.SiatsRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.sigilmassasaurus.SigilmassasaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.silesaurus.SilesaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.tanystropheus.TanystropheusRenderer;
@@ -100,6 +103,9 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.PARASAUROLOPHUS.get(), ParasaurolophusRenderer::new);
         event.registerEntityRenderer(EntityInit.SCLEROCEPHALUS.get(), SclerocephalusRenderer::new);
         event.registerEntityRenderer(EntityInit.KENTROSAURUS.get(), KentrosaurusRenderer::new);
+        event.registerEntityRenderer(EntityInit.SIATS.get(), SiatsRenderer::new);
+        event.registerEntityRenderer(EntityInit.JINFENGOPTERYX.get(), JinfengopteryxRenderer::new);
+        event.registerEntityRenderer(EntityInit.CLADOSELACHE.get(), CladoselacheRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());
@@ -115,6 +121,7 @@ public class ClientEvents {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.HYPER_CALAMITES_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());

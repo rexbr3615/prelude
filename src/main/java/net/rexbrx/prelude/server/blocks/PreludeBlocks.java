@@ -320,7 +320,9 @@ public class PreludeBlocks
                 }
             });
 
-
+    public static final RegistryObject<Block> HYPER_CALAMITES_SAPLING = registerBlock("hyperflora_calamites_sapling",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 8,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));
 
 
 

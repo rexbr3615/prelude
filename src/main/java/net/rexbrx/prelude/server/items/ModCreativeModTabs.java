@@ -47,11 +47,17 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.CRETACEOUS_DISK.get());
                         pOutput.accept(PreludeItems.JURASSIC_DISK.get());
                         pOutput.accept(PreludeItems.TRIASSIC_DISK.get());
+                        pOutput.accept(PreludeItems.PERMIAN_DISK.get());
+                        pOutput.accept(PreludeItems.DEVONIAN_DISK.get());
+
                         pOutput.accept(PreludeItems.PLANT_DISK.get());
 
                         pOutput.accept(PreludeItems.CRETACEOUS_FOSSIL.get());
                         pOutput.accept(PreludeItems.JURASSIC_FOSSIL.get());
                         pOutput.accept(PreludeItems.TRIASSIC_FOSSIL.get());
+                        pOutput.accept(PreludeItems.PERMIAN_FOSSIL.get());
+                        pOutput.accept(PreludeItems.DEVONIAN_FOSSIL.get());
+
                         pOutput.accept(PreludeItems.PLANT_FOSSIL.get());
 
                         pOutput.accept(PreludeItems.RAW_MARBLE.get());
@@ -89,6 +95,12 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.DRYOSAURUS_DNA.get());
                         pOutput.accept(PreludeItems.SILESAURUS_DNA.get());
                         pOutput.accept(PreludeItems.AUSTRORAPTOR_DNA.get());
+                        pOutput.accept(PreludeItems.PARASAUROLOPHUS_DNA.get());
+                        pOutput.accept(PreludeItems.SCLEROCEPHALUS_DNA.get());
+                        pOutput.accept(PreludeItems.KENTROSAURUS_DNA.get());
+                        pOutput.accept(PreludeItems.SIATS_DNA.get());
+                        pOutput.accept(PreludeItems.JINFENGOPTERYX_DNA.get());
+                        pOutput.accept(PreludeItems.CLADOSELACHE_DNA.get());
 
 
                         pOutput.accept(PreludeItems.JURAVENATOR_SPAWN_EGG.get());
@@ -121,6 +133,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.SCLEROCEPHALUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.KENTROSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.SIATS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.JINFENGOPTERYX_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.CLADOSELACHE_SPAWN_EGG.get());
 
 
                         pOutput.accept(PreludeItems.HYBRIDIZER.get());
@@ -241,6 +255,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.HYPER_CALAMITES_LOG.get());
                         pOutput.accept(PreludeBlocks.HYPER_CALAMITES_WOOD.get());
                         pOutput.accept(PreludeBlocks.HYPER_CALAMITES_LEAVES.get());
+                        pOutput.accept(PreludeBlocks.HYPER_CALAMITES_SAPLING.get());
 
 
 

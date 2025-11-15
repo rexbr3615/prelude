@@ -15,6 +15,8 @@
     "prelude:puertasaurus_dna",
     "prelude:sigilmassasaurus_dna",
     "prelude:orodromeus_dna",
-    "prelude:austroraptor_dna"
+    "prelude:austroraptor_dna",
+    "prelude:parasaurolophus_dna",
+    "prelude:siats_dna"
   ]
 }

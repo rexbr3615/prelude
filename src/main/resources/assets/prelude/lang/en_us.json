@@ -208,5 +208,18 @@
   "block.prelude.tuff_decorative": "Cobbled Tuff",
   "block.prelude.asphalt_block": "Asphalt Block",
   "block.prelude.reinforced_asphalt_block": "Hardened Asphalt Block",
-  "block.prelude.ancient_relic": "Ancient Relic Stone"
+  "block.prelude.ancient_relic": "Ancient Relic Stone",
+  "block.prelude.metal_pillar": "Steel Pillar",
+  "item.prelude.parasaurolophus_dna": "Parasaurolophus DNA",
+  "item.prelude.sclerocephalus_dna": "Sclerocephalus DNA",
+  "item.prelude.kentrosaurus_dna": "Kentrosaurus DNA",
+  "item.prelude.siats_dna": "Siats DNA",
+  "item.prelude.parasaurolophus_spawn_egg": "Parasaurolophus Spawn Egg",
+  "item.prelude.sclerocephalus_spawn_egg": "Sclerocephalus Spawn Egg",
+  "item.prelude.kentrosaurus_spawn_egg": "Kentrosaurus Spawn Egg",
+  "item.prelude.siats_spawn_egg": "Siats Spawn Egg",
+  "entity.prelude.parasaurolophus": "Parasaurolophus",
+  "entity.prelude.sclerocephalus": "Sclerocephalus",
+  "entity.prelude.kentrosaurus": "Kentrosaurus",
+  "entity.prelude.siats": "Siats Meekerorum"
 }

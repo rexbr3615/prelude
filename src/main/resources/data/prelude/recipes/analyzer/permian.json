@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyzer",
+  "ingredients": [
+    {
+      "item": "prelude:permian_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:permian_disk"
+  }
+}

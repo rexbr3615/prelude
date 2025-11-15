@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:parasaurolophus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:parasaurolophus_spawn_egg"
+  }
+}

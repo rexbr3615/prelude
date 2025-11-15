@@ -165,6 +165,22 @@ public class EntityInit {
 
                     .sized(1.27f, 1.98f));
 
+    public static final RegistryObject<EntityType<SiatsEntity>> SIATS = register("siats",
+            EntityType.Builder.<SiatsEntity>of(SiatsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SiatsEntity::new)
+
+                    .sized(1.61f, 2.599f));
+
+
+    public static final RegistryObject<EntityType<JinfengopteryxEntity>> JINFENGOPTERYX = register("jinfengopteryx",
+            EntityType.Builder.<JinfengopteryxEntity>of(JinfengopteryxEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JinfengopteryxEntity::new)
+
+                    .sized(0.38f, 0.54f));
+
+    public static final RegistryObject<EntityType<CladoselacheEntity>> CLADOSELACHE = register("cladoselache",
+            EntityType.Builder.<CladoselacheEntity>of(CladoselacheEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CladoselacheEntity::new)
+
+                    .sized(1.5f, 1.3f));
+
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -203,7 +219,9 @@ public class EntityInit {
             ParasaurolophusEntity.init();
             SclerocephalusEntity.init();
             KentrosaurusEntity.init();
-
+            SiatsEntity.init();
+            JinfengopteryxEntity.init();
+            CladoselacheEntity.init();
         });
     }
 
@@ -238,6 +256,9 @@ public class EntityInit {
         event.put(PARASAUROLOPHUS.get(), ParasaurolophusEntity.createAttributes().build());
         event.put(SCLEROCEPHALUS.get(), SclerocephalusEntity.createAttributes().build());
         event.put(KENTROSAURUS.get(), KentrosaurusEntity.createAttributes().build());
+        event.put(SIATS.get(), SiatsEntity.createAttributes().build());
+        event.put(JINFENGOPTERYX.get(), JinfengopteryxEntity.createAttributes().build());
+        event.put(CLADOSELACHE.get(), CladoselacheEntity.createAttributes().build());
 
     }
 
