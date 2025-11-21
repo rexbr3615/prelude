@@ -36,7 +36,6 @@ public class CladoselacheModel extends GeoModel<CladoselacheEntity> {
         CoreGeoBone tail1 = this.getAnimationProcessor().getBone("root3");
         CoreGeoBone tail2 = this.getAnimationProcessor().getBone("bone2");
         CoreGeoBone neck1 = this.getAnimationProcessor().getBone("bone3");
-        CoreGeoBone head1 = this.getAnimationProcessor().getBone("bone4");
 
         // Obtenha a rotação da cabeça para a base do movimento
         float netHeadYaw = Mth.clamp(entity.getYRot() - entity.yBodyRot, -45, 45); // Limita pra não girar demais
@@ -48,8 +47,6 @@ public class CladoselacheModel extends GeoModel<CladoselacheEntity> {
         if (tail2 != null) tail2.setRotY(tail2.getRotY() + baseYaw);
         if (back1 != null) back1.setRotY(back1.getRotY() + baseYaw);
         if (neck1 != null) neck1.setRotY(neck1.getRotY() + dotYaw);
-        if (head1 != null) head1.setRotY(head1.getRotY() + dotYaw);
-
     }
 
 }

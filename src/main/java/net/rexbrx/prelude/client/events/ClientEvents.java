@@ -17,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.RegisterEvent;
 import net.rexbrx.prelude.client.CreaturesMR.albertosaurus.AlbertosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.allosaurus.AllosaurusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.argentavis.ArgentavisRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.austroraptor.AustroraptorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.avaceratops.AvaceratopsRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.bajadasaurus.BajadasaurusRenderer;
@@ -106,6 +107,7 @@ public class ClientEvents {
         event.registerEntityRenderer(EntityInit.SIATS.get(), SiatsRenderer::new);
         event.registerEntityRenderer(EntityInit.JINFENGOPTERYX.get(), JinfengopteryxRenderer::new);
         event.registerEntityRenderer(EntityInit.CLADOSELACHE.get(), CladoselacheRenderer::new);
+        event.registerEntityRenderer(EntityInit.ARGENTAVIS.get(), ArgentavisRenderer::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());

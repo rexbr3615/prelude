@@ -181,6 +181,11 @@ public class EntityInit {
 
                     .sized(1.5f, 1.3f));
 
+    public static final RegistryObject<EntityType<ArgentavisEntity>> ARGENTAVIS = register("argentavis",
+            EntityType.Builder.<ArgentavisEntity>of(ArgentavisEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ArgentavisEntity::new)
+
+                    .sized(0.78f, 0.9f));
+
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -222,6 +227,7 @@ public class EntityInit {
             SiatsEntity.init();
             JinfengopteryxEntity.init();
             CladoselacheEntity.init();
+            ArgentavisEntity.init();
         });
     }
 
@@ -259,6 +265,7 @@ public class EntityInit {
         event.put(SIATS.get(), SiatsEntity.createAttributes().build());
         event.put(JINFENGOPTERYX.get(), JinfengopteryxEntity.createAttributes().build());
         event.put(CLADOSELACHE.get(), CladoselacheEntity.createAttributes().build());
+        event.put(ARGENTAVIS.get(), ArgentavisEntity.createAttributes().build());
 
     }
 

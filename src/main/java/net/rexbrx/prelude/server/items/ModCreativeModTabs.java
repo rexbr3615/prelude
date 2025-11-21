@@ -135,6 +135,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.SIATS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.JINFENGOPTERYX_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.CLADOSELACHE_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.ARGENTAVIS_SPAWN_EGG.get());
 
 
                         pOutput.accept(PreludeItems.HYBRIDIZER.get());
