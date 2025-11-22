@@ -42,7 +42,7 @@ public class AnalyzerEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 650;
+    private int maxProgress = 620;
 
     public AnalyzerEntity(BlockPos pPos, BlockState pBlockState) {
         super(ModBlockEntities.ANALYZER_ENTITY.get(), pPos, pBlockState);

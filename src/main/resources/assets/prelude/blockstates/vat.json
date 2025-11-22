@@ -1,5 +1,19 @@
 {
   "variants": {
-    "": { "model": "prelude:block/vat" }
+    "facing=north": {
+      "model": "prelude:block/eolicgenerator"
+    },
+    "facing=east": {
+      "model": "prelude:block/eolicgenerator",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "prelude:block/eolicgenerator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prelude:block/eolicgenerator",
+      "y": 270
+    }
   }
 }
