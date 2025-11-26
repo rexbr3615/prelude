@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#prelude:calamites_logs",
-    "#prelude:hyper_calamites_logs",
-    "#prelude:ginkgo_logs"
-  ]
-}

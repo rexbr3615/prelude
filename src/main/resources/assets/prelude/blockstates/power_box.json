@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "prelude:block/powerbox" },
-    "facing=east": { "model": "prelude:block/powerbox", "y": 90 },
-    "facing=south": { "model": "prelude:block/powerbox", "y": 180 },
-    "facing=west": { "model": "prelude:block/powerbox", "y": 270 }
-  }
-}

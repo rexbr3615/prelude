@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "prelude:block/cable_block_corner" },
-    "facing=east": { "model": "prelude:block/cable_block_corner", "y": 90 },
-    "facing=south": { "model": "prelude:block/cable_block_corner", "y": 180 },
-    "facing=west": { "model": "prelude:block/cable_block_corner", "y": 270 }
-  }
-}
