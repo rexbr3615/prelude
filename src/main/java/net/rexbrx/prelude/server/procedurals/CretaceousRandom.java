@@ -11,6 +11,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.rexbrx.prelude.server.items.PreludeItems;
 
 import java.util.Random;
@@ -20,7 +21,7 @@ public class CretaceousRandom {
         if (entity == null)
             return;
         if (world instanceof Level _level && !_level.isClientSide()) {
-            ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack((ForgeRegistries.ITEMS.tags()
+            ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack((NeoForgeRegistries.IETMS.tags()
                     .getTag(ItemTags.create(new ResourceLocation("prelude:cretaceous_dna"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))));
             entityToSpawn.setPickUpDelay(2);
             _level.addFreshEntity(entityToSpawn);

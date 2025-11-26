@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "experience": 1,
-  "cookingtime": 280,
-  "ingredient": {
-    "item": "prelude:asphalt_block"
-  },
-  "result": "prelude:reinforced_asphalt_block"
-}

@@ -1,7 +1,0 @@
-{
-  "name":"prelude.books.book_name",
-  "landing_text":"prelude.book_name.book_landing_text",
-  "subtitle":"0.0.5","dont_generate_book":false,
-  "show_progress":false,"macros":{},
-  "use_resource_pack":true
-}

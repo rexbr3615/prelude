@@ -1,7 +1,0 @@
-{
-  "parent": "prelude:block/ore",
-  "textures": {
-    "all": "minecraft:block/stone",
-    "overlay": "prelude:block/relic_overlay"
-  }
-}

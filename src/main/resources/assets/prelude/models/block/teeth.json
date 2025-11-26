@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "prelude:block/texture9",
-    "particle": "prelude:block/texture9"
-  },
-  "render_type": "solid"
-}

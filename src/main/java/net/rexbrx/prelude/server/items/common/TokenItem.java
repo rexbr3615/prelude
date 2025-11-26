@@ -15,10 +15,9 @@ public class TokenItem extends Item {
         super(pProperties);
     }
 
-    @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level,
                                 List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.literal("This is a Creative Token from Prelude Mod ;)"));
-        super.appendHoverText(stack, level, tooltip, flag);
+        super.appendHoverText(stack, (TooltipContext) level, tooltip, flag);
     }
 }

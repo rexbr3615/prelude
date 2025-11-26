@@ -1,11 +1,10 @@
 package net.rexbrx.prelude.server.entity;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.rexbrx.prelude.server.entity.common.*;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class EntityAnimationFactory {
     @SubscribeEvent
     public static void onEntityTick(LivingEvent.LivingTickEvent event) {

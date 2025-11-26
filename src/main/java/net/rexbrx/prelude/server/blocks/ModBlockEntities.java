@@ -1,10 +1,8 @@
 package net.rexbrx.prelude.server.blocks;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.blocks.other.EolicgeneratorBlockEntity;
 import net.rexbrx.prelude.server.blocks.other.barrier.BarrierBlockEntity;
@@ -14,7 +12,7 @@ import net.rexbrx.prelude.server.blocks.tile.*;
 
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
-            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, prelude.MODID);
+            DeferredRegister.create(NeoForgeRegistries.BLOCK_ENTITY_TYPES, prelude.MODID);
 
 
 

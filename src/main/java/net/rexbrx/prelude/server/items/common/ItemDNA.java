@@ -31,7 +31,7 @@ public class ItemDNA extends Item
         ItemStack stack = player.getItemInHand(hand);
 
         if (!level.isClientSide) {
-            CompoundTag tag = stack.getOrCreateTag();
+            CompoundTag tag = (CompoundTag) stack.getTags();
 
             if (!tag.contains(KEY_DNA_VALUE)) {
                 int value = ThreadLocalRandom.current().nextInt(0, 100);
@@ -50,7 +50,7 @@ public class ItemDNA extends Item
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level,
                                 List<Component> tooltip, TooltipFlag flag) {
-        CompoundTag tag = stack.getTag();
+        CompoundTag tag = (CompoundTag) stack.getTags();
 
         if (tag != null && tag.contains(KEY_DNA_VALUE)) {
             tooltip.add(Component.literal("DNA purity: " + tag.getInt(KEY_DNA_VALUE)));

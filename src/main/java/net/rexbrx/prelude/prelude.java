@@ -1,57 +1,36 @@
 package net.rexbrx.prelude;
 
-import com.mojang.logging.LogUtils;
-import net.minecraft.core.registries.Registries;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.RegisterEvent;
-import net.rexbrx.prelude.server.blocks.ModBlockEntities;
-import net.rexbrx.prelude.server.blocks.PreludeBlocks;
-import net.rexbrx.prelude.server.entity.EntityInit;
-import net.rexbrx.prelude.server.items.ModCreativeModTabs;
-import net.rexbrx.prelude.server.items.PreludeItems;
-import net.rexbrx.prelude.server.recipes.ModRecipes;
-import net.rexbrx.prelude.server.screens.ModMenuTypes;
 import org.slf4j.Logger;
-import software.bernie.geckolib.GeckoLib;
 
+import com.mojang.logging.LogUtils;
 
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+
+// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(prelude.MODID)
-public class prelude
-{
+public class prelude {
     public static final String MODID = "prelude";
-    private static final Logger LOGGER = LogUtils.getLogger();
-
-    public prelude() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        ModCreativeModTabs.register(modEventBus);
-        PreludeItems.register(modEventBus);
-        EntityInit.REGISTRY.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
-        ModMenuTypes.register(modEventBus);
-        PreludeBlocks.register(modEventBus);
-        ModRecipes.register(modEventBus);
+    public static final Logger LOGGER = LogUtils.getLogger();
 
 
-        GeckoLib.initialize();
+    public prelude(IEventBus modEventBus, ModContainer modContainer) {
+        NeoForge.EVENT_BUS.register(this);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        //PreludeItems.register(modEventBus);
+        //PreludeCreativeModeTabs.register(modEventBus);
+
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-
-        }
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+        // Do something when the server starts
+        LOGGER.info("Prelude!");
     }
-
-
-
 }

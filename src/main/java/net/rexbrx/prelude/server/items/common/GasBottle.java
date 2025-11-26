@@ -32,7 +32,6 @@ public class GasBottle extends Item {
         return stack;
     }
 
-    @Override
     public int getUseDuration(ItemStack stack) {
         return 32; // duração pra beber
     }

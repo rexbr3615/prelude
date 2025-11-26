@@ -2,10 +2,9 @@ package net.rexbrx.prelude.server.recipes;
 
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.recipes.common.AnalyzerRecipe;
 import net.rexbrx.prelude.server.recipes.common.CrusherRecipe;
@@ -15,7 +14,7 @@ import net.rexbrx.prelude.server.recipes.common.incubatorRecipe;
 
 public class ModRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
-            DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, prelude.MODID);
+            DeferredRegister.create(NeoForgeRegistries.RECIPE_SERIALIZERS, prelude.MODID);
 
 
     public static final RegistryObject<RecipeSerializer<AnalyzerRecipe>> ANALYZER_SERIALIZER =
