@@ -1,0 +1,20 @@
+package net.rexbrx.prelude.server.items.common;
+
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+
+import java.util.List;
+
+public class PlasterItem extends Item {
+    public PlasterItem(Properties pProperties) {
+        super(pProperties);
+    }
+
+    public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+        super.appendHoverText(itemstack, (TooltipContext) world, list, flag);
+        list.add(Component.literal("Use me on fossil!!"));
+    }
+}
