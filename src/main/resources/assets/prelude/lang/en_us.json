@@ -221,5 +221,15 @@
   "entity.prelude.parasaurolophus": "Parasaurolophus",
   "entity.prelude.sclerocephalus": "Sclerocephalus",
   "entity.prelude.kentrosaurus": "Kentrosaurus",
-  "entity.prelude.siats": "Siats Meekerorum"
+  "entity.prelude.siats": "Siats Meekerorum",
+  "item.prelude.permian_fossil": "Permian Fossil",
+  "item.prelude.permian_disk": "Permian Disk",
+  "item.prelude.devonian_fossil": "Devonian Fossil",
+  "item.prelude.devonian_disk": "Devonian Disk",
+  "item.prelude.jinfengopteryx_dna": "Jinfengopteryx DNA",
+  "item.prelude.jinfengopteryx_spawn_egg": "Jinfengopteryx Spawn Egg",
+  "item.prelude.cladoselache_dna": "Cladoselache DNA",
+  "item.prelude.cladoselache_spawn_egg": "Cladoselache Spawn Egg",
+  "item.prelude.argentavis_dna": "Argentavis DNA",
+  "item.prelude.argentavis_spawn_egg": "Argentavis Spawn Egg"
 }

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:jinfengopteryx_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:jinfengopteryx_spawn_egg"
+  }
+}

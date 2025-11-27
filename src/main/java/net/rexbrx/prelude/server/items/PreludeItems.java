@@ -170,15 +170,15 @@ public class PreludeItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> JINFENGOPTERYX_SPAWN_EGG = ITEMS.register("jinfengopteryx_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.JINFENGOPTERYX,0x073604, 0x175c13,
+            () -> new ForgeSpawnEggItem(EntityInit.JINFENGOPTERYX,0x9e603f, 0x362116,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> CLADOSELACHE_SPAWN_EGG = ITEMS.register("cladoselache_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.CLADOSELACHE,0x073604, 0x175c13,
+            () -> new ForgeSpawnEggItem(EntityInit.CLADOSELACHE,0xffffff, 0xffffff,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> ARGENTAVIS_SPAWN_EGG = ITEMS.register("argentavis_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.ARGENTAVIS,0xebc934, 0xdeca71,
+            () -> new ForgeSpawnEggItem(EntityInit.ARGENTAVIS,0x69270f, 0xed4305,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> PLASTER = ITEMS.register("plaster",
@@ -289,6 +289,8 @@ public class PreludeItems {
     public static final RegistryObject<Item> JINFENGOPTERYX_DNA = ITEMS.register("jinfengopteryx_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> CLADOSELACHE_DNA = ITEMS.register("cladoselache_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ARGENTAVIS_DNA = ITEMS.register("argentavis_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TEST_DNA = ITEMS.register("test_dna",

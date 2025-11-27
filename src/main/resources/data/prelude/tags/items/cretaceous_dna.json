@@ -17,6 +17,8 @@
     "prelude:orodromeus_dna",
     "prelude:austroraptor_dna",
     "prelude:parasaurolophus_dna",
-    "prelude:siats_dna"
+    "prelude:siats_dna",
+    "prelude:jinfengopteryx_dna",
+    "prelude:argentavis_dna"
   ]
 }
