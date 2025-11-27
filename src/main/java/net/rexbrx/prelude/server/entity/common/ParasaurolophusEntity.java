@@ -25,6 +25,10 @@ import net.rexbrx.prelude.server.entity.EntityInit;
 import net.rexbrx.prelude.server.entity.ai.MoveToTaggedItemGoal;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.animation.*;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animation.AnimationController;
@@ -156,47 +160,19 @@ public class ParasaurolophusEntity extends PathfinderMob implements GeoEntity
         return builder;
     }
 
-    private PlayState movementPredicate(software.bernie.geckolib.core.animation.AnimationState event) {
-        if (this.animationprocedure.equals("empty")) {
-            if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "Walk/Idle", state -> {
+            if (state.isMoving())
+                return state.setAndContinue(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
 
-            ) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
-            }
-            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
-        }
-        return PlayState.STOP;
-    }
+            return state.setAndContinue(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        }));
 
-    private PlayState attackingPredicate(software.bernie.geckolib.core.animation.AnimationState event) {
-        double d1 = this.getX() - this.xOld;
-        double d0 = this.getZ() - this.zOld;
-        float velocity = (float) Math.sqrt(d1 * d1 + d0 * d0);
-        if (getAttackAnim(event.getPartialTick()) > 0f && !this.swinging) {
-            this.swinging = true;
-            this.lastSwing = level().getGameTime();
-        }
-        if (this.swinging && this.lastSwing + 7L <= level().getGameTime()) {
-            this.swinging = false;
-        }
-        if (this.swinging && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-            event.getController().forceAnimationReset();
-            return event.setAndContinue(RawAnimation.begin().thenPlay("attack"));
-        }
-        return PlayState.CONTINUE;
-    }
+        controllers.add(new AnimationController<>(this, "attackController", state -> software.bernie.geckolib.animation.PlayState.STOP)
+                .triggerableAnim("attack", RawAnimation.begin().then("attack", Animation.LoopType.PLAY_ONCE)));
 
-    private PlayState procedurePredicate(AnimationState event) {
-        if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-            event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-            if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-                this.animationprocedure = "empty";
-                event.getController().forceAnimationReset();
-            }
-        } else if (animationprocedure.equals("empty")) {
-            return PlayState.STOP;
-        }
-        return PlayState.CONTINUE;
+
     }
 
     @Override

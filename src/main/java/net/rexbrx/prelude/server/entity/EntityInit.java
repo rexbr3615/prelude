@@ -55,135 +55,135 @@ public class EntityInit {
                     .sized(1.29f, 2.789f).build("yutyrannus"));
 
     public static final Supplier<EntityType<BlueCoelacanthEntity>> BLUE_COELACANTH = ENTITY_TYPES.register("blue_coelacanth",
-            EntityType.Builder.of(BlueCoelacanthEntity::new, MobCategory.WATER_CREATURE)
+            () -> EntityType.Builder.of(BlueCoelacanthEntity::new, MobCategory.WATER_CREATURE)
 
-                    .sized(1.5f, 1.3f));
+                    .sized(1.5f, 1.3f).build("blue_coelacanth"));
 
     public static final Supplier<EntityType<ConodontaEntity>> CONODONTA = ENTITY_TYPES.register("conodonta",
-            EntityType.Builder.of(ConodontaEntity::new, MobCategory.WATER_CREATURE)
+            () -> EntityType.Builder.of(ConodontaEntity::new, MobCategory.WATER_CREATURE)
 
-                    .sized(0.34f, 0.34f));
+                    .sized(0.34f, 0.34f).build("conodonta"));
 
     public static final Supplier<EntityType<PteranodonEntity>> PTERANODON = ENTITY_TYPES.register("pteranodon",
-            EntityType.Builder.of(PteranodonEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(PteranodonEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.78f, 0.9f));
+                    .sized(0.78f, 0.9f).build("pteranodon"));
 
     public static final Supplier<EntityType<TherizinosaurusEntity>> THERIZINOSAURUS = ENTITY_TYPES.register("therizinosaurus",
-            EntityType.Builder.of(TherizinosaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(TherizinosaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.789f, 3.1f));
+                    .sized(1.789f, 3.1f).build("therizinosaurus"));
 
     public static final Supplier<EntityType<TorvosaurusEntity>> TORVOSAURUS = ENTITY_TYPES.register("torvosaurus",
-            EntityType.Builder.of(TorvosaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(TorvosaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.399f, 2.850f));
+                    .sized(1.399f, 2.850f).build("torvosaurus"));
 
     public static final Supplier<EntityType<MutadonEntity>> MUTADON = ENTITY_TYPES.register("mutadon",
-            EntityType.Builder.of(MutadonEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(MutadonEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.1f, 2.2f));
+                    .sized(1.1f, 2.2f).build("mutadon"));
 
     public static final Supplier<EntityType<CeratosaurusEntity>> CERATOSAURUS = ENTITY_TYPES.register("ceratosaurus",
-            EntityType.Builder.of(CeratosaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(CeratosaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.04f, 2.12f));
+                    .sized(1.04f, 2.12f).build("ceratosaurus"));
 
     public static final Supplier<EntityType<OuranosaurusEntity>> OURANOSAURUS = ENTITY_TYPES.register("ouranosaurus",
-            EntityType.Builder.of(OuranosaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(OuranosaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.89f, 3.111f));
+                    .sized(1.89f, 3.111f).build("ouranosaurus"));
 
     public static final Supplier<EntityType<AvaceratopsEntity>> AVACERATOPS = ENTITY_TYPES.register("avaceratops",
-            EntityType.Builder.of(AvaceratopsEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(AvaceratopsEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.18f, 1.34f));
+                    .sized(1.18f, 1.34f).build("avaceratops"));
 
     public static final Supplier<EntityType<BajadasaurusEntity>> BAJADASAURUS = ENTITY_TYPES.register("bajadasaurus",
-            EntityType.Builder.of(BajadasaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(BajadasaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(2.18f, 2.44f));
+                    .sized(2.18f, 2.44f).build("bajadasaurus"));
 
     public static final Supplier<EntityType<DeinocheirusEntity>> DEINOCHEIRUS = ENTITY_TYPES.register("deinocheirus",
-            EntityType.Builder.of(DeinocheirusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(DeinocheirusEntity::new, MobCategory.CREATURE)
 
-                    .sized(2.18f, 2.44f));
+                    .sized(2.18f, 2.44f).build("deinocheirus"));
 
     public static final Supplier<EntityType<AlbertosaurusEntity>> ALBERTOSAURUS = ENTITY_TYPES.register("albertosaurus",
-            EntityType.Builder.of(AlbertosaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(AlbertosaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.29f, 2.789f));
+                    .sized(1.29f, 2.789f).build("albertosaurus"));
 
     public static final Supplier<EntityType<PuertasaurusEntity>> PUERTASAURUS = ENTITY_TYPES.register("puertasaurus",
-            EntityType.Builder.of(PuertasaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(PuertasaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(5.35f, 6.965f));
+                    .sized(5.35f, 6.965f).build("puertasaurus"));
 
     public static final Supplier<EntityType<TanystropheusEntity>> TANYSTROPHEUS = ENTITY_TYPES.register("tanystropheus",
-            EntityType.Builder.of(TanystropheusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(TanystropheusEntity::new, MobCategory.CREATURE)
 
-                    .sized(2.2f, 0.8892f));
+                    .sized(2.2f, 0.8892f).build("tanystropheus"));
 
     public static final Supplier<EntityType<SigilmassasaurusEntity>> SIGILMASSASAURUS = ENTITY_TYPES.register("sigilmassasaurus",
-            EntityType.Builder.of(SigilmassasaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(SigilmassasaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.81273f, 3.26242f));
+                    .sized(1.81273f, 3.26242f).build("sigilmassasaurus"));
 
     public static final Supplier<EntityType<OrodromeusEntity>> ORODROMEUS = ENTITY_TYPES.register("orodromeus",
-            EntityType.Builder.of(OrodromeusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(OrodromeusEntity::new, MobCategory.CREATURE)
 
                     .sized(0.6911f, 0.812451f));
 
     public static final Supplier<EntityType<DryosaurusEntity>> DRYOSAURUS = ENTITY_TYPES.register("dryosaurus",
-            EntityType.Builder.of(DryosaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(DryosaurusEntity::new, MobCategory.CREATURE)
 
                     .sized(0.811f, 1.2783f));
 
     public static final Supplier<EntityType<SilesaurusEntity>> SILESAURUS = ENTITY_TYPES.register("silesaurus",
-            EntityType.Builder.of(SilesaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(SilesaurusEntity::new, MobCategory.CREATURE)
 
                     .sized(0.75f, 1.12f));
 
     public static final Supplier<EntityType<AustroraptorEntity>> AUSTRORAPTOR = ENTITY_TYPES.register("austroraptor",
-            EntityType.Builder.of(AustroraptorEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(AustroraptorEntity::new, MobCategory.CREATURE)
 
                     .sized(0.87f, 1.68f));
 
     public static final Supplier<EntityType<ParasaurolophusEntity>> PARASAUROLOPHUS = ENTITY_TYPES.register("parasaurolophus",
-            EntityType.Builder.of(ParasaurolophusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(ParasaurolophusEntity::new, MobCategory.CREATURE)
 
                     .sized(2.27f, 2.88f));
 
     public static final Supplier<EntityType<SclerocephalusEntity>> SCLEROCEPHALUS = ENTITY_TYPES.register("sclerocephalus",
-            EntityType.Builder.of(SclerocephalusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(SclerocephalusEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.56f, 0.23f));
+                    .sized(0.56f, 0.23f).build("sclerocephalus"));
 
     public static final Supplier<EntityType<KentrosaurusEntity>> KENTROSAURUS = ENTITY_TYPES.register("kentrosaurus",
-            EntityType.Builder.of(KentrosaurusEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(KentrosaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.27f, 1.98f));
+                    .sized(1.27f, 1.98f).build("kentrosaurus"));
 
     public static final Supplier<EntityType<SiatsEntity>> SIATS = ENTITY_TYPES.register("siats",
-            EntityType.Builder.of(SiatsEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(SiatsEntity::new, MobCategory.CREATURE)
 
-                    .sized(1.61f, 2.599f));
+                    .sized(1.61f, 2.599f).build("siats"));
 
 
     public static final Supplier<EntityType<JinfengopteryxEntity>> JINFENGOPTERYX = ENTITY_TYPES.register("jinfengopteryx",
-            EntityType.Builder.of(JinfengopteryxEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(JinfengopteryxEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.38f, 0.54f));
+                    .sized(0.38f, 0.54f).build("jinfengopteryx"));
 
     public static final Supplier<EntityType<CladoselacheEntity>> CLADOSELACHE = ENTITY_TYPES.register("cladoselache",
-            EntityType.Builder.of(CladoselacheEntity::new, MobCategory.WATER_CREATURE)
+            () -> EntityType.Builder.of(CladoselacheEntity::new, MobCategory.WATER_CREATURE)
 
-                    .sized(1.5f, 1.3f));
+                    .sized(1.5f, 1.3f).build("cladoselache"));
 
     public static final Supplier<EntityType<ArgentavisEntity>> ARGENTAVIS = ENTITY_TYPES.register("argentavis",
-            EntityType.Builder.of(ArgentavisEntity::new, MobCategory.CREATURE)
+            () -> EntityType.Builder.of(ArgentavisEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.78f, 0.9f));
+                    .sized(0.78f, 0.9f).build("argentavis"));
 
 
     @SubscribeEvent

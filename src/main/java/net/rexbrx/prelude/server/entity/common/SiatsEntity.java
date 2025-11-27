@@ -23,6 +23,7 @@ import net.rexbrx.prelude.server.entity.ai.MoveToTaggedItemGoal;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class SiatsEntity extends PathfinderMob implements GeoEntity
@@ -89,7 +90,20 @@ public class SiatsEntity extends PathfinderMob implements GeoEntity
 
 
 
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "Walk/Idle", state -> {
+            if (state.isMoving())
+                return state.setAndContinue(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
 
+            return state.setAndContinue(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        }));
+
+        controllers.add(new AnimationController<>(this, "attackController", state -> PlayState.STOP)
+                .triggerableAnim("attack", RawAnimation.begin().then("attack", Animation.LoopType.PLAY_ONCE)));
+
+
+    }
 
 
 

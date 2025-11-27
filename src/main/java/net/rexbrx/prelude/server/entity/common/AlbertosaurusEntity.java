@@ -30,12 +30,8 @@ public class AlbertosaurusEntity extends PathfinderMob implements GeoEntity
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public AlbertosaurusEntity(Level world) {
-        this(EntityInit.ALBERTOSAURUS.get(), world);
-    }
-
-    public AlbertosaurusEntity(EntityType<AlbertosaurusEntity> type, Level world) {
-        super(type, world);
+    public AlbertosaurusEntity(EntityType<? extends PathfinderMob> entityEntityType, Level level) {
+        super(entityEntityType, level);
         xpReward = 5;
         setNoAi(false);
         setPersistenceRequired();
