@@ -21,12 +21,10 @@ public class AlbertosaurusRenderer extends GeoEntityRenderer<AlbertosaurusEntity
         return RenderType.entityTranslucent(getTextureLocation(animatable));
     }
 
-    @Override
-    public void preRender(PoseStack poseStack, AlbertosaurusEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
-                          float blue, float alpha) {
+
+    public void preRender(float widthScale, float heightScale, PoseStack poseStack, AlbertosaurusEntity animatable, BakedGeoModel model, boolean isReRender, float partialTick, int packedLight, int packedOverlay) {
         float scale = 1.05f;
         this.scaleHeight = scale;
         this.scaleWidth = scale;
-        super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
     }
 }

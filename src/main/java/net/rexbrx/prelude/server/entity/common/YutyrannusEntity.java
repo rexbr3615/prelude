@@ -44,12 +44,8 @@ public class YutyrannusEntity extends PathfinderMob implements GeoEntity
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public YutyrannusEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(EntityInit.YUTYRANNUS.get(), world);
-    }
-
-    public YutyrannusEntity(EntityType<YutyrannusEntity> type, Level world) {
-        super(type, world);
+    public YutyrannusEntity(EntityType<? extends PathfinderMob> entityEntityType, Level level) {
+        super(entityEntityType, level);
         xpReward = 5;
         setNoAi(false);
         setPersistenceRequired();

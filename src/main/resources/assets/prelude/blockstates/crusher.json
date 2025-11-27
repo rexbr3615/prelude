@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "prelude:block/crusher" },
+    "facing=east": { "model": "prelude:block/crusher", "y": 90 },
+    "facing=south": { "model": "prelude:block/crusher", "y": 180 },
+    "facing=west": { "model": "prelude:block/crusher", "y": 270 }
+  }
+}

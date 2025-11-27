@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "prelude:block/trees/calamites/hyper/hyperflora_calamites_sapling"
+  }
+}

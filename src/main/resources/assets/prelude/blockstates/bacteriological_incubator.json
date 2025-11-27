@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "prelude:block/bacteriological_incubator"
+    },
+    "facing=east": {
+      "model": "prelude:block/bacteriological_incubator",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "prelude:block/bacteriological_incubator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prelude:block/bacteriological_incubator",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "prelude:block/graphite_block" }
+  }
+}

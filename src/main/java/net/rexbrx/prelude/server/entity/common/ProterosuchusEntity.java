@@ -44,12 +44,8 @@ public class ProterosuchusEntity extends PathfinderMob implements GeoEntity
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public ProterosuchusEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(EntityInit.PROTEROSUCHUS.get(), world);
-    }
-
-    public ProterosuchusEntity(EntityType<ProterosuchusEntity> type, Level world) {
-        super(type, world);
+    public ProterosuchusEntity(EntityType<? extends PathfinderMob> entityEntityType, Level level) {
+        super(entityEntityType, level);
         xpReward = 5;
         setNoAi(false);
         setPersistenceRequired();

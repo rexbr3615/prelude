@@ -1,7 +1,7 @@
 package net.rexbrx.prelude;
 
 import net.rexbrx.prelude.server.entity.EntityInit;
-import net.rexbrx.prelude.server.entity.items.PreludeItems;
+import net.rexbrx.prelude.server.items.PreludeItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -9,7 +9,6 @@ import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;

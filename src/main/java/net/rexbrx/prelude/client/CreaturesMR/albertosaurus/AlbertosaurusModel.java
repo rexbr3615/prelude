@@ -8,16 +8,16 @@ import software.bernie.geckolib.model.GeoModel;
 public class AlbertosaurusModel extends GeoModel<AlbertosaurusEntity> {
     @Override
     public ResourceLocation getAnimationResource(AlbertosaurusEntity entity) {
-        return new ResourceLocation(prelude.MODID, "animations/albertosaurus.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(prelude.MODID, "animations/albertosaurus.animation.json");
     }
 
     @Override
     public ResourceLocation getModelResource(AlbertosaurusEntity entity) {
-        return new ResourceLocation(prelude.MODID, "geo/albertosaurus.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(prelude.MODID, "geo/albertosaurus.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(AlbertosaurusEntity entity) {
-        return new ResourceLocation(prelude.MODID, "textures/dinosaurs/albertosaurus.png");
+        return ResourceLocation.fromNamespaceAndPath(prelude.MODID, "textures/dinosaurs/albertosaurus.png");
     }
 }

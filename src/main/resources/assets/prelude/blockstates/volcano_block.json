@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "prelude:block/volcano_block" }
+  }
+}
