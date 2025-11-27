@@ -1,5 +1,7 @@
 package net.rexbrx.prelude;
 
+import net.rexbrx.prelude.server.entity.EntityInit;
+import net.rexbrx.prelude.server.entity.items.PreludeItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -20,12 +22,11 @@ public class prelude {
 
 
     public prelude(IEventBus modEventBus, ModContainer modContainer) {
+
+        PreludeItems.register(modEventBus);
+        EntityInit.register(modEventBus);
+
         NeoForge.EVENT_BUS.register(this);
-
-        //PreludeItems.register(modEventBus);
-        //PreludeCreativeModeTabs.register(modEventBus);
-
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     @SubscribeEvent
