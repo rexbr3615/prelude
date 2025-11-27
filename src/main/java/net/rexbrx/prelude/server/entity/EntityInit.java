@@ -5,189 +5,189 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.entity.common.*;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
 
 @EventBusSubscriber(modid = prelude.MODID)
 public class EntityInit {
-    public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, prelude.MODID);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
+            DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, prelude.MODID);
 
 
-    public static final RegistryObject<EntityType<JuravenatorEntity>> JURAVENATOR = register("juravenator",
-            EntityType.Builder.<JuravenatorEntity>of(JuravenatorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JuravenatorEntity::new)
+    public static final Supplier<EntityType<JuravenatorEntity>> JURAVENATOR = ENTITY_TYPES.register("juravenator",
+            () -> EntityType.Builder.of(JuravenatorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.35f, 0.5f));
 
-    public static final RegistryObject<EntityType<AllosaurusEntity>> ALLOSAURUS = register("allosaurus",
-            EntityType.Builder.<AllosaurusEntity>of(AllosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AllosaurusEntity::new)
+    public static final Supplier<EntityType<AllosaurusEntity>> ALLOSAURUS = ENTITY_TYPES.register("allosaurus",
+            EntityType.Builder.of(AllosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.29f, 2.789f));
 
-    public static final RegistryObject<EntityType<GallimimusEntity>> GALLIMIMUS = register("gallimimus",
-            EntityType.Builder.<GallimimusEntity>of(GallimimusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GallimimusEntity::new)
+    public static final Supplier<EntityType<GallimimusEntity>> GALLIMIMUS = ENTITY_TYPES.register("gallimimus",
+            EntityType.Builder.of(GallimimusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.87f, 1.839f));
 
-    public static final RegistryObject<EntityType<RugopsEntity>> RUGOPS = register("rugops",
-            EntityType.Builder.<RugopsEntity>of(RugopsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RugopsEntity::new)
+    public static final Supplier<EntityType<RugopsEntity>> RUGOPS = ENTITY_TYPES.register("rugops",
+            EntityType.Builder.of(RugopsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.79f, 1.888f));
 
-    public static final RegistryObject<EntityType<ProterosuchusEntity>> PROTEROSUCHUS = register("proterosuchus",
-            EntityType.Builder.<ProterosuchusEntity>of(ProterosuchusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ProterosuchusEntity::new)
+    public static final Supplier<EntityType<ProterosuchusEntity>> PROTEROSUCHUS = ENTITY_TYPES.register("proterosuchus",
+            EntityType.Builder.of(ProterosuchusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.21f, 0.8911f));
 
-    public static final RegistryObject<EntityType<MegaraptorEntity>> MEGARAPTOR = register("megaraptor",
-            EntityType.Builder.<MegaraptorEntity>of(MegaraptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MegaraptorEntity::new)
+    public static final Supplier<EntityType<MegaraptorEntity>> MEGARAPTOR = ENTITY_TYPES.register("megaraptor",
+            EntityType.Builder.of(MegaraptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.785f, 1.879f));
 
-    public static final RegistryObject<EntityType<YutyrannusEntity>> YUTYRANNUS = register("yutyrannus",
-            EntityType.Builder.<YutyrannusEntity>of(YutyrannusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(YutyrannusEntity::new)
+    public static final Supplier<EntityType<YutyrannusEntity>> YUTYRANNUS = ENTITY_TYPES.register("yutyrannus",
+            EntityType.Builder.of(YutyrannusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.29f, 2.789f));
 
-    public static final RegistryObject<EntityType<BlueCoelacanthEntity>> BLUE_COELACANTH = register("blue_coelacanth",
-            EntityType.Builder.<BlueCoelacanthEntity>of(BlueCoelacanthEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlueCoelacanthEntity::new)
+    public static final Supplier<EntityType<BlueCoelacanthEntity>> BLUE_COELACANTH = ENTITY_TYPES.register("blue_coelacanth",
+            EntityType.Builder.of(BlueCoelacanthEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.5f, 1.3f));
 
-    public static final RegistryObject<EntityType<ConodontaEntity>> CONODONTA = register("conodonta",
-            EntityType.Builder.<ConodontaEntity>of(ConodontaEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ConodontaEntity::new)
+    public static final Supplier<EntityType<ConodontaEntity>> CONODONTA = ENTITY_TYPES.register("conodonta",
+            EntityType.Builder.of(ConodontaEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.34f, 0.34f));
 
-    public static final RegistryObject<EntityType<PteranodonEntity>> PTERANODON = register("pteranodon",
-            EntityType.Builder.<PteranodonEntity>of(PteranodonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PteranodonEntity::new)
+    public static final Supplier<EntityType<PteranodonEntity>> PTERANODON = ENTITY_TYPES.register("pteranodon",
+            EntityType.Builder.of(PteranodonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.78f, 0.9f));
 
-    public static final RegistryObject<EntityType<TherizinosaurusEntity>> THERIZINOSAURUS = register("therizinosaurus",
-            EntityType.Builder.<TherizinosaurusEntity>of(TherizinosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TherizinosaurusEntity::new)
+    public static final Supplier<EntityType<TherizinosaurusEntity>> THERIZINOSAURUS = ENTITY_TYPES.register("therizinosaurus",
+            EntityType.Builder.of(TherizinosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.789f, 3.1f));
 
-    public static final RegistryObject<EntityType<TorvosaurusEntity>> TORVOSAURUS = register("torvosaurus",
-            EntityType.Builder.<TorvosaurusEntity>of(TorvosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TorvosaurusEntity::new)
+    public static final Supplier<EntityType<TorvosaurusEntity>> TORVOSAURUS = ENTITY_TYPES.register("torvosaurus",
+            EntityType.Builder.of(TorvosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.399f, 2.850f));
 
-    public static final RegistryObject<EntityType<MutadonEntity>> MUTADON = register("mutadon",
-            EntityType.Builder.<MutadonEntity>of(MutadonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MutadonEntity::new)
+    public static final Supplier<EntityType<MutadonEntity>> MUTADON = ENTITY_TYPES.register("mutadon",
+            EntityType.Builder.of(MutadonEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.1f, 2.2f));
 
-    public static final RegistryObject<EntityType<CeratosaurusEntity>> CERATOSAURUS = register("ceratosaurus",
-            EntityType.Builder.<CeratosaurusEntity>of(CeratosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CeratosaurusEntity::new)
+    public static final Supplier<EntityType<CeratosaurusEntity>> CERATOSAURUS = ENTITY_TYPES.register("ceratosaurus",
+            EntityType.Builder.of(CeratosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.04f, 2.12f));
 
-    public static final RegistryObject<EntityType<OuranosaurusEntity>> OURANOSAURUS = register("ouranosaurus",
-            EntityType.Builder.<OuranosaurusEntity>of(OuranosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OuranosaurusEntity::new)
+    public static final Supplier<EntityType<OuranosaurusEntity>> OURANOSAURUS = ENTITY_TYPES.register("ouranosaurus",
+            EntityType.Builder.of(OuranosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.89f, 3.111f));
 
-    public static final RegistryObject<EntityType<AvaceratopsEntity>> AVACERATOPS = register("avaceratops",
-            EntityType.Builder.<AvaceratopsEntity>of(AvaceratopsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AvaceratopsEntity::new)
+    public static final Supplier<EntityType<AvaceratopsEntity>> AVACERATOPS = ENTITY_TYPES.register("avaceratops",
+            EntityType.Builder.of(AvaceratopsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.18f, 1.34f));
 
-    public static final RegistryObject<EntityType<BajadasaurusEntity>> BAJADASAURUS = register("bajadasaurus",
-            EntityType.Builder.<BajadasaurusEntity>of(BajadasaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BajadasaurusEntity::new)
+    public static final Supplier<EntityType<BajadasaurusEntity>> BAJADASAURUS = ENTITY_TYPES.register("bajadasaurus",
+            EntityType.Builder.of(BajadasaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(2.18f, 2.44f));
 
-    public static final RegistryObject<EntityType<DeinocheirusEntity>> DEINOCHEIRUS = register("deinocheirus",
-            EntityType.Builder.<DeinocheirusEntity>of(DeinocheirusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DeinocheirusEntity::new)
+    public static final Supplier<EntityType<DeinocheirusEntity>> DEINOCHEIRUS = ENTITY_TYPES.register("deinocheirus",
+            EntityType.Builder.of(DeinocheirusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(2.18f, 2.44f));
 
-    public static final RegistryObject<EntityType<AlbertosaurusEntity>> ALBERTOSAURUS = register("albertosaurus",
-            EntityType.Builder.<AlbertosaurusEntity>of(AlbertosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AlbertosaurusEntity::new)
+    public static final Supplier<EntityType<AlbertosaurusEntity>> ALBERTOSAURUS = ENTITY_TYPES.register("albertosaurus",
+            EntityType.Builder.of(AlbertosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.29f, 2.789f));
 
-    public static final RegistryObject<EntityType<PuertasaurusEntity>> PUERTASAURUS = register("puertasaurus",
-            EntityType.Builder.<PuertasaurusEntity>of(PuertasaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PuertasaurusEntity::new)
+    public static final Supplier<EntityType<PuertasaurusEntity>> PUERTASAURUS = ENTITY_TYPES.register("puertasaurus",
+            EntityType.Builder.of(PuertasaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(5.35f, 6.965f));
 
-    public static final RegistryObject<EntityType<TanystropheusEntity>> TANYSTROPHEUS = register("tanystropheus",
-            EntityType.Builder.<TanystropheusEntity>of(TanystropheusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TanystropheusEntity::new)
+    public static final Supplier<EntityType<TanystropheusEntity>> TANYSTROPHEUS = ENTITY_TYPES.register("tanystropheus",
+            EntityType.Builder.of(TanystropheusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(2.2f, 0.8892f));
 
-    public static final RegistryObject<EntityType<SigilmassasaurusEntity>> SIGILMASSASAURUS = register("sigilmassasaurus",
-            EntityType.Builder.<SigilmassasaurusEntity>of(SigilmassasaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SigilmassasaurusEntity::new)
+    public static final Supplier<EntityType<SigilmassasaurusEntity>> SIGILMASSASAURUS = ENTITY_TYPES.register("sigilmassasaurus",
+            EntityType.Builder.of(SigilmassasaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.81273f, 3.26242f));
 
-    public static final RegistryObject<EntityType<OrodromeusEntity>> ORODROMEUS = register("orodromeus",
-            EntityType.Builder.<OrodromeusEntity>of(OrodromeusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OrodromeusEntity::new)
+    public static final Supplier<EntityType<OrodromeusEntity>> ORODROMEUS = ENTITY_TYPES.register("orodromeus",
+            EntityType.Builder.of(OrodromeusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.6911f, 0.812451f));
 
-    public static final RegistryObject<EntityType<DryosaurusEntity>> DRYOSAURUS = register("dryosaurus",
-            EntityType.Builder.<DryosaurusEntity>of(DryosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DryosaurusEntity::new)
+    public static final Supplier<EntityType<DryosaurusEntity>> DRYOSAURUS = ENTITY_TYPES.register("dryosaurus",
+            EntityType.Builder.of(DryosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.811f, 1.2783f));
 
-    public static final RegistryObject<EntityType<SilesaurusEntity>> SILESAURUS = register("silesaurus",
-            EntityType.Builder.<SilesaurusEntity>of(SilesaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilesaurusEntity::new)
+    public static final Supplier<EntityType<SilesaurusEntity>> SILESAURUS = ENTITY_TYPES.register("silesaurus",
+            EntityType.Builder.of(SilesaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.75f, 1.12f));
 
-    public static final RegistryObject<EntityType<AustroraptorEntity>> AUSTRORAPTOR = register("austroraptor",
-            EntityType.Builder.<AustroraptorEntity>of(AustroraptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AustroraptorEntity::new)
+    public static final Supplier<EntityType<AustroraptorEntity>> AUSTRORAPTOR = ENTITY_TYPES.register("austroraptor",
+            EntityType.Builder.of(AustroraptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.87f, 1.68f));
 
-    public static final RegistryObject<EntityType<ParasaurolophusEntity>> PARASAUROLOPHUS = register("parasaurolophus",
-            EntityType.Builder.<ParasaurolophusEntity>of(ParasaurolophusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ParasaurolophusEntity::new)
+    public static final Supplier<EntityType<ParasaurolophusEntity>> PARASAUROLOPHUS = ENTITY_TYPES.register("parasaurolophus",
+            EntityType.Builder.of(ParasaurolophusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(2.27f, 2.88f));
 
-    public static final RegistryObject<EntityType<SclerocephalusEntity>> SCLEROCEPHALUS = register("sclerocephalus",
-            EntityType.Builder.<SclerocephalusEntity>of(SclerocephalusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SclerocephalusEntity::new)
+    public static final Supplier<EntityType<SclerocephalusEntity>> SCLEROCEPHALUS = ENTITY_TYPES.register("sclerocephalus",
+            EntityType.Builder.of(SclerocephalusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.56f, 0.23f));
 
-    public static final RegistryObject<EntityType<KentrosaurusEntity>> KENTROSAURUS = register("kentrosaurus",
-            EntityType.Builder.<KentrosaurusEntity>of(KentrosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KentrosaurusEntity::new)
+    public static final Supplier<EntityType<KentrosaurusEntity>> KENTROSAURUS = ENTITY_TYPES.register("kentrosaurus",
+            EntityType.Builder.of(KentrosaurusEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.27f, 1.98f));
 
-    public static final RegistryObject<EntityType<SiatsEntity>> SIATS = register("siats",
-            EntityType.Builder.<SiatsEntity>of(SiatsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SiatsEntity::new)
+    public static final Supplier<EntityType<SiatsEntity>> SIATS = ENTITY_TYPES.register("siats",
+            EntityType.Builder.of(SiatsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.61f, 2.599f));
 
 
-    public static final RegistryObject<EntityType<JinfengopteryxEntity>> JINFENGOPTERYX = register("jinfengopteryx",
-            EntityType.Builder.<JinfengopteryxEntity>of(JinfengopteryxEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JinfengopteryxEntity::new)
+    public static final Supplier<EntityType<JinfengopteryxEntity>> JINFENGOPTERYX = ENTITY_TYPES.register("jinfengopteryx",
+            EntityType.Builder.of(JinfengopteryxEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.38f, 0.54f));
 
-    public static final RegistryObject<EntityType<CladoselacheEntity>> CLADOSELACHE = register("cladoselache",
-            EntityType.Builder.<CladoselacheEntity>of(CladoselacheEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CladoselacheEntity::new)
+    public static final Supplier<EntityType<CladoselacheEntity>> CLADOSELACHE = ENTITY_TYPES.register("cladoselache",
+            EntityType.Builder.of(CladoselacheEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(1.5f, 1.3f));
 
-    public static final RegistryObject<EntityType<ArgentavisEntity>> ARGENTAVIS = register("argentavis",
-            EntityType.Builder.<ArgentavisEntity>of(ArgentavisEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ArgentavisEntity::new)
+    public static final Supplier<EntityType<ArgentavisEntity>> ARGENTAVIS = ENTITY_TYPES.register("argentavis",
+            EntityType.Builder.of(ArgentavisEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
                     .sized(0.78f, 0.9f));
 
-
-    private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
-        return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
-    }
 
     @SubscribeEvent
     public static void init(FMLCommonSetupEvent event) {
@@ -229,42 +229,9 @@ public class EntityInit {
         });
     }
 
-    @SubscribeEvent
-    public static void registerAttributes(EntityAttributeCreationEvent event) {
-        event.put(JURAVENATOR.get(), JuravenatorEntity.createAttributes().build());
-        event.put(ALLOSAURUS.get(), AllosaurusEntity.createAttributes().build());
-        event.put(GALLIMIMUS.get(), GallimimusEntity.createAttributes().build());
-        event.put(RUGOPS.get(), RugopsEntity.createAttributes().build());
-        event.put(PROTEROSUCHUS.get(), ProterosuchusEntity.createAttributes().build());
-        event.put(MEGARAPTOR.get(), MegaraptorEntity.createAttributes().build());
-        event.put(YUTYRANNUS.get(), YutyrannusEntity.createAttributes().build());
-        event.put(BLUE_COELACANTH.get(), BlueCoelacanthEntity.createAttributes().build());
-        event.put(CONODONTA.get(), ConodontaEntity.createAttributes().build());
-        event.put(PTERANODON.get(), PteranodonEntity.createAttributes().build());
-        event.put(THERIZINOSAURUS.get(), TherizinosaurusEntity.createAttributes().build());
-        event.put(TORVOSAURUS.get(), TorvosaurusEntity.createAttributes().build());
-        event.put(MUTADON.get(), MutadonEntity.createAttributes().build());
-        event.put(CERATOSAURUS.get(), CeratosaurusEntity.createAttributes().build());
-        event.put(OURANOSAURUS.get(), OuranosaurusEntity.createAttributes().build());
-        event.put(AVACERATOPS.get(), AvaceratopsEntity.createAttributes().build());
-        event.put(BAJADASAURUS.get(), BajadasaurusEntity.createAttributes().build());
-        event.put(DEINOCHEIRUS.get(), DeinocheirusEntity.createAttributes().build());
-        event.put(ALBERTOSAURUS.get(), AlbertosaurusEntity.createAttributes().build());
-        event.put(PUERTASAURUS.get(), PuertasaurusEntity.createAttributes().build());
-        event.put(TANYSTROPHEUS.get(), TanystropheusEntity.createAttributes().build());
-        event.put(SIGILMASSASAURUS.get(), SigilmassasaurusEntity.createAttributes().build());
-        event.put(ORODROMEUS.get(), OrodromeusEntity.createAttributes().build());
-        event.put(DRYOSAURUS.get(), DryosaurusEntity.createAttributes().build());
-        event.put(SILESAURUS.get(), SilesaurusEntity.createAttributes().build());
-        event.put(AUSTRORAPTOR.get(), AustroraptorEntity.createAttributes().build());
-        event.put(PARASAUROLOPHUS.get(), ParasaurolophusEntity.createAttributes().build());
-        event.put(SCLEROCEPHALUS.get(), SclerocephalusEntity.createAttributes().build());
-        event.put(KENTROSAURUS.get(), KentrosaurusEntity.createAttributes().build());
-        event.put(SIATS.get(), SiatsEntity.createAttributes().build());
-        event.put(JINFENGOPTERYX.get(), JinfengopteryxEntity.createAttributes().build());
-        event.put(CLADOSELACHE.get(), CladoselacheEntity.createAttributes().build());
-        event.put(ARGENTAVIS.get(), ArgentavisEntity.createAttributes().build());
 
+    public static void register(IEventBus eventBus) {
+        ENTITY_TYPES.register(eventBus);
     }
 
 }
