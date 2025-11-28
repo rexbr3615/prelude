@@ -26,17 +26,10 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.rexbrx.prelude.server.entity.EntityInit;
 import software.bernie.geckolib.animatable.GeoEntity;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.EnumSet;
@@ -51,42 +44,12 @@ public class ArgentavisEntity extends PathfinderMob implements GeoEntity {
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public ArgentavisEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(EntityInit.ARGENTAVIS.get(), world);
-    }
-
-    public ArgentavisEntity(EntityType<ArgentavisEntity> type, Level world) {
-        super(type, world);
-        xpReward = 0;
+    public ArgentavisEntity(EntityType<? extends PathfinderMob> entityEntityType, Level level) {
+        super(entityEntityType, level);
+        xpReward = 5;
         setNoAi(false);
         setPersistenceRequired();
         this.moveControl = new FlyingMoveControl(this, 10, false);
-    }
-
-    @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(SHOOT, false);
-        this.entityData.define(ANIMATION, "undefined");
-        this.entityData.define(TEXTURE, "jallyfish");
-    }
-
-    public void setTexture(String texture) {
-        this.entityData.set(TEXTURE, texture);
-    }
-
-    public String getTexture() {
-        return this.entityData.get(TEXTURE);
-    }
-
-    @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
-    }
-
-    @Override
-    protected PathNavigation createNavigation(Level world) {
-        return new FlyingPathNavigation(this, world);
     }
 
     @Override
@@ -142,33 +105,12 @@ public class ArgentavisEntity extends PathfinderMob implements GeoEntity {
             }
         });
         this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
-            @Override
             protected double getAttackReachSqr(LivingEntity entity) {
                 return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
             }
         });
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
-    }
-
-    @Override
-    public MobType getMobType() {
-        return MobType.UNDEFINED;
-    }
-
-    @Override
-    public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-        return false;
-    }
-
-    @Override
-    public SoundEvent getHurtSound(DamageSource ds) {
-        return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
-    }
-
-    @Override
-    public SoundEvent getDeathSound() {
-        return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
     }
 
     @Override
@@ -184,27 +126,9 @@ public class ArgentavisEntity extends PathfinderMob implements GeoEntity {
     }
 
     @Override
-    public void addAdditionalSaveData(CompoundTag compound) {
-        super.addAdditionalSaveData(compound);
-        compound.putString("Texture", this.getTexture());
-    }
-
-    @Override
-    public void readAdditionalSaveData(CompoundTag compound) {
-        super.readAdditionalSaveData(compound);
-        if (compound.contains("Texture"))
-            this.setTexture(compound.getString("Texture"));
-    }
-
-    @Override
     public void baseTick() {
         super.baseTick();
         this.refreshDimensions();
-    }
-
-    @Override
-    public EntityDimensions getDimensions(Pose p_33597_) {
-        return super.getDimensions(p_33597_).scale((float) 1);
     }
 
     @Override
@@ -237,53 +161,24 @@ public class ArgentavisEntity extends PathfinderMob implements GeoEntity {
         return builder;
     }
 
-    private PlayState movementPredicate(software.bernie.geckolib.core.animation.AnimationState event) {
-        if (this.animationprocedure.equals("empty")) {
-            if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) && this.onGround()) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new AnimationController<>(this, "Walk/Idle", state -> {
+            if (!ArgentavisEntity.this.onGround()) {
+                return state.setAndContinue(RawAnimation.begin().then("fly", Animation.LoopType.LOOP));
             }
-            if (!this.onGround() && !event.isMoving()) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("air"));
+            if (!ArgentavisEntity.this.onGround() && this.isFallFlying()) {
+                return state.setAndContinue(RawAnimation.begin().then("fly_air", Animation.LoopType.LOOP));
             }
-            if (!this.onGround() && event.isMoving()) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("fly"));
-            }
-            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+            if (state.isMoving())
+                return state.setAndContinue(ArgentavisEntity.this.isSprinting() ? RawAnimation.begin().then("walk", Animation.LoopType.LOOP) : RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
 
+            return state.setAndContinue(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        }));
 
-        }
-        return PlayState.STOP;
-    }
+        controllers.add(new AnimationController<>(this, "attackController", state -> PlayState.STOP)
+                .triggerableAnim("attack", RawAnimation.begin().then("attack", Animation.LoopType.PLAY_ONCE)));
 
-    private PlayState attackingPredicate(software.bernie.geckolib.core.animation.AnimationState event) {
-        double d1 = this.getX() - this.xOld;
-        double d0 = this.getZ() - this.zOld;
-        float velocity = (float) Math.sqrt(d1 * d1 + d0 * d0);
-        if (getAttackAnim(event.getPartialTick()) > 0f && !this.swinging) {
-            this.swinging = true;
-            this.lastSwing = level().getGameTime();
-        }
-        if (this.swinging && this.lastSwing + 7L <= level().getGameTime()) {
-            this.swinging = false;
-        }
-        if (this.swinging && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-            event.getController().forceAnimationReset();
-            return event.setAndContinue(RawAnimation.begin().thenPlay("attack"));
-        }
-        return PlayState.CONTINUE;
-    }
-
-    private PlayState procedurePredicate(AnimationState event) {
-        if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-            event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-            if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
-                this.animationprocedure = "empty";
-                event.getController().forceAnimationReset();
-            }
-        } else if (animationprocedure.equals("empty")) {
-            return PlayState.STOP;
-        }
-        return PlayState.CONTINUE;
     }
 
     @Override
@@ -291,7 +186,6 @@ public class ArgentavisEntity extends PathfinderMob implements GeoEntity {
         ++this.deathTime;
         if (this.deathTime == 20) {
             this.remove(ArgentavisEntity.RemovalReason.KILLED);
-            this.dropExperience();
         }
     }
 
@@ -301,13 +195,6 @@ public class ArgentavisEntity extends PathfinderMob implements GeoEntity {
 
     public void setAnimation(String animation) {
         this.entityData.set(ANIMATION, animation);
-    }
-
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-        data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-        data.add(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
-        data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
     }
 
     @Override
