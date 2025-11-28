@@ -132,27 +132,27 @@ public class EntityInit {
     public static final Supplier<EntityType<OrodromeusEntity>> ORODROMEUS = ENTITY_TYPES.register("orodromeus",
             () -> EntityType.Builder.of(OrodromeusEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.6911f, 0.812451f));
+                    .sized(0.6911f, 0.812451f).build("orodromeus"));
 
     public static final Supplier<EntityType<DryosaurusEntity>> DRYOSAURUS = ENTITY_TYPES.register("dryosaurus",
             () -> EntityType.Builder.of(DryosaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.811f, 1.2783f));
+                    .sized(0.811f, 1.2783f).build("dryosaurusw"));
 
     public static final Supplier<EntityType<SilesaurusEntity>> SILESAURUS = ENTITY_TYPES.register("silesaurus",
             () -> EntityType.Builder.of(SilesaurusEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.75f, 1.12f));
+                    .sized(0.75f, 1.12f).build("silesaurus"));
 
     public static final Supplier<EntityType<AustroraptorEntity>> AUSTRORAPTOR = ENTITY_TYPES.register("austroraptor",
             () -> EntityType.Builder.of(AustroraptorEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.87f, 1.68f));
+                    .sized(0.87f, 1.68f).build("austroraptor"));
 
     public static final Supplier<EntityType<ParasaurolophusEntity>> PARASAUROLOPHUS = ENTITY_TYPES.register("parasaurolophus",
             () -> EntityType.Builder.of(ParasaurolophusEntity::new, MobCategory.CREATURE)
 
-                    .sized(2.27f, 2.88f));
+                    .sized(2.27f, 2.88f).build("parasaurolophus"));
 
     public static final Supplier<EntityType<SclerocephalusEntity>> SCLEROCEPHALUS = ENTITY_TYPES.register("sclerocephalus",
             () -> EntityType.Builder.of(SclerocephalusEntity::new, MobCategory.CREATURE)

@@ -18,23 +18,15 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.rexbrx.prelude.server.entity.EntityInit;
 import net.rexbrx.prelude.server.entity.ai.MoveToTaggedItemGoal;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import software.bernie.geckolib.animatable.GeoEntity;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.animation.AnimatableManager;
 import software.bernie.geckolib.animation.AnimationController;
 import software.bernie.geckolib.animation.RawAnimation;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class ParasaurolophusEntity extends PathfinderMob implements GeoEntity
@@ -48,36 +40,11 @@ public class ParasaurolophusEntity extends PathfinderMob implements GeoEntity
     private long lastSwing;
     public String animationprocedure = "empty";
 
-    public ParasaurolophusEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(EntityInit.PARASAUROLOPHUS.get(), world);
-    }
-
-    public ParasaurolophusEntity(EntityType<ParasaurolophusEntity> type, Level world) {
-        super(type, world);
+    public ParasaurolophusEntity(EntityType<? extends PathfinderMob> entityEntityType, Level level) {
+        super(entityEntityType, level);
         xpReward = 5;
         setNoAi(false);
         setPersistenceRequired();
-    }
-
-    @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(SHOOT, false);
-        this.entityData.define(ANIMATION, "undefined");
-        this.entityData.define(TEXTURE, "juravenator");
-    }
-
-    public void setTexture(String texture) {
-        this.entityData.set(TEXTURE, texture);
-    }
-
-    public String getTexture() {
-        return this.entityData.get(TEXTURE);
-    }
-
-    @Override
-    public Packet<ClientGamePacketListener> getAddEntityPacket() {
-        return NetworkHooks.getEntitySpawningPacket(this);
     }
 
     @Override
@@ -91,53 +58,18 @@ public class ParasaurolophusEntity extends PathfinderMob implements GeoEntity
         this.targetSelector.addGoal(5, (new HurtByTargetGoal(this)).setAlertOthers());
 
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.867, true) {
-            @Override
             protected double getAttackReachSqr(LivingEntity entity) {
                 return (double) (2.0 + entity.getBbWidth() * entity.getBbWidth());
             }
         });
 
-        this.goalSelector.addGoal(1, new MoveToTaggedItemGoal(this, 1.2D, 10.0D, new ResourceLocation("prelude", "herbivore_food")));
-
     }
 
-    @Override
-    public MobType getMobType() {
-        return MobType.UNDEFINED;
-    }
-
-    @Override
-    public SoundEvent getHurtSound(DamageSource ds) {
-        return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
-    }
-
-    @Override
-    public SoundEvent getDeathSound() {
-        return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-    }
-
-    @Override
-    public void addAdditionalSaveData(CompoundTag compound) {
-        super.addAdditionalSaveData(compound);
-        compound.putString("Texture", this.getTexture());
-    }
-
-    @Override
-    public void readAdditionalSaveData(CompoundTag compound) {
-        super.readAdditionalSaveData(compound);
-        if (compound.contains("Texture"))
-            this.setTexture(compound.getString("Texture"));
-    }
 
     @Override
     public void baseTick() {
         super.baseTick();
         this.refreshDimensions();
-    }
-
-    @Override
-    public EntityDimensions getDimensions(Pose p_33597_) {
-        return super.getDimensions(p_33597_).scale((float) 1);
     }
 
     @Override
@@ -180,7 +112,6 @@ public class ParasaurolophusEntity extends PathfinderMob implements GeoEntity
         ++this.deathTime;
         if (this.deathTime == 20) {
             this.remove(ParasaurolophusEntity.RemovalReason.KILLED);
-            this.dropExperience();
         }
     }
 
@@ -192,12 +123,7 @@ public class ParasaurolophusEntity extends PathfinderMob implements GeoEntity
         this.entityData.set(ANIMATION, animation);
     }
 
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-        data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-        data.add(new AnimationController<>(this, "attacking", 4, this::attackingPredicate));
-        data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
-    }
+
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
