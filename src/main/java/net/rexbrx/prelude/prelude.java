@@ -1,6 +1,7 @@
 package net.rexbrx.prelude;
 
 import net.rexbrx.prelude.server.entity.EntityInit;
+import net.rexbrx.prelude.server.items.ModCreativeModTabs;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import org.slf4j.Logger;
 
@@ -24,6 +25,7 @@ public class prelude {
 
         PreludeItems.register(modEventBus);
         EntityInit.register(modEventBus);
+        ModCreativeModTabs.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
     }

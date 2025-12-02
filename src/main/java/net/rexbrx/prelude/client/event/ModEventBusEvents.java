@@ -5,7 +5,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.entity.EntityInit;
-import net.rexbrx.prelude.server.entity.common.*;
+import net.rexbrx.prelude.server.entity.common.chapter_one.*;
 
 @EventBusSubscriber(modid = prelude.MODID)
 public class ModEventBusEvents

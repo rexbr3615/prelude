@@ -9,7 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rexbrx.prelude.prelude;
-import net.rexbrx.prelude.server.entity.common.*;
+import net.rexbrx.prelude.server.entity.common.chapter_one.*;
 
 import java.util.function.Supplier;
 
