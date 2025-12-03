@@ -1,10 +1,15 @@
 package net.rexbrx.prelude;
 
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 import net.rexbrx.prelude.server.entity.EntityInit;
 
 import net.rexbrx.prelude.client.CreaturesMR.chapter_one.albertosaurus.AlbertosaurusRenderer;
@@ -40,6 +45,7 @@ import net.rexbrx.prelude.client.CreaturesMR.chapter_one.tanystropheus.Tanystrop
 import net.rexbrx.prelude.client.CreaturesMR.chapter_one.therizinosaurus.TherizinosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_one.torvosaurus.TorvosaurusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_one.yutyrannus.YutyrannusRenderer;
+import net.rexbrx.prelude.server.screens.ModMenuTypes;
 
 @Mod(value = prelude.MODID, dist = Dist.CLIENT)
 @EventBusSubscriber(modid = prelude.MODID, value = Dist.CLIENT)
@@ -83,7 +89,7 @@ public class PreludeModClient {
         event.registerEntityRenderer(EntityInit.CLADOSELACHE.get(), CladoselacheRenderer::new);
         event.registerEntityRenderer(EntityInit.ARGENTAVIS.get(), ArgentavisRenderer::new);
 
-        /*
+
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.PROTOTAXITES_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.ENCRINUS.get(), RenderType.cutoutMipped());
@@ -96,13 +102,13 @@ public class PreludeModClient {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CONCRETE_BARRIER.get(), RenderType.cutoutMipped());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
+        //ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
+        //ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.HYPER_CALAMITES_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_SAPLING.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_DOOR.get(), RenderType.translucent());
+        //ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());
+        //ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_DOOR.get(), RenderType.translucent());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.POWER_BOX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CABLE_BLOCK.get(), RenderType.translucent());
@@ -111,15 +117,21 @@ public class PreludeModClient {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.ANCIENT_RELIC.get(), RenderType.translucent());
 
 
-        MenuScreens.register(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
-        MenuScreens.register(ModMenuTypes.VAT_MENU.get(), VatScreen::new);
-        MenuScreens.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
-        MenuScreens.register(ModMenuTypes.INCUBATOR_MENU.get(), IncubatorScreen::new);
+        //MenuScreens.create(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
+        //MenuScreens.create(ModMenuTypes.VAT_MENU.get(), VatScreen::new);
+        //MenuScreens.create(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
+        //MenuScreens.create(ModMenuTypes.INCUBATOR_MENU.get(), IncubatorScreen::new);
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.METAL_PILLAR.get(), RenderType.translucent());
-        */
+
     }
 
-
+    @SubscribeEvent
+    public static void registerScreens(RegisterMenuScreensEvent event) {
+        event.register(ModMenuTypes.ANALYZER_MENU.get(), AnalyzerScreen::new);
+        event.register(ModMenuTypes.VAT_MENU.get(), VatScreen::new);
+        event.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
+        event.register(ModMenuTypes.INCUBATOR_MENU.get(), IncubatorScreen::new);
+    }
 
 }
