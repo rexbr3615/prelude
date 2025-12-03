@@ -32,6 +32,7 @@ import org.jetbrains.annotations.Nullable;
 public class VatBlock extends BaseEntityBlock {
     public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 32, 16);
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    public static final MapCodec<VatBlock> CODEC = simpleCodec(VatBlock::new);
 
 
     public VatBlock(Properties pProperties) {
@@ -42,7 +43,7 @@ public class VatBlock extends BaseEntityBlock {
 
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
-        return null;
+        return CODEC;
     }
 
     @Override

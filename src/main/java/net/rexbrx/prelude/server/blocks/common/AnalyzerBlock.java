@@ -31,6 +31,7 @@ import org.jetbrains.annotations.Nullable;
 public class AnalyzerBlock extends BaseEntityBlock {
     public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 12, 16);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final MapCodec<AnalyzerBlock> CODEC = simpleCodec(AnalyzerBlock::new);
 
     public AnalyzerBlock(Properties pProperties) {
         super(pProperties);
@@ -38,7 +39,7 @@ public class AnalyzerBlock extends BaseEntityBlock {
 
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec() {
-        return null;
+        return CODEC;
     }
 
     @Override
