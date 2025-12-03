@@ -21,7 +21,7 @@ public class ModRecipes {
 
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<AnalyzerRecipe>> ANALYZER_SERIALIZER =
-            SERIALIZERS.register("analyzer", () -> AnalyzerRecipe.Serializer::new);
+            SERIALIZERS.register("analyzer", AnalyzerRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<AnalyzerRecipe>> ANALYZER_TYPE =
             TYPES.register("analyzer", () -> new RecipeType<AnalyzerRecipe>() {
                 @Override
@@ -31,7 +31,7 @@ public class ModRecipes {
             });
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<VatRecipe>> VAT_SERIALIZER =
-            SERIALIZERS.register("vat", () -> VatRecipe.Serializer::new);
+            SERIALIZERS.register("vat", VatRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<VatRecipe>> VAT_TYPE =
             TYPES.register("vat", () -> new RecipeType<VatRecipe>() {
                 @Override
@@ -41,7 +41,7 @@ public class ModRecipes {
             });
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CrusherRecipe>> CRUSHER_SERIALIZER =
-            SERIALIZERS.register("crusher", () -> CrusherRecipe.Serializer::new);
+            SERIALIZERS.register("crusher", CrusherRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<CrusherRecipe>> CRUSHER_TYPE =
             TYPES.register("crusher", () -> new RecipeType<CrusherRecipe>() {
                 @Override
@@ -51,7 +51,7 @@ public class ModRecipes {
             });
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<incubatorRecipe>> INCUBATOR_SERIALIZER =
-            SERIALIZERS.register("incubator", () -> incubatorRecipe.Serializer::new);
+            SERIALIZERS.register("incubator", incubatorRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<incubatorRecipe>> INCUBATOR_TYPE =
             TYPES.register("incubator", () -> new RecipeType<incubatorRecipe>() {
                 @Override

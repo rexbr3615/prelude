@@ -1,24 +1,16 @@
 package net.rexbrx.prelude.server.recipes.common;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
-import net.minecraft.core.RegistryAccess;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
-import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.recipes.ModRecipes;
-import org.jetbrains.annotations.Nullable;
+import org.checkerframework.checker.units.qual.A;
 
 public record AnalyzerRecipe(Ingredient inputItem, ItemStack output) implements Recipe<AnalyzerRecipeInput> {
     // inputItem & output ==> Read From JSON File!
@@ -57,17 +49,17 @@ public record AnalyzerRecipe(Ingredient inputItem, ItemStack output) implements 
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ModRecipes.VAT_SERIALIZER.get();
+        return ModRecipes.ANALYZER_SERIALIZER.get();
     }
 
     @Override
     public RecipeType<?> getType() {
-        return ModRecipes.VAT_TYPE.get();
+        return ModRecipes.ANALYZER_TYPE.get();
     }
 
     public static class Serializer implements RecipeSerializer<AnalyzerRecipe> {
         public static final MapCodec<AnalyzerRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.listOf().fieldOf("ingredient").forGetter(AnalyzerRecipe::inputItem),
+                Ingredient.CODEC.fieldOf("ingredient").forGetter(AnalyzerRecipe::inputItem),
                 ItemStack.CODEC.fieldOf("result").forGetter(AnalyzerRecipe::output)
         ).apply(inst, AnalyzerRecipe::new));
 
