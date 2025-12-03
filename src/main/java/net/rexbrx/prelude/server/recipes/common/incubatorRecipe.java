@@ -67,8 +67,8 @@ public record incubatorRecipe (Ingredient inputItem, ItemStack output) implement
 
     public static class Serializer implements RecipeSerializer<incubatorRecipe> {
         public static final MapCodec<incubatorRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(incubatorRecipe::inputItem),
-                ItemStack.CODEC.fieldOf("result").forGetter(incubatorRecipe::output)
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredients").forGetter(incubatorRecipe::inputItem),
+                ItemStack.CODEC.fieldOf("output").forGetter(incubatorRecipe::output)
         ).apply(inst, incubatorRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, incubatorRecipe> STREAM_CODEC =

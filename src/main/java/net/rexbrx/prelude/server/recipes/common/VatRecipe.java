@@ -61,8 +61,8 @@ public record VatRecipe(Ingredient inputItem, ItemStack output) implements Recip
 
     public static class Serializer implements RecipeSerializer<VatRecipe> {
         public static final MapCodec<VatRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(VatRecipe::inputItem),
-                ItemStack.CODEC.fieldOf("result").forGetter(VatRecipe::output)
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredients").forGetter(VatRecipe::inputItem),
+                ItemStack.CODEC.fieldOf("output").forGetter(VatRecipe::output)
         ).apply(inst, VatRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, VatRecipe> STREAM_CODEC =

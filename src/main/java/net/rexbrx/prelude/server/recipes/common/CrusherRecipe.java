@@ -67,8 +67,8 @@ public record CrusherRecipe(Ingredient inputItem, ItemStack output) implements R
 
     public static class Serializer implements RecipeSerializer<CrusherRecipe> {
         public static final MapCodec<CrusherRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(CrusherRecipe::inputItem),
-                ItemStack.CODEC.fieldOf("result").forGetter(CrusherRecipe::output)
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredients").forGetter(CrusherRecipe::inputItem),
+                ItemStack.CODEC.fieldOf("output").forGetter(CrusherRecipe::output)
         ).apply(inst, CrusherRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, CrusherRecipe> STREAM_CODEC =

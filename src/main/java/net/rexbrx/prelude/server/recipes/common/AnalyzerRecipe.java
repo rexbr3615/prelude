@@ -59,8 +59,8 @@ public record AnalyzerRecipe(Ingredient inputItem, ItemStack output) implements 
 
     public static class Serializer implements RecipeSerializer<AnalyzerRecipe> {
         public static final MapCodec<AnalyzerRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC.fieldOf("ingredient").forGetter(AnalyzerRecipe::inputItem),
-                ItemStack.CODEC.fieldOf("result").forGetter(AnalyzerRecipe::output)
+                Ingredient.CODEC.fieldOf("ingredients").forGetter(AnalyzerRecipe::inputItem),
+                ItemStack.CODEC.fieldOf("output").forGetter(AnalyzerRecipe::output)
         ).apply(inst, AnalyzerRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, AnalyzerRecipe> STREAM_CODEC =

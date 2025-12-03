@@ -8,6 +8,7 @@ import net.minecraft.world.item.Items;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rexbrx.prelude.prelude;
+import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 
 import java.util.function.Supplier;
 
@@ -221,7 +222,7 @@ public class ModCreativeModTabs
                     })
                     .build());
 
-    /*public static final Supplier<CreativeModeTab> BLOCKS_TAB = CREATIVE_MODE_TABS.register("tutorial_tab4",
+    public static final Supplier<CreativeModeTab> BLOCKS_TAB = CREATIVE_MODE_TABS.register("tutorial_tab4",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(PreludeBlocks.FOSSIL_ORE.get()))
                     .title(Component.translatable("creativetab.prelude_tab_4"))
                     .displayItems((pParameters, pOutput) -> {
@@ -230,7 +231,6 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.FOSSIL_ORE.get());
                         pOutput.accept(PreludeBlocks.DEEP_FOSSIL_ORE.get());
                         pOutput.accept(PreludeBlocks.ENCHASED_FOSSIL.get());
-                        pOutput.accept(PreludeBlocks.BASIC_PIPE.get());
                         pOutput.accept(PreludeBlocks.ANTENNA_1X1.get());
                         pOutput.accept(PreludeBlocks.ANTENNA_2X2.get());
                         pOutput.accept(PreludeBlocks.ANTENNA_3X3.get());
@@ -263,8 +263,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.ANCIENT_RELIC.get());
                         pOutput.accept(PreludeBlocks.BITUMEN_STONE.get());
 
-                        pOutput.accept(PreludeBlocks.BARRIER_BLOCK.get());
-                        pOutput.accept(PreludeBlocks.TEETH_BLOCK.get());
+                        //pOutput.accept(PreludeBlocks.BARRIER_BLOCK.get());
+                        //pOutput.accept(PreludeBlocks.TEETH_BLOCK.get());
 
                         pOutput.accept(PreludeBlocks.COMMON_FENCE.get());
 
@@ -272,7 +272,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.FOSSIL_ORE.get());
                         pOutput.accept(PreludeBlocks.DEEP_FOSSIL_ORE.get());
                         pOutput.accept(PreludeBlocks.ENCHASED_FOSSIL.get());
-                        pOutput.accept(PreludeBlocks.BASIC_PIPE.get());
+                        //pOutput.accept(PreludeBlocks.BASIC_PIPE.get());
                         pOutput.accept(PreludeBlocks.ANTENNA_1X1.get());
                         pOutput.accept(PreludeBlocks.ANTENNA_2X2.get());
                         pOutput.accept(PreludeBlocks.ANTENNA_3X3.get());
@@ -309,9 +309,9 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.METAL_PILLAR.get());
 
                     })
-                    .build());*/
+                    .build());
 
-    /*public static final Supplier<CreativeModeTab> MACHINE_TAB = CREATIVE_MODE_TABS.register("tutorial_tab5",
+    public static final Supplier<CreativeModeTab> MACHINE_TAB = CREATIVE_MODE_TABS.register("tutorial_tab5",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(PreludeBlocks.INCUBATOR.get()))
                     .title(Component.translatable("creativetab.prelude_tab_5"))
                     .displayItems((pParameters, pOutput) -> {
@@ -326,9 +326,9 @@ public class ModCreativeModTabs
 
 
                     })
-                    .build());*/
+                    .build());
 
-    /*public static final Supplier<CreativeModeTab> PLANT_TAB = CREATIVE_MODE_TABS.register("tutorial_tab6",
+    public static final Supplier<CreativeModeTab> PLANT_TAB = CREATIVE_MODE_TABS.register("tutorial_tab6",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(PreludeBlocks.CALAMITES_SAPLING2.get()))
                     .title(Component.translatable("creativetab.prelude_tab_5"))
                     .displayItems((pParameters, pOutput) -> {
@@ -347,28 +347,28 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.CALAMITES_LOG.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_WOOD.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_PLANKS.get());
-                        pOutput.accept(PreludeBlocks.CALAMITES_DOOR.get());
-                        pOutput.accept(PreludeBlocks.CALAMITES_BUTTON.get());
-                        pOutput.accept(PreludeBlocks.CALAMITES_PRESSURE_PLATE.get());
+                        //pOutput.accept(PreludeBlocks.CALAMITES_DOOR.get());
+                        //pOutput.accept(PreludeBlocks.CALAMITES_BUTTON.get());
+                        //pOutput.accept(PreludeBlocks.CALAMITES_PRESSURE_PLATE.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_SLAB.get());
-                        pOutput.accept(PreludeBlocks.CALAMITES_STAIRS.get());
+                        //pOutput.accept(PreludeBlocks.CALAMITES_STAIRS.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_FENCE.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_FENCE_GATE.get());
-                        pOutput.accept(PreludeBlocks.CALAMITES_TRAPDOOR.get());
+                        //pOutput.accept(PreludeBlocks.CALAMITES_TRAPDOOR.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_LEAVES.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_SAPLING2.get());
 
                         pOutput.accept(PreludeBlocks.GINKGO_LOG.get());
                         pOutput.accept(PreludeBlocks.GINKGO_WOOD.get());
                         pOutput.accept(PreludeBlocks.GINKGO_PLANKS.get());
-                        pOutput.accept(PreludeBlocks.GINKGO_DOOR.get());
-                        pOutput.accept(PreludeBlocks.GINKGO_BUTTON.get());
-                        pOutput.accept(PreludeBlocks.GINKGO_PRESSURE_PLATE.get());
+                        //pOutput.accept(PreludeBlocks.GINKGO_DOOR.get());
+                        //pOutput.accept(PreludeBlocks.GINKGO_BUTTON.get());
+                        //pOutput.accept(PreludeBlocks.GINKGO_PRESSURE_PLATE.get());
                         pOutput.accept(PreludeBlocks.GINKGO_SLAB.get());
-                        pOutput.accept(PreludeBlocks.GINKGO_STAIRS.get());
+                        //pOutput.accept(PreludeBlocks.GINKGO_STAIRS.get());
                         pOutput.accept(PreludeBlocks.GINKGO_FENCE.get());
                         pOutput.accept(PreludeBlocks.GINKGO_FENCE_GATE.get());
-                        pOutput.accept(PreludeBlocks.GINKGO_TRAPDOOR.get());
+                        //pOutput.accept(PreludeBlocks.GINKGO_TRAPDOOR.get());
                         pOutput.accept(PreludeBlocks.GINKGO_LEAVES.get());
                         pOutput.accept(PreludeBlocks.GINKGO_LEAVES_FRUIT.get());
                         pOutput.accept(PreludeBlocks.GINKGO_SAPLING.get());
@@ -381,7 +381,7 @@ public class ModCreativeModTabs
 
 
                     })
-                    .build());*/
+                    .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
