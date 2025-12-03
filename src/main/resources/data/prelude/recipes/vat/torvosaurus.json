@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:torvosaurus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:torvosaurus_spawn_egg"
+  }
+}

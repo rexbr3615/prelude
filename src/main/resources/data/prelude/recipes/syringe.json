@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " Y ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "prelude:test_tube"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "prelude:syringe",
+    "count": 2
+  }
+}

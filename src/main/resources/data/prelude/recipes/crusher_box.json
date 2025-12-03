@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "prelude:crusher_box",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    " Y ",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Y": {
+      "item": "prelude:carbon_fibre_plate"
+    }
+  },
+  "result": {
+    "item": "prelude:covered_rod",
+    "count": 8
+  }
+}

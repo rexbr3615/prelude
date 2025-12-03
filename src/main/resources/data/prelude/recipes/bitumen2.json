@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prelude:bitumen_nugget"
+    },
+    {
+      "item": "prelude:bitumen_nugget"
+    },
+    {
+      "item": "prelude:bitumen_nugget"
+    },
+    {
+      "item": "prelude:bitumen_nugget"
+    },
+    {
+      "item": "prelude:bitumen_nugget"
+    },
+    {
+      "item": "prelude:bitumen_nugget"
+    },
+    {
+      "item": "prelude:bitumen_nugget"
+    },
+    {
+      "item": "prelude:bitumen_nugget"
+    }
+  ],
+  "result": {
+    "item": "prelude:bitumen",
+    "count": 1
+  }
+}

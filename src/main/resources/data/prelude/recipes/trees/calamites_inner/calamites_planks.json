@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A"
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:calamites_log"
+    }
+  },
+  "result": {
+    "item": "prelude:calamites_planks",
+    "count": 4
+  }
+}

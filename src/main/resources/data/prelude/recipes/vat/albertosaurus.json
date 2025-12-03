@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:albertosaurus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:albertosaurus_spawn_egg"
+  }
+}

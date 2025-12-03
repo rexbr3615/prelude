@@ -1,0 +1,11 @@
+{
+  "type": "prelude:crusher",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar_cane"
+    }
+  ],
+  "output": {
+    "item": "minecraft:sugar"
+  }
+}

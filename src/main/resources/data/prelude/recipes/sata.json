@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "XY "
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:covered_rod"
+    },
+    "Y": {
+      "item": "minecraft:copper_ingot"
+    },
+    "X": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "prelude:sata",
+    "count": 1
+  }
+}

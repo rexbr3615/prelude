@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CAC",
+    "ABA",
+    "CAC"
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:graphite"
+    },
+    "B": {
+      "item": "prelude:steel_ingot"
+    },
+    "C": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "prelude:heat_dissipator",
+    "count": 1
+  }
+}

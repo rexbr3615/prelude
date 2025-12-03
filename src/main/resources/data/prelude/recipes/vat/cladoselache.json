@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:cladoselache_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:cladoselache_spawn_egg"
+  }
+}

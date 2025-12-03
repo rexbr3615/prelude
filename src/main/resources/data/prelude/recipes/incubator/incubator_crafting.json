@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LOP",
+    "BAB",
+    "XXX"
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:wire"
+    },
+    "B": {
+      "item": "prelude:covered_rod"
+    },
+    "X": {
+      "item": "prelude:steel_ingot"
+    },
+    "L": {
+      "item": "prelude:heat_dissipator"
+    },
+    "O": {
+      "item": "prelude:cpu"
+    },
+    "P": {
+      "item": "prelude:computer_screen"
+    }
+  },
+  "result": {
+    "item": "prelude:bacteriological_incubator",
+    "count": 1
+  }
+}

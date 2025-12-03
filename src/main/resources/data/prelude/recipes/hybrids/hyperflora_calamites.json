@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    "BAB",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:hybridizer"
+    },
+    "B": {
+      "item": "prelude:calamites_sapling1"
+    }
+  },
+  "result": {
+    "item": "prelude:hyperflora_calamites_sapling",
+    "count": 1
+  }
+}

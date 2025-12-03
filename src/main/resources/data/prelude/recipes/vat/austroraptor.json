@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:austroraptor_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:austroraptor_spawn_egg"
+  }
+}

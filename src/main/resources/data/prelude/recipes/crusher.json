@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "ABA",
+    "UYU"
+  ],
+  "key": {
+    "X": {
+      "item": "prelude:steel_cogwheel"
+    },
+    "A": {
+      "item": "prelude:graphite"
+    },
+    "B": {
+      "item": "prelude:mechanism"
+    },
+    "U": {
+      "item": "prelude:covered_rod"
+    },
+    "Y": {
+      "item": "prelude:crusher_box"
+    }
+  },
+  "result": {
+    "item": "prelude:crusher",
+    "count": 1
+  }
+}

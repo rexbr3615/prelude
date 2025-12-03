@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:kentrosaurus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:kentrosaurus_spawn_egg"
+  }
+}

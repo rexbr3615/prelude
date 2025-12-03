@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prelude:bitumen"
+    }
+  ],
+  "result": {
+    "item": "prelude:bitumen_nugget",
+    "count": 8
+  }
+}

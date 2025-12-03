@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA"
+  ],
+  "key": {
+    "A": {
+      "item": "prelude:cable_block"
+    }
+  },
+  "result": {
+    "item": "prelude:cable_block_corner",
+    "count": 1
+  }
+}

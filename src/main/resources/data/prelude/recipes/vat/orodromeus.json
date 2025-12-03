@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:orodromeus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:orodromeus_spawn_egg"
+  }
+}

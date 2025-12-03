@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:sclerocephalus_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:sclerocephalus_spawn_egg"
+  }
+}

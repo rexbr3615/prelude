@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyzer",
+  "ingredients": [
+    {
+      "item": "prelude:devonian_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:devonian_disk"
+  }
+}

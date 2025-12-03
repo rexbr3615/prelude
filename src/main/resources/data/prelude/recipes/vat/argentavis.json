@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:argentavis_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:argentavis_spawn_egg"
+  }
+}

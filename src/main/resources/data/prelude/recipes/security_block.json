@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "BXB",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:black_wool"
+    },
+    "B": {
+      "item": "minecraft:yellow_wool"
+    },
+    "X": {
+      "item": "minecraft:white_concrete"
+    }
+  },
+  "result": {
+    "item": "prelude:security_block",
+    "count": 8
+  }
+}

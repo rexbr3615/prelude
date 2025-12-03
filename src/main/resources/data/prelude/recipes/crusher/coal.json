@@ -1,0 +1,11 @@
+{
+  "type": "prelude:crusher",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "output": {
+    "item": "prelude:coal_dust"
+  }
+}

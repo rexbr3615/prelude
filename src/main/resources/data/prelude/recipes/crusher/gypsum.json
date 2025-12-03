@@ -1,0 +1,11 @@
+{
+  "type": "prelude:crusher",
+  "ingredients": [
+    {
+      "item": "prelude:gypsum_crystal"
+    }
+  ],
+  "output": {
+    "item": "prelude:gypsum_powder"
+  }
+}

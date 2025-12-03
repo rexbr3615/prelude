@@ -1,0 +1,24 @@
+{
+  "values": [
+    "prelude:gallimimus_dna",
+    "prelude:rugops_dna",
+    "prelude:megaraptor_dna",
+    "prelude:yutyrannus_dna",
+    "prelude:coelacanth_dna",
+    "prelude:pteranodon_dna",
+    "prelude:therizinosaurus_dna",
+    "prelude:ouranosaurus_dna",
+    "prelude:avaceratops_dna",
+    "prelude:bajadasaurus_dna",
+    "prelude:deinocheirus_dna",
+    "prelude:albertosaurus_dna",
+    "prelude:puertasaurus_dna",
+    "prelude:sigilmassasaurus_dna",
+    "prelude:orodromeus_dna",
+    "prelude:austroraptor_dna",
+    "prelude:parasaurolophus_dna",
+    "prelude:siats_dna",
+    "prelude:jinfengopteryx_dna",
+    "prelude:argentavis_dna"
+  ]
+}

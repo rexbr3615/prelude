@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:juravenator_dna"
+    }
+  ],
+  "output": {
+    "item": "prelude:juravenator_spawn_egg"
+  }
+}

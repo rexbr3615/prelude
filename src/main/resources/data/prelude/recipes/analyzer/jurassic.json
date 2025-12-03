@@ -1,0 +1,11 @@
+{
+  "type": "prelude:analyzer",
+  "ingredients": [
+    {
+      "item": "prelude:jurassic_fossil"
+    }
+  ],
+  "output": {
+    "item": "prelude:jurassic_disk"
+  }
+}

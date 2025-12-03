@@ -1,0 +1,11 @@
+{
+  "type": "prelude:crusher",
+  "ingredients": [
+    {
+      "item": "minecraft:blaze_rod"
+    }
+  ],
+  "output": {
+    "item": "minecraft:blaze_powder"
+  }
+}

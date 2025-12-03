@@ -1,0 +1,11 @@
+{
+  "type": "prelude:crusher",
+  "ingredients": [
+    {
+      "item": "prelude:ginkgo_leaves_fruit"
+    }
+  ],
+  "output": {
+    "item": "prelude:ginkgo_sapling"
+  }
+}

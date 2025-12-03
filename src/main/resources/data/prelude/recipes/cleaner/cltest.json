@@ -1,0 +1,11 @@
+{
+  "type": "prelude:cleaner",
+  "ingredients": [
+    {
+      "item": "prelude:flare"
+    }
+  ],
+  "output": {
+    "item": "prelude:covered_rod"
+  }
+}
