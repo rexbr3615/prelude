@@ -27,7 +27,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.NUCLEOTIDES.get());
 
                         pOutput.accept(PreludeItems.AGAR.get());
-                        //pOutput.accept(PreludeItems.COOKSONIA_SPORES.get());
+                        pOutput.accept(PreludeItems.COOKSONIA_SPORES.get());
 
                         pOutput.accept(PreludeItems.PETRI_DISH.get());
                         pOutput.accept(PreludeItems.PETRI_DISH_AGAR.get());

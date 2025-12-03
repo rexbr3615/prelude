@@ -7,6 +7,7 @@ import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rexbrx.prelude.prelude;
+import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 import net.rexbrx.prelude.server.entity.EntityInit;
 import net.rexbrx.prelude.server.items.common.*;
 
@@ -354,8 +355,8 @@ public class PreludeItems {
     //public static final DeferredItem<Item> RAILGUN = ITEMS.register("railgun",
     //        () -> new GravityGunItem(new Item.Properties().stacksTo(1)));
 
-    //public static final DeferredItem<Item> COOKSONIA_SPORES = ITEMS.register("cooksonia_spores",
-    //        () -> new ItemNameBlockItem(PreludeBlocks.COOKSONIA_PLANT.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COOKSONIA_SPORES = ITEMS.register("cooksonia_spores",
+            () -> new ItemNameBlockItem(PreludeBlocks.COOKSONIA_PLANT.get(), new Item.Properties()));
 
 
 
