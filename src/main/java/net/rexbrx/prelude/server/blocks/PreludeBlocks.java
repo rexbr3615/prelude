@@ -18,10 +18,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.blocks.common.*;
-import net.rexbrx.prelude.server.blocks.common.PipeBlock;
-import net.rexbrx.prelude.server.blocks.other.EolicgeneratorBlock;
-import net.rexbrx.prelude.server.blocks.other.barrier.BarrierBlock;
-import net.rexbrx.prelude.server.blocks.other.teeth.TeethBlock;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import net.rexbrx.prelude.server.items.common.ModRotatedPillarBlock;
 
@@ -114,8 +110,7 @@ public class PreludeBlocks
     public static final DeferredBlock<Block> CABLE_BLOCK_CORNER = registerBlock("cable_block_corner",
             () -> new PreludeInWallBlock());
 
-    public static final DeferredBlock<Block> BASIC_PIPE = registerBlock("basic_pipe",
-            () -> new PipeBlock(ofFullCopy(Blocks.IRON_BLOCK).strength(1f).noOcclusion()));
+
 
     public static final DeferredBlock<Block> COOKSONIA_PLANT = registerBlockWithoutBlockItem("cooksonia_plant",
             () -> new CooksoniaPlantBlock(ofFullCopy(Blocks.WHEAT).noOcclusion()));
@@ -341,9 +336,9 @@ public class PreludeBlocks
                     .strength(1.89f, 8.6f).requiresCorrectToolForDrops()));
 
 
-    public static final DeferredBlock<Block> TEETH_BLOCK = registerBlock("teeth", () -> new TeethBlock());
-    public static final DeferredBlock<Block> BARRIER_BLOCK = registerBlock("barrier", () -> new BarrierBlock());
-    public static final DeferredBlock<Block> EO_GEN = registerBlock("eolicgenerator", () -> new EolicgeneratorBlock());
+    //public static final DeferredBlock<Block> TEETH_BLOCK = registerBlock("teeth", () -> new TeethBlock());
+    //public static final DeferredBlock<Block> BARRIER_BLOCK = registerBlock("barrier", () -> new BarrierBlock());
+    //public static final DeferredBlock<Block> EO_GEN = registerBlock("eolicgenerator", () -> new EolicgeneratorBlock());
 
 
     public static final DeferredBlock<Block> ADOBE_BLOCK = registerBlock("adobe_block",
