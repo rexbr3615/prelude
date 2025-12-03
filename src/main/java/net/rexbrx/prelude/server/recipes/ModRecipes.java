@@ -3,7 +3,6 @@ package net.rexbrx.prelude.server.recipes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -22,7 +21,7 @@ public class ModRecipes {
 
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<AnalyzerRecipe>> ANALYZER_SERIALIZER =
-            SERIALIZERS.register("analyzer", () -> AnalyzerRecipe.Serializer.INSTANCE);
+            SERIALIZERS.register("analyzer", () -> AnalyzerRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<AnalyzerRecipe>> ANALYZER_TYPE =
             TYPES.register("analyzer", () -> new RecipeType<AnalyzerRecipe>() {
                 @Override
@@ -32,7 +31,7 @@ public class ModRecipes {
             });
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<VatRecipe>> VAT_SERIALIZER =
-            SERIALIZERS.register("vat", () -> VatRecipe.Serializer.INSTANCE);
+            SERIALIZERS.register("vat", () -> VatRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<VatRecipe>> VAT_TYPE =
             TYPES.register("vat", () -> new RecipeType<VatRecipe>() {
                 @Override
@@ -42,7 +41,7 @@ public class ModRecipes {
             });
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CrusherRecipe>> CRUSHER_SERIALIZER =
-            SERIALIZERS.register("crusher", () -> CrusherRecipe.Serializer.INSTANCE);
+            SERIALIZERS.register("crusher", () -> CrusherRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<CrusherRecipe>> CRUSHER_TYPE =
             TYPES.register("crusher", () -> new RecipeType<CrusherRecipe>() {
                 @Override
@@ -52,7 +51,7 @@ public class ModRecipes {
             });
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<incubatorRecipe>> INCUBATOR_SERIALIZER =
-            SERIALIZERS.register("incubator", () -> incubatorRecipe.Serializer.INSTANCE);
+            SERIALIZERS.register("incubator", () -> incubatorRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<incubatorRecipe>> INCUBATOR_TYPE =
             TYPES.register("incubator", () -> new RecipeType<incubatorRecipe>() {
                 @Override

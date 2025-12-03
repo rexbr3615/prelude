@@ -1,8 +1,12 @@
 package net.rexbrx.prelude;
 
+import net.rexbrx.prelude.server.blocks.ModBlockEntities;
+import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 import net.rexbrx.prelude.server.entity.EntityInit;
 import net.rexbrx.prelude.server.items.ModCreativeModTabs;
 import net.rexbrx.prelude.server.items.PreludeItems;
+import net.rexbrx.prelude.server.recipes.ModRecipes;
+import net.rexbrx.prelude.server.screens.ModMenuTypes;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -26,6 +30,10 @@ public class prelude {
         PreludeItems.register(modEventBus);
         EntityInit.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        PreludeBlocks.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
     }

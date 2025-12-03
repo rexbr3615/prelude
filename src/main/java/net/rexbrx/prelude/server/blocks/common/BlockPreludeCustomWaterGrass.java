@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
 import java.util.Collections;
 import java.util.List;
 
-public class BlockPreludeCustomWaterGrass extends BushBlock implements LiquidBlockContainer, net.minecraftforge.common.IForgeShearable {
+public class BlockPreludeCustomWaterGrass extends BushBlock implements LiquidBlockContainer {
     protected static final float AABB_OFFSET = 6.0F;
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
 
