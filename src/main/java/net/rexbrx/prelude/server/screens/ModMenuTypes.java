@@ -21,16 +21,16 @@ public class ModMenuTypes {
             DeferredRegister.create(Registries.MENU, prelude.MODID);
 
 
-    public static final DeferredHolder<MenuType<AnalyzerMenu>> ANALYZER_MENU =
+    public static final DeferredHolder<MenuType<?>, MenuType<AnalyzerMenu>> ANALYZER_MENU =
             registerMenuType("analyzer_menu", AnalyzerMenu::new);
 
-    public static final DeferredHolder<MenuType<VatMenu>> VAT_MENU =
+    public static final DeferredHolder<MenuType<?>, MenuType<VatMenu>> VAT_MENU =
             registerMenuType("vat_menu", VatMenu::new);
 
-    public static final DeferredHolder<MenuType<CrusherMenu>> CRUSHER_MENU =
+    public static final DeferredHolder<MenuType<?>, MenuType<CrusherMenu>> CRUSHER_MENU =
             registerMenuType("crusher_menu", CrusherMenu::new);
 
-    public static final DeferredHolder<MenuType<IncubatorMenu>> INCUBATOR_MENU =
+    public static final DeferredHolder<MenuType<?>, MenuType<IncubatorMenu>> INCUBATOR_MENU =
             registerMenuType("incubator_menu", IncubatorMenu::new);
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
