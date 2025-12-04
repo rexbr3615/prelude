@@ -5,5 +5,7 @@
   "ingredient": {
     "item": "prelude:nucleotides"
   },
-  "result": "prelude:dna_nucleotides"
+  "result": {
+    "id": "prelude:dna_nucleotides"
+  }
 }

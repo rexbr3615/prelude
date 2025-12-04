@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "prelude:wire",
+    "id": "prelude:wire",
     "count": 16
   }
 }

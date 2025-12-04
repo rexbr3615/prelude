@@ -17,7 +17,7 @@
     }
   },
   "result": {
-    "item": "prelude:security_block",
+    "id": "prelude:security_block",
     "count": 8
   }
 }

@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "prelude:petri_dish",
+    "id": "prelude:petri_dish",
     "count": 3
   }
 }

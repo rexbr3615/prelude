@@ -16,7 +16,7 @@
     }
   },
   "result": {
-    "item": "prelude:sata",
+    "id": "prelude:sata",
     "count": 1
   }
 }

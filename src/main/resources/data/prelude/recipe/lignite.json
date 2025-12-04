@@ -5,5 +5,7 @@
   "ingredient": {
     "item": "minecraft:coal"
   },
-  "result": "prelude:lignite"
+  "result": {
+    "id": "prelude:lignite"
+  }
 }

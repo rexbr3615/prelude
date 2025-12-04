@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 import net.rexbrx.prelude.server.items.PreludeItems;
 
 @EventBusSubscriber
@@ -25,7 +26,7 @@ public class EncaseFossil {
         BlockPos pos = ev.getPos();
         ItemStack held = ev.getItemStack();
 
-        /*
+
         if (!world.isClientSide() && held.getItem() == PreludeItems.PLASTER.get()) {
             BlockState clicked = world.getBlockState(pos);
             // Verifica se o bloco clicado é de pedra
@@ -51,7 +52,7 @@ public class EncaseFossil {
                 ev.setCanceled(true);
             }
         }
-        */
+
     }
 }
 

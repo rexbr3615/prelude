@@ -16,7 +16,7 @@
     }
   },
   "result": {
-    "item": "prelude:barrier",
+    "id": "prelude:barrier",
     "count": 3
   }
 }

@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "prelude:metal_pillar",
+    "id": "prelude:metal_pillar",
     "count": 12
   }
 }

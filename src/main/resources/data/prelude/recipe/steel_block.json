@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "prelude:steel_block",
+    "id": "prelude:steel_block",
     "count": 1
   }
 }

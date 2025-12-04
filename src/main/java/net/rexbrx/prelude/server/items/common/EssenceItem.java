@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
+import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 
 import java.util.List;
 import java.util.Optional;
@@ -35,7 +36,7 @@ public class EssenceItem extends Item {
         tooltip.add(Component.literal("Use Me to GROW prelude trees!!"));
     }
 
-    /*@Override
+    @Override
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
         BlockPos clickedPos = context.getClickedPos();
@@ -55,13 +56,13 @@ public class EssenceItem extends Item {
                 BlockPos offset;
 
                 if (choice == 0) {
-                    structureRL = new ResourceLocation("prelude", "calamites");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "calamites");
                     offset = new BlockPos(-6, 0, -6); // ex: estrutura 7x7
                 } else if (choice == 1) {
-                    structureRL = new ResourceLocation("prelude", "calamites2");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "calamites2");
                     offset = new BlockPos(-1, 0, -1); // correto
                 } else {
-                    structureRL = new ResourceLocation("prelude", "calamites3");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "calamites3");
                     offset = new BlockPos(-4, 0, -4); // ex: estrutura 11x5 (formato estranho)
                 }
 
@@ -91,9 +92,9 @@ public class EssenceItem extends Item {
                     );
 
                     // Opcional: desgastar o item
-                    if (player != null) {
-                        stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
-                    }
+                    //if (player != null) {
+                    //    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
+                    //}
 
                     return InteractionResult.SUCCESS;
                 }
@@ -109,13 +110,13 @@ public class EssenceItem extends Item {
                 BlockPos offset;
 
                 if (choice == 0) {
-                    structureRL = new ResourceLocation("prelude", "hyperflora_calamites_var1");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "hyperflora_calamites_var1");
                     offset = new BlockPos(-5, 0, -5); // ex: estrutura 7x7
                 } else if (choice == 1) {
-                    structureRL = new ResourceLocation("prelude", "hyperflora_calamites_var2");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "hyperflora_calamites_var2");
                     offset = new BlockPos(-5, 0, -5); // correto
                 } else {
-                    structureRL = new ResourceLocation("prelude", "hyperflora_calamites_var3");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "hyperflora_calamites_var3");
                     offset = new BlockPos(-2, 0, -2); // ex: estrutura 11x5 (formato estranho)
                 }
 
@@ -145,9 +146,9 @@ public class EssenceItem extends Item {
                     );
 
                     // Opcional: desgastar o item
-                    if (player != null) {
-                        stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
-                    }
+                    //if (player != null) {
+                    //    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
+                    //}
 
                     return InteractionResult.SUCCESS;
                 }
@@ -163,19 +164,19 @@ public class EssenceItem extends Item {
                 BlockPos offset;
 
                 if (choice == 0) {
-                    structureRL = new ResourceLocation("prelude", "ginkgo1");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "ginkgo1");
                     offset = new BlockPos(-1, 0, -1); // ex: estrutura 7x7
                 } else if (choice == 1) {
-                    structureRL = new ResourceLocation("prelude", "ginkgo2");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "ginkgo2");
                     offset = new BlockPos(-2, 0, -2);
                 } else if (choice == 2){
-                    structureRL = new ResourceLocation("prelude", "ginkgo3");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "ginkgo3");
                     offset = new BlockPos(-4, 0, -4); // ex: estrutura 11x5 (formato estranho)
                 } else if (choice == 3) {
-                    structureRL = new ResourceLocation("prelude", "ginkgo5");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "ginkgo5");
                     offset = new BlockPos(-2, 0, -2); // ex: estrutura 11x5 (formato estranho)
                 } else {
-                    structureRL = new ResourceLocation("prelude", "ginkgo4");
+                    structureRL = ResourceLocation.fromNamespaceAndPath("prelude", "ginkgo4");
                     offset = new BlockPos(-4, 0, -4);
                 }
 
@@ -205,9 +206,9 @@ public class EssenceItem extends Item {
                     );
 
                     // Opcional: desgastar o item
-                    if (player != null) {
-                        stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
-                    }
+                    //if (player != null) {
+                    //    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(context.getHand()));
+                    //}
 
                     return InteractionResult.SUCCESS;
                 }
@@ -217,5 +218,5 @@ public class EssenceItem extends Item {
         return InteractionResult.PASS;
     }
 
-    */
+
 }

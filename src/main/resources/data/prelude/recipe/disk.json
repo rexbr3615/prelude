@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "prelude:diskdrive",
+    "id": "prelude:diskdrive",
     "count": 4
   }
 }

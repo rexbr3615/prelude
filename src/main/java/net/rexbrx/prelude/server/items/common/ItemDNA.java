@@ -22,7 +22,7 @@ public class ItemDNA extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.literal("DNA Quality: ## ERROR ##"));
-        tooltip.add(Component.literal("> Prelude Foundation DNA Code V3.25"));
+        tooltip.add(Component.literal("> Prelude Corporation DNA Code V3.25"));
         super.appendHoverText(stack, context, tooltip, flag);
     }
 }

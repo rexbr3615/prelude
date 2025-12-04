@@ -5,5 +5,7 @@
   "ingredient": {
     "item": "prelude:lignite"
   },
-  "result": "prelude:coal_dust"
+  "result": {
+    "id": "prelude:coal_dust"
+  }
 }

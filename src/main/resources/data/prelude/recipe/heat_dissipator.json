@@ -17,7 +17,7 @@
     }
   },
   "result": {
-    "item": "prelude:heat_dissipator",
+    "id": "prelude:heat_dissipator",
     "count": 1
   }
 }

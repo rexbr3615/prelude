@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "prelude:calamites_door",
+    "id": "prelude:calamites_door",
     "count": 3
   }
 }

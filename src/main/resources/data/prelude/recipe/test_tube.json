@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "prelude:test_tube",
+    "id": "prelude:test_tube",
     "count": 3
   }
 }

@@ -3,7 +3,6 @@
   "pools": [
     {
       "rolls": 1.0,
-      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -17,9 +16,7 @@
                     "enchantments": [
                       {
                         "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
-                        }
+                        "levels": { "min": 1 }
                       }
                     ]
                   }
@@ -29,6 +26,7 @@
             },
             {
               "type": "minecraft:item",
+              "name": "prelude:gypsum_crystal",
               "functions": [
                 {
                   "function": "minecraft:set_count",
@@ -36,8 +34,7 @@
                     "type": "minecraft:uniform",
                     "min": 2.0,
                     "max": 5.0
-                  },
-                  "add": false
+                  }
                 },
                 {
                   "function": "minecraft:apply_bonus",
@@ -47,8 +44,7 @@
                 {
                   "function": "minecraft:explosion_decay"
                 }
-              ],
-              "name": "prelude:gypsum_crystal"
+              ]
             }
           ]
         }

@@ -17,9 +17,7 @@
                   "enchantments": [
                     {
                       "enchantment": "minecraft:silk_touch",
-                      "levels": {
-                        "min": 1
-                      }
+                      "levels": { "min": 1 }
                     }
                   ]
                 }
@@ -28,23 +26,23 @@
           ],
           "functions": [
             {
-              "function": "set_count",
+              "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
             },
             {
-              "function": "enchant_with_levels",
+              "function": "minecraft:enchant_with_levels",
               "treasure": true,
               "levels": {
+                "type": "minecraft:uniform",
                 "min": 0,
                 "max": 3
               }
             },
-            {
-              "function": "minecraft:explosion_decay"
-            },
+            { "function": "minecraft:explosion_decay" },
             {
               "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
@@ -63,9 +61,7 @@
                 "enchantments": [
                   {
                     "enchantment": "minecraft:silk_touch",
-                    "levels": {
-                      "min": 1
-                    }
+                    "levels": { "min": 1 }
                   }
                 ]
               }
@@ -73,8 +69,9 @@
           ],
           "functions": [
             {
-              "function": "set_count",
+              "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 1
               }
@@ -99,9 +96,7 @@
                   "enchantments": [
                     {
                       "enchantment": "minecraft:silk_touch",
-                      "levels": {
-                        "min": 1
-                      }
+                      "levels": { "min": 1 }
                     }
                   ]
                 }
@@ -110,23 +105,23 @@
           ],
           "functions": [
             {
-              "function": "set_count",
+              "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               }
             },
             {
-              "function": "enchant_with_levels",
+              "function": "minecraft:enchant_with_levels",
               "treasure": true,
               "levels": {
+                "type": "minecraft:uniform",
                 "min": 0,
                 "max": 3
               }
             },
-            {
-              "function": "minecraft:explosion_decay"
-            },
+            { "function": "minecraft:explosion_decay" },
             {
               "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
@@ -145,9 +140,7 @@
                 "enchantments": [
                   {
                     "enchantment": "minecraft:silk_touch",
-                    "levels": {
-                      "min": 1
-                    }
+                    "levels": { "min": 1 }
                   }
                 ]
               }
@@ -155,8 +148,9 @@
           ],
           "functions": [
             {
-              "function": "set_count",
+              "function": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 1
               }

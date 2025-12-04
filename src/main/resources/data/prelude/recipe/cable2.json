@@ -9,7 +9,7 @@
     }
   },
   "result": {
-    "item": "prelude:cable_block",
+    "id": "prelude:cable_block",
     "count": 3
   }
 }

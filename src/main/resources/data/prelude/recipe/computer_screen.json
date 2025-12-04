@@ -23,7 +23,7 @@
     }
   },
   "result": {
-    "item": "prelude:computer_screen",
+    "id": "prelude:computer_screen",
     "count": 1
   }
 }

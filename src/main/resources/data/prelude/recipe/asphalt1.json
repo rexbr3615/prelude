@@ -5,5 +5,7 @@
   "ingredient": {
     "item": "prelude:asphalt_block"
   },
-  "result": "prelude:reinforced_asphalt_block"
+  "result": {
+    "id": "prelude:reinforced_asphalt_block"
+  }
 }

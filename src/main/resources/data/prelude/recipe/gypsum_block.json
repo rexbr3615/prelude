@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "prelude:gypsum_block",
+    "id": "prelude:gypsum_block",
     "count": 1
   }
 }

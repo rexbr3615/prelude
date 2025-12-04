@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "prelude:power_box",
+    "id": "prelude:power_box",
     "count": 1
   }
 }

@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "prelude:graphite_block",
+    "id": "prelude:graphite_block",
     "count": 1
   }
 }

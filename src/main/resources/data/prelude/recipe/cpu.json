@@ -17,7 +17,7 @@
     }
   },
   "result": {
-    "item": "prelude:cpu",
+    "id": "prelude:cpu",
     "count": 1
   }
 }

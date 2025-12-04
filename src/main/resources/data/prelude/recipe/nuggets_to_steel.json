@@ -30,7 +30,7 @@
     }
   ],
   "result": {
-    "item": "prelude:steel_ingot",
+    "id": "prelude:steel_ingot",
     "count": 1
   }
 }
