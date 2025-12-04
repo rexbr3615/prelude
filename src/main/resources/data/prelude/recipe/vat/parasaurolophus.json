@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:parasaurolophus_spawn_egg"
+    "id": "prelude:parasaurolophus_spawn_egg"
   }
 }

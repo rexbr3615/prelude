@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:sclerocephalus_spawn_egg"
+    "id": "prelude:sclerocephalus_spawn_egg"
   }
 }

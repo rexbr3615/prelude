@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:plant_disk"
+    "id": "prelude:plant_disk"
   }
 }

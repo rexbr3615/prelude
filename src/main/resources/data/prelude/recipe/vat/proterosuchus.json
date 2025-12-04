@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:proterosuchus_spawn_egg"
+    "id": "prelude:proterosuchus_spawn_egg"
   }
 }

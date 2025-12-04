@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:juravenator_spawn_egg"
+    "id": "prelude:juravenator_spawn_egg"
   }
 }

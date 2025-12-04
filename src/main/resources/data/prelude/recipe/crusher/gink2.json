@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:ginkgo_sapling"
+    "id": "prelude:ginkgo_sapling"
   }
 }

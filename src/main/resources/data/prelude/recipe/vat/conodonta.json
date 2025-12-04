@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:conodonta_spawn_egg"
+    "id": "prelude:conodonta_spawn_egg"
   }
 }

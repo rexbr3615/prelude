@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "prelude:marble_tiles",
+    "id": "prelude:marble_tiles",
     "count": 4
   }
 }

@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:gypsum_powder"
+    "id": "prelude:gypsum_powder"
   }
 }

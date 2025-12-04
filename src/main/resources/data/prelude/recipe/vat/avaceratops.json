@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:avaceratops_spawn_egg"
+    "id": "prelude:avaceratops_spawn_egg"
   }
 }

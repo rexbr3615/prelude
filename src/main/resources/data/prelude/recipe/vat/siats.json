@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:siats_spawn_egg"
+    "id": "prelude:siats_spawn_egg"
   }
 }

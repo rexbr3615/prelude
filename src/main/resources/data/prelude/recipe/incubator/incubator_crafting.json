@@ -26,7 +26,7 @@
     }
   },
   "result": {
-    "item": "prelude:bacteriological_incubator",
+    "id": "prelude:bacteriological_incubator",
     "count": 1
   }
 }

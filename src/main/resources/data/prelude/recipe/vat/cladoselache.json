@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:cladoselache_spawn_egg"
+    "id": "prelude:cladoselache_spawn_egg"
   }
 }

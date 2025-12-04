@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:sigilmassasaurus_spawn_egg"
+    "id": "prelude:sigilmassasaurus_spawn_egg"
   }
 }

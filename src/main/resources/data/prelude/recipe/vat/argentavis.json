@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:argentavis_spawn_egg"
+    "id": "prelude:argentavis_spawn_egg"
   }
 }

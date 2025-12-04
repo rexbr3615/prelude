@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "minecraft:netherite_scrap"
+    "id": "minecraft:netherite_scrap"
   }
 }

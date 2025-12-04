@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:orodromeus_spawn_egg"
+    "id": "prelude:orodromeus_spawn_egg"
   }
 }

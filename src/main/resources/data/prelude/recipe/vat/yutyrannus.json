@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:yutyrannus_spawn_egg"
+    "id": "prelude:yutyrannus_spawn_egg"
   }
 }

@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:coal_dust"
+    "id": "prelude:coal_dust"
   }
 }

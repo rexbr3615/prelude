@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:test_dna"
+    "id": "prelude:test_dna"
   }
 }

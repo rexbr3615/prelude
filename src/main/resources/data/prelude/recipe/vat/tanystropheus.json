@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:tanystropheus_spawn_egg"
+    "id": "prelude:tanystropheus_spawn_egg"
   }
 }

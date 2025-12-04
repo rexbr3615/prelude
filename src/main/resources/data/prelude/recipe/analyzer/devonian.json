@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:devonian_disk"
+    "id": "prelude:devonian_disk"
   }
 }

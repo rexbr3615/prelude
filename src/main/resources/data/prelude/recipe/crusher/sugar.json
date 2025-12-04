@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "minecraft:sugar"
+    "id": "minecraft:sugar"
   }
 }

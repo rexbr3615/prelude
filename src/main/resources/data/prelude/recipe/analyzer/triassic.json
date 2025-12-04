@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:triassic_disk"
+    "id": "prelude:triassic_disk"
   }
 }

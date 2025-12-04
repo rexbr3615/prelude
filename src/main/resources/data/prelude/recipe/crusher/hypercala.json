@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:hyperflora_calamites_sapling"
+    "id": "prelude:hyperflora_calamites_sapling"
   }
 }

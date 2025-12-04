@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:austroraptor_spawn_egg"
+    "id": "prelude:austroraptor_spawn_egg"
   }
 }

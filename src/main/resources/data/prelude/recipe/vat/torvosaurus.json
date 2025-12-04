@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:torvosaurus_spawn_egg"
+    "id": "prelude:torvosaurus_spawn_egg"
   }
 }

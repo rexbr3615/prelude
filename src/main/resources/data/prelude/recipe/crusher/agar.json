@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:agar"
+    "id": "prelude:agar"
   }
 }

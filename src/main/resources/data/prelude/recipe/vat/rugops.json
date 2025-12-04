@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:rugops_spawn_egg"
+    "id": "prelude:rugops_spawn_egg"
   }
 }

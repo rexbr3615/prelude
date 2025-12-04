@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:pteranodon_spawn_egg"
+    "id": "prelude:pteranodon_spawn_egg"
   }
 }

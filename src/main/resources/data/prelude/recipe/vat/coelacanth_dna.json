@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:blue_coelacanth_spawn"
+    "id": "prelude:blue_coelacanth_spawn"
   }
 }

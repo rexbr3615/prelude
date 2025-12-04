@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:gallimimus_spawn_egg"
+    "id": "prelude:gallimimus_spawn_egg"
   }
 }

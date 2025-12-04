@@ -6,6 +6,6 @@
     }
   ],
   "output": {
-    "item": "prelude:mutadon_spawn_egg"
+    "id": "prelude:mutadon_spawn_egg"
   }
 }
