@@ -29,7 +29,7 @@ public record AnalyzerRecipe(Ingredient inputItem, ItemStack output) implements 
             return false;
         }
 
-        return inputItem.test(AnalyzerRecipeInput.getItem(0));
+        return inputItem.test(AnalyzerRecipeInput.getItem(1));
     }
 
     @Override

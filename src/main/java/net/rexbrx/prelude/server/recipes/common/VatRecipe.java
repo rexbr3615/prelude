@@ -31,7 +31,7 @@ public record VatRecipe(Ingredient inputItem, ItemStack output) implements Recip
             return false;
         }
 
-        return inputItem.test(VatRecipeInput.getItem(0));
+        return inputItem.test(VatRecipeInput.getItem(1));
     }
 
     @Override
