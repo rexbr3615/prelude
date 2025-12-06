@@ -7,19 +7,23 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:cobblestone",
-          "weight": 28,
+          "weight": 1,
           "conditions": [
             {
               "condition": "minecraft:inverted",
               "term": {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": { "min": 1 }
-                    }
-                  ]
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -28,21 +32,13 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 1
               }
             },
             {
-              "function": "minecraft:enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "type": "minecraft:uniform",
-                "min": 0,
-                "max": 3
-              }
+              "function": "minecraft:explosion_decay"
             },
-            { "function": "minecraft:explosion_decay" },
             {
               "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
@@ -53,19 +49,23 @@
         {
           "type": "minecraft:item",
           "name": "prelude:coke",
-          "weight": 15,
+          "weight": 1,
           "conditions": [
             {
               "condition": "minecraft:inverted",
               "term": {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": { "min": 1 }
-                    }
-                  ]
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -74,21 +74,13 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 1
               }
             },
             {
-              "function": "minecraft:enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "type": "minecraft:uniform",
-                "min": 0,
-                "max": 3
-              }
+              "function": "minecraft:explosion_decay"
             },
-            { "function": "minecraft:explosion_decay" },
             {
               "function": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
@@ -99,17 +91,60 @@
         {
           "type": "minecraft:item",
           "name": "prelude:nacre",
-          "weight": 15,
+          "weight": 1,
           "conditions": [
             {
               "condition": "minecraft:inverted",
               "term": {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "enchantments": [
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            },
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "prelude:ancient_relics",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "predicates": {
+                  "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": { "min": 1 }
+                      "enchantments": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
                     }
                   ]
                 }
@@ -120,50 +155,6 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
-                "min": 1,
-                "max": 1
-              }
-            },
-            {
-              "function": "minecraft:enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "type": "minecraft:uniform",
-                "min": 0,
-                "max": 3
-              }
-            },
-            { "function": "minecraft:explosion_decay" },
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "prelude:ancient_relic",
-          "weight": 1,
-          "conditions": [
-            {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:silk_touch",
-                    "levels": { "min": 1 }
-                  }
-                ]
-              }
-            }
-          ],
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 1
               }
@@ -172,5 +163,6 @@
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "prelude:blocks/ancient_relic"
 }

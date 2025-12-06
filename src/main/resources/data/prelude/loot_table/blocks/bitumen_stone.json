@@ -6,18 +6,19 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "prelude:bitumen",
-          "weight": 15,
+          "name": "prelude:enchased_fossil",
+          "weight": 1,
           "conditions": [
             {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "enchantments": [
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "predicates": {
+                  "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": { "min": 1 }
+                      "enchantments": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
                     }
                   ]
                 }
@@ -28,42 +29,33 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
                 "min": 1,
-                "max": 3
+                "max": 1
               }
-            },
-            {
-              "function": "minecraft:enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "type": "minecraft:uniform",
-                "min": 0,
-                "max": 3
-              }
-            },
-            { "function": "minecraft:explosion_decay" },
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "prelude:bitumen_stone",
+          "name": "prelude:bitumen",
           "weight": 1,
           "conditions": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:silk_touch",
-                    "levels": { "min": 1 }
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
                   }
-                ]
+                }
               }
             }
           ],
@@ -71,10 +63,17 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
                 "min": 1,
-                "max": 1
+                "max": 2
               }
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            },
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops"
             }
           ]
         }
@@ -85,18 +84,19 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "prelude:bitumen_nugget",
-          "weight": 15,
+          "name": "prelude:enchased_fossil",
+          "weight": 1,
           "conditions": [
             {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "enchantments": [
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "predicates": {
+                  "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": { "min": 1 }
+                      "enchantments": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
                     }
                   ]
                 }
@@ -107,42 +107,33 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
                 "min": 1,
-                "max": 3
+                "max": 1
               }
-            },
-            {
-              "function": "minecraft:enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "type": "minecraft:uniform",
-                "min": 0,
-                "max": 3
-              }
-            },
-            { "function": "minecraft:explosion_decay" },
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:ore_drops"
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "prelude:bitumen_stone",
+          "name": "prelude:bitumen_nugget",
           "weight": 1,
           "conditions": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:silk_touch",
-                    "levels": { "min": 1 }
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
                   }
-                ]
+                }
               }
             }
           ],
@@ -150,14 +141,22 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
                 "min": 1,
-                "max": 1
+                "max": 4
               }
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            },
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:ore_drops"
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "prelude:blocks/enchased_fossil"
 }
