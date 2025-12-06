@@ -34,8 +34,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(PreludeBlocks.STEEL_BLOCK.get());
     }
 
-    @Override
-    protected Iterable<Block> getKnownBlocks() {
-        return PreludeBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
-    }
+    //@Override
+    //protected Iterable<Block> getKnownBlocks() {
+    //    return PreludeBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
+    //}
 }
