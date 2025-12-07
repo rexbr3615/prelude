@@ -378,7 +378,9 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.HYPER_CALAMITES_LEAVES.get());
                         pOutput.accept(PreludeBlocks.HYPER_CALAMITES_SAPLING.get());
 
-
+                        pOutput.accept(PreludeBlocks.ARAUCARIA_LOG.get());
+                        pOutput.accept(PreludeBlocks.ARAUCARIA_WOOD.get());
+                        pOutput.accept(PreludeBlocks.ARAUCARIA_LEAVES.get());
 
                     })
                     .build());

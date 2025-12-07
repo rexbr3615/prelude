@@ -317,9 +317,35 @@ public class PreludeBlocks
                 }
             });
 
+
     public static final DeferredBlock<Block> HYPER_CALAMITES_SAPLING = registerBlock("hyperflora_calamites_sapling",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
                     ofFullCopy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));
+
+
+
+
+    public static final DeferredBlock<Block> ARAUCARIA_LOG = registerBlock("araucaria_log",
+            () -> new ModFlammableRotatedPillarBlock(ofFullCopy(Blocks.OAK_LOG)));
+    public static final DeferredBlock<Block> ARAUCARIA_WOOD = registerBlock("araucaria_wood",
+            () -> new ModFlammableRotatedPillarBlock(ofFullCopy(Blocks.OAK_WOOD)));
+    public static final DeferredBlock<Block> ARAUCARIA_LEAVES = registerBlock("araucaria_leaves",
+            () -> new LeavesBlock(ofFullCopy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            });
 
 
 
