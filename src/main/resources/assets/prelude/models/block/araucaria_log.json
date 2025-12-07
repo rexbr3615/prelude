@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "prelude:block/trees/araucaria/calamites_top",
+    "side": "prelude:block/trees/araucaria/calamites_side"
+  }
+}
