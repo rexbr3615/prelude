@@ -38,6 +38,19 @@ public class ModBlockEntities {
                             PreludeBlocks.INCUBATOR.get()).build(null));
 
 
+    public static final Supplier<BlockEntityType<PipeBlockEntity>> TILE_ITEM_PIPE_ENTITY =
+            BLOCK_ENTITIES.register("item_pipe_entity", () -> BlockEntityType.Builder.of(
+                    PipeBlockEntity::new, PreludeBlocks.PIPE_ITEM.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PipeBlockEntity>> TILE_FLUID_PIPE_ENTITY =
+            BLOCK_ENTITIES.register("fluid_pipe_entity", () -> BlockEntityType.Builder.of(
+                    PipeBlockEntity::new, PreludeBlocks.PIPE_FLUID.get()).build(null));
+
+    public static final Supplier<BlockEntityType<PipeBlockEntity>> TILE_POWER_PIPE_ENTITY =
+            BLOCK_ENTITIES.register("power_pipe_entity", () -> BlockEntityType.Builder.of(
+                    PipeBlockEntity::new, PreludeBlocks.PIPE_POWA.get()).build(null));
+
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

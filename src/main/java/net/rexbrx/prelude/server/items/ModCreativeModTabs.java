@@ -101,6 +101,7 @@ public class ModCreativeModTabs
 
                         //pOutput.accept(PreludeBlocks.COOKSONIA_PLANT.get());
 
+                        pOutput.accept(PreludeItems.PIPE_STATE_CHANGER.get());
 
 
 
@@ -322,6 +323,13 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.ANALYZER.get());
                         pOutput.accept(PreludeBlocks.CRUSHER.get());
                         pOutput.accept(PreludeBlocks.INCUBATOR.get());
+
+
+                        pOutput.accept(PreludeBlocks.PIPE_POWA.get());
+                        pOutput.accept(PreludeBlocks.PIPE_FLUID.get());
+                        pOutput.accept(PreludeBlocks.PIPE_ITEM.get());
+
+                        pOutput.accept(PreludeItems.PIPE_STATE_CHANGER.get());
 
 
 

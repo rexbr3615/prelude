@@ -18,6 +18,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.blocks.common.*;
+import net.rexbrx.prelude.server.blocks.common.PipeBlock;
 import net.rexbrx.prelude.server.items.PreludeItems;
 import net.rexbrx.prelude.server.items.common.ModRotatedPillarBlock;
 
@@ -426,6 +427,18 @@ public class PreludeBlocks
 
     public static final DeferredBlock<Block> INCUBATOR = registerBlock("bacteriological_incubator",
             () -> new IncubatorBlock(ofFullCopy(Blocks.IRON_BLOCK).noOcclusion()));
+
+
+
+
+    public static final DeferredBlock<Block> PIPE_ITEM = registerBlock("item_pipe",
+            () -> new PipeBlock(BlockBehaviour.Properties.of().strength(1.0F).noOcclusion(), PipeBlock.Transport.ITEMS));
+
+    public static final DeferredBlock<Block> PIPE_FLUID = registerBlock("fluid_pipe",
+            () -> new PipeBlock(BlockBehaviour.Properties.of().strength(1.0F).noOcclusion(), PipeBlock.Transport.FLUIDS));
+
+    public static final DeferredBlock<Block> PIPE_POWA = registerBlock("power_pipe",
+            () -> new PipeBlock(BlockBehaviour.Properties.of().strength(1.0F).noOcclusion(), PipeBlock.Transport.ENERGY));
 
 
     //==================================================================================

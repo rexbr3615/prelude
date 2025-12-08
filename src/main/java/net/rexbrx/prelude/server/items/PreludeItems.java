@@ -14,6 +14,9 @@ import net.rexbrx.prelude.server.items.common.*;
 public class PreludeItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(prelude.MODID);
 
+    public static final DeferredItem<Item> PIPE_STATE_CHANGER = ITEMS.register("pipe_wrench",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> DISC_DRIVE = ITEMS.register("diskdrive",
             () -> new Item(new Item.Properties()));
 
