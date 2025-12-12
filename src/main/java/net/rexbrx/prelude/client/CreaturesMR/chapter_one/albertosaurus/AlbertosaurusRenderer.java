@@ -21,9 +21,8 @@ public class AlbertosaurusRenderer extends GeoEntityRenderer<AlbertosaurusEntity
     }
 
 
-    public void preRender(float widthScale, float heightScale, PoseStack poseStack, AlbertosaurusEntity animatable, BakedGeoModel model, boolean isReRender, float partialTick, int packedLight, int packedOverlay) {
+    public void scaleModelForRender(float widthScale, float heightScale, PoseStack poseStack, AlbertosaurusEntity animatable, BakedGeoModel model, boolean isReRender, float partialTick, int packedLight, int packedOverlay) {
         float scale = 1.05f;
-        this.scaleHeight = scale;
-        this.scaleWidth = scale;
+        poseStack.scale(scale,scale,scale);
     }
 }
