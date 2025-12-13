@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.rexbrx.prelude.server.entity.common.chapter_one.AlbertosaurusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_one.ConodontaEntity;
+import net.rexbrx.prelude.server.entity.common.chapter_one.PuertasaurusEntity;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
@@ -26,10 +27,10 @@ public class ConodontaRenderer extends GeoEntityRenderer<ConodontaEntity> {
         return RenderType.entityTranslucent(getTextureLocation(animatable));
     }
 
-    public void render(ConodontaEntity entity, float entityYaw, float partialTick, PoseStack poseStack,
-                       MultiBufferSource bufferSource, int packedLight) {
+    @Override
+    public void preRender(PoseStack poseStack, ConodontaEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
         float scale = 0.05f;
         poseStack.scale(scale,scale,scale);
-        super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
+        super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
     }
 }
