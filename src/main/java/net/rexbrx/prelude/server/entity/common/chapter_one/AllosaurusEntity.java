@@ -165,10 +165,9 @@ public class AllosaurusEntity extends PathfinderMob implements GeoEntity
             if (this.isSprinting()) {
                 return event.setAndContinue(RawAnimation.begin().thenLoop("running"));
             }
-            if (this.isInWaterOrBubble()) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("swim"));
-            }
-
+            //if (this.isInWaterOrBubble()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("swim"));
+            //}
             //if (!this.onGround() && !event.isMoving()) {
             //    return event.setAndContinue(RawAnimation.begin().thenLoop("air"));
             //}
