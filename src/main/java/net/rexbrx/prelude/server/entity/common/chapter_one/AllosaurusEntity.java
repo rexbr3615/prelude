@@ -88,16 +88,15 @@ public class AllosaurusEntity extends PathfinderMob implements GeoEntity
 
     //@Override
     //public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-    //    controllers.add(new AnimationController<>(this, "Walk/Idle",10, state -> {
-    //        if (state.isMoving())
-    //            return state.setAndContinue(RawAnimation.begin().then("walk2", Animation.LoopType.LOOP));
+     //   controllers.add(new AnimationController<>(this, "Walk/Idle",10, state -> {
+     //       if (state.isMoving()  || !(state.getLimbSwingAmount() > -0.15F && state.getLimbSwingAmount() < 0.15F)) && this.onGround())
+     //           return state.setAndContinue(RawAnimation.begin().then("walk2", Animation.LoopType.LOOP));
 //
-     //        return state.setAndContinue(RawAnimation.begin().then("idle2", Animation.LoopType.LOOP));
-    //    }));
+      //        return state.setAndContinue(RawAnimation.begin().then("idle2", Animation.LoopType.LOOP));
+     //   }));
 //
-    //     controllers.add(new AnimationController<>(this, "attackController", state -> PlayState.STOP)
-    //            .triggerableAnim("attack", RawAnimation.begin().then("attack", Animation.LoopType.PLAY_ONCE)));
-//
+      //    controllers.add(new AnimationController<>(this, "attackController", state -> PlayState.STOP)
+     //           .triggerableAnim("attack", RawAnimation.begin().then("attack", Animation.LoopType.PLAY_ONCE)));
 
     //}
 
@@ -154,8 +153,9 @@ public class AllosaurusEntity extends PathfinderMob implements GeoEntity
     }
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar data) {
-        data.add(new AnimationController<>(this, "movement", 4, this::movementPredicate));
-        data.add(new AnimationController<>(this, "procedure", 4, this::procedurePredicate));
+        data.add(new AnimationController<>(this, "movement", 11, this::movementPredicate));
+        data.add(new AnimationController<>(this, "attacking", 11, this::attackingPredicate));
+        data.add(new AnimationController<>(this, "procedure", 11, this::procedurePredicate));
     }
     private PlayState movementPredicate(AnimationState event) {
         if (this.animationprocedure.equals("empty")) {
@@ -165,10 +165,13 @@ public class AllosaurusEntity extends PathfinderMob implements GeoEntity
             if (this.isSprinting()) {
                 return event.setAndContinue(RawAnimation.begin().thenLoop("running"));
             }
-            //if (!this.onGround()) {
+            //if (!this.onGround() && !event.isMoving()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("air"));
+            //}
+            //if (!this.onGround() && event.isMoving()) {
             //    return event.setAndContinue(RawAnimation.begin().thenLoop("fly"));
             //}
-            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+            return event.setAndContinue(RawAnimation.begin().thenLoop("idle2"));
         }
         return PlayState.STOP;
     }
@@ -187,6 +190,23 @@ public class AllosaurusEntity extends PathfinderMob implements GeoEntity
             return PlayState.STOP;
         }
         prevAnim = this.animationprocedure;
+        return PlayState.CONTINUE;
+    }
+    private PlayState attackingPredicate(AnimationState event) {
+        double d1 = this.getX() - this.xOld;
+        double d0 = this.getZ() - this.zOld;
+        float velocity = (float) Math.sqrt(d1 * d1 + d0 * d0);
+        if (getAttackAnim(event.getPartialTick()) > 0f && !this.swinging) {
+            this.swinging = true;
+            this.lastSwing = level().getGameTime();
+        }
+        if (this.swinging && this.lastSwing + 20L <= level().getGameTime()) {
+            this.swinging = false;
+        }
+        if (this.swinging && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+            event.getController().forceAnimationReset();
+            return event.setAndContinue(RawAnimation.begin().thenPlay("attack"));
+        }
         return PlayState.CONTINUE;
     }
 

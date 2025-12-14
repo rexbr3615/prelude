@@ -3,6 +3,7 @@ package net.rexbrx.prelude.server.entity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import net.rexbrx.prelude.server.entity.common.chapter_one.AllosaurusEntity;
 
 @EventBusSubscriber
 public class EntityAnimationFactory {
@@ -18,7 +19,7 @@ public class EntityAnimationFactory {
             //    }
             //}
 
-            /*
+
             if (event.getEntity() instanceof AllosaurusEntity syncable) {
                 String animation = syncable.getSyncedAnimation();
                 if (!animation.equals("undefined")) {
@@ -27,6 +28,7 @@ public class EntityAnimationFactory {
                 }
             }
 
+/*
             if (event.getEntity() instanceof GallimimusEntity syncable) {
                 String animation = syncable.getSyncedAnimation();
                 if (!animation.equals("undefined")) {
