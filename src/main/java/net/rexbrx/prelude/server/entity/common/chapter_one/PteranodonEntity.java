@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -17,10 +18,6 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -56,46 +53,8 @@ public class PteranodonEntity extends PathfinderMob implements GeoEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(1, new Goal() {
-            {
-                this.setFlags(EnumSet.of(Goal.Flag.MOVE));
-            }
-
-            public boolean canUse() {
-                if (PteranodonEntity.this.getTarget() != null && !PteranodonEntity.this.getMoveControl().hasWanted()) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-
-            @Override
-            public boolean canContinueToUse() {
-                return PteranodonEntity.this.getMoveControl().hasWanted() && PteranodonEntity.this.getTarget() != null && PteranodonEntity.this.getTarget().isAlive();
-            }
-
-            @Override
-            public void start() {
-                LivingEntity livingentity = PteranodonEntity.this.getTarget();
-                Vec3 vec3d = livingentity.getEyePosition(1);
-                PteranodonEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
-            }
-
-            @Override
-            public void tick() {
-                LivingEntity livingentity = PteranodonEntity.this.getTarget();
-                if (PteranodonEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-                    PteranodonEntity.this.doHurtTarget(livingentity);
-                } else {
-                    double d0 = PteranodonEntity.this.distanceToSqr(livingentity);
-                    if (d0 < 16) {
-                        Vec3 vec3d = livingentity.getEyePosition(1);
-                        PteranodonEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
-                    }
-                }
-            }
-        });
-        this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1, 20) {
+        super.registerGoals();
+        this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1, 20) {
             @Override
             protected Vec3 getPosition() {
                 RandomSource random = PteranodonEntity.this.getRandom();
@@ -105,12 +64,9 @@ public class PteranodonEntity extends PathfinderMob implements GeoEntity {
                 return new Vec3(dir_x, dir_y, dir_z);
             }
         });
-        this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
-            protected double getAttackReachSqr(LivingEntity entity) {
-                return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
-            }
-        });
-        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(3, new FloatGoal(this));
+        this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, (float) 0.5));
         this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
     }
 
