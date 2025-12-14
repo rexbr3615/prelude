@@ -138,9 +138,9 @@ public class CladoselacheEntity extends PathfinderMob implements GeoEntity
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Walk/Idle", state -> {
+        controllers.add(new AnimationController<>(this, "Walk/Idle", 10, state -> {
             if (state.isMoving())
-                return state.setAndContinue(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
+                return state.setAndContinue(RawAnimation.begin().then("swim", Animation.LoopType.LOOP));
 
             return state.setAndContinue(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
         }));
@@ -162,6 +162,11 @@ public class CladoselacheEntity extends PathfinderMob implements GeoEntity
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, MobSpawnType spawnType, @Nullable SpawnGroupData spawnGroupData) {
         return super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
+    }
+
+    @Override
+    public EntityDimensions getDefaultDimensions(Pose pose) {
+        return super.getDefaultDimensions(pose).scale(1f, 1f);
     }
 
     @Override

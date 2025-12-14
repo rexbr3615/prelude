@@ -84,9 +84,9 @@ public class SigilmassasaurusEntity extends PathfinderMob implements GeoEntity
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "Walk/Idle", state -> {
             if (state.isMoving())
-                return state.setAndContinue(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
+                return state.setAndContinue(RawAnimation.begin().then("walk2", Animation.LoopType.LOOP));
 
-            return state.setAndContinue(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+            return state.setAndContinue(RawAnimation.begin().then("idle2", Animation.LoopType.LOOP));
         }));
 
         controllers.add(new AnimationController<>(this, "attackController", state -> software.bernie.geckolib.animation.PlayState.STOP)
@@ -108,7 +108,10 @@ public class SigilmassasaurusEntity extends PathfinderMob implements GeoEntity
         return super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
     }
 
-
+    @Override
+    public EntityDimensions getDefaultDimensions(Pose pose) {
+        return super.getDefaultDimensions(pose).scale(1f, 1f);
+    }
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {

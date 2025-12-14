@@ -112,6 +112,11 @@ public class AvaceratopsEntity extends PathfinderMob implements GeoEntity
     }
 
     @Override
+    public EntityDimensions getDefaultDimensions(Pose pose) {
+        return super.getDefaultDimensions(pose).scale(1f, 1f);
+    }
+
+    @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }

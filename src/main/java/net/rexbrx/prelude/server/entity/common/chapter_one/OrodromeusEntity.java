@@ -90,7 +90,7 @@ public class OrodromeusEntity extends PathfinderMob implements GeoEntity
             if (state.isMoving())
                 return state.setAndContinue(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
 
-            return state.setAndContinue(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+            return state.setAndContinue(RawAnimation.begin().then("idle1", Animation.LoopType.LOOP));
         }));
 
         controllers.add(new AnimationController<>(this, "attackController", state -> software.bernie.geckolib.animation.PlayState.STOP)

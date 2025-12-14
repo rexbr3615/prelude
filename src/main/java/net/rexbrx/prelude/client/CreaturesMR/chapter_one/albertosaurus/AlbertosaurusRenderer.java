@@ -1,11 +1,13 @@
 package net.rexbrx.prelude.client.CreaturesMR.chapter_one.albertosaurus;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.rexbrx.prelude.server.entity.common.chapter_one.AlbertosaurusEntity;
+import net.rexbrx.prelude.server.entity.common.chapter_one.ConodontaEntity;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
@@ -21,9 +23,12 @@ public class AlbertosaurusRenderer extends GeoEntityRenderer<AlbertosaurusEntity
     }
 
 
-    public void submit(float widthScale, float heightScale, PoseStack poseStack, AlbertosaurusEntity animatable, BakedGeoModel model, boolean isReRender, float partialTick, int packedLight, int packedOverlay) {
+    @Override
+    public void preRender(PoseStack poseStack, AlbertosaurusEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
         float scale = 1.05f;
         poseStack.scale(scale,scale,scale);
+        super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
+
     }
 
 }

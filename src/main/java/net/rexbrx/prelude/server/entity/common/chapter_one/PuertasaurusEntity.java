@@ -9,6 +9,11 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.animal.Cow;
+import net.minecraft.world.entity.animal.frog.Frog;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.monster.Phantom;
+import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -110,6 +115,18 @@ public class PuertasaurusEntity extends PathfinderMob implements GeoEntity
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor level, DifficultyInstance difficulty, MobSpawnType spawnType, @Nullable SpawnGroupData spawnGroupData) {
         return super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
     }
+
+
+    @Override
+    public EntityDimensions getDefaultDimensions(Pose pose) {
+        return super.getDefaultDimensions(pose).scale(1f, 1f);
+    }
+
+    @Override
+    public boolean canCollideWith(Entity entity) {
+        return true;
+    }
+
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {

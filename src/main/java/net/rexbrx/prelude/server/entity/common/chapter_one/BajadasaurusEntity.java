@@ -111,7 +111,10 @@ public class BajadasaurusEntity extends PathfinderMob implements GeoEntity
         return super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
     }
 
-
+    @Override
+    public EntityDimensions getDefaultDimensions(Pose pose) {
+        return super.getDefaultDimensions(pose).scale(1f, 1f);
+    }
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {

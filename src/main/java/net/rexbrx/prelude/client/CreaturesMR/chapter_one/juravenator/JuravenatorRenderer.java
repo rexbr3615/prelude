@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.rexbrx.prelude.server.entity.common.chapter_one.AlbertosaurusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_one.JuravenatorEntity;
 import software.bernie.geckolib.cache.object.BakedGeoModel;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
@@ -23,11 +24,13 @@ public class JuravenatorRenderer extends GeoEntityRenderer<JuravenatorEntity> {
         return RenderType.entityTranslucent(getTextureLocation(animatable));
     }
 
-    public void preRender(PoseStack poseStack, JuravenatorEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
-                          float blue, float alpha) {
+    @Override
+    public void preRender(PoseStack poseStack, JuravenatorEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
+
         float scale = 0.35f;
-        this.scaleHeight = scale;
-        this.scaleWidth = scale;
+        poseStack.scale(scale,scale,scale);
+        super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
+
     }
 }
 
