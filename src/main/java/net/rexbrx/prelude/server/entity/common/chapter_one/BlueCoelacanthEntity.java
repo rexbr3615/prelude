@@ -1,6 +1,9 @@
 package net.rexbrx.prelude.server.entity.common.chapter_one;
 
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.level.Level;
@@ -23,6 +26,7 @@ import net.neoforged.neoforge.fluids.FluidType;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
+import software.bernie.geckolib.animation.AnimationState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
@@ -124,22 +128,6 @@ public class BlueCoelacanthEntity extends PathfinderMob implements GeoEntity
         return false; // Pode se afogar em outros fluidos, mas não em água
     }
 
-    @Override
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Walk/Idle",10, state -> {
-            if (state.isMoving())
-                return state.setAndContinue(RawAnimation.begin().then("swim", Animation.LoopType.LOOP));
-
-            return state.setAndContinue(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
-        }));
-
-        controllers.add(new AnimationController<>(this, "attackController", state -> PlayState.STOP)
-                .triggerableAnim("attack", RawAnimation.begin().then("attack", Animation.LoopType.PLAY_ONCE)));
-
-
-    }
-
-
 
     @Override
     protected void tickDeath() {
@@ -163,5 +151,102 @@ public class BlueCoelacanthEntity extends PathfinderMob implements GeoEntity
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.cache;
     }
+
+    @Override
+    public SoundEvent getHurtSound(DamageSource ds) {
+        return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
+    }
+
+    @Override
+    public SoundEvent getDeathSound() {
+        return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
+    }
+
+
+    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(BlueCoelacanthEntity.class, EntityDataSerializers.STRING);
+    private boolean swinging;
+    private boolean lastloop;
+    private long lastSwing;
+    public String animationprocedure = "empty";
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(ANIMATION, "undefined");
+    }
+    public String getSyncedAnimation() {
+        return this.entityData.get(ANIMATION);
+    }
+    public void setAnimation(String animation) {
+        this.entityData.set(ANIMATION, animation);
+    }
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar data) {
+        data.add(new AnimationController<>(this, "movement", 11, this::movementPredicate));
+        data.add(new AnimationController<>(this, "attacking", 11, this::attackingPredicate));
+        data.add(new AnimationController<>(this, "procedure", 11, this::procedurePredicate));
+    }
+    private PlayState movementPredicate(AnimationState event) {
+        if (this.animationprocedure.equals("empty")) {
+            //if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) && this.onGround() && !this.isSprinting()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
+            //}
+            //if (this.isSprinting()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("running"));
+            //}
+            if (this.isInWaterOrBubble()) {
+                return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+            }
+            if (this.isInWaterOrBubble() && !event.isMoving()) {
+                return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+            }
+            if (this.isInWaterOrBubble() && event.isMoving()) {
+                return event.setAndContinue(RawAnimation.begin().thenLoop("swimmmmm"));
+            }
+            //if (!this.onGround() && !event.isMoving()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("air"));
+            //}
+            //if (!this.onGround() && event.isMoving()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("fly"));
+            //}
+            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+        }
+        return PlayState.STOP;
+    }
+    String prevAnim = "empty";
+    private PlayState procedurePredicate(AnimationState event) {
+        if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED || (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty"))) {
+            if (!this.animationprocedure.equals(prevAnim))
+                event.getController().forceAnimationReset();
+            event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
+            if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+                this.animationprocedure = "empty";
+                event.getController().forceAnimationReset();
+            }
+        } else if (animationprocedure.equals("empty")) {
+            prevAnim = "empty";
+            return PlayState.STOP;
+        }
+        prevAnim = this.animationprocedure;
+        return PlayState.CONTINUE;
+    }
+    private PlayState attackingPredicate(AnimationState event) {
+        double d1 = this.getX() - this.xOld;
+        double d0 = this.getZ() - this.zOld;
+        float velocity = (float) Math.sqrt(d1 * d1 + d0 * d0);
+        if (getAttackAnim(event.getPartialTick()) > 0f && !this.swinging) {
+            this.swinging = true;
+            this.lastSwing = level().getGameTime();
+        }
+        if (this.swinging && this.lastSwing + 20L <= level().getGameTime()) {
+            this.swinging = false;
+        }
+        if (this.swinging && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+            event.getController().forceAnimationReset();
+            return event.setAndContinue(RawAnimation.begin().thenPlay("attack"));
+        }
+        return PlayState.CONTINUE;
+    }
+
+
 
 }
