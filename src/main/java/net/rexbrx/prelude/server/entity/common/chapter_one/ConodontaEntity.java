@@ -197,20 +197,23 @@ public class ConodontaEntity extends PathfinderMob implements GeoEntity
     private PlayState movementPredicate(AnimationState event) {
         if (this.animationprocedure.equals("empty")) {
             //if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) && this.onGround() && !this.isSprinting()) {
-            //    return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("swim"));
             //}
+            if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))) {
+                return event.setAndContinue(RawAnimation.begin().thenLoop("swim"));
+            }
             //if (this.isSprinting()) {
             //    return event.setAndContinue(RawAnimation.begin().thenLoop("running"));
             //}
-            if (this.isInWaterOrBubble()) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
-            }
-            if (this.isInWaterOrBubble() && !event.isMoving()) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
-            }
-            if (this.isInWaterOrBubble() && event.isMoving()) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("swim"));
-            }
+            //if (this.isInWaterOrBubble()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+            //}
+            //if (this.isInWaterOrBubble() && !event.isMoving()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+            //}
+            //if (this.isInWaterOrBubble() && event.isMoving()) {
+            //    return event.setAndContinue(RawAnimation.begin().thenLoop("swim"));
+            //}
             //if (!this.onGround() && !event.isMoving()) {
             //    return event.setAndContinue(RawAnimation.begin().thenLoop("air"));
             //}

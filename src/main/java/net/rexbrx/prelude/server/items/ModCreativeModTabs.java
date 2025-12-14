@@ -325,9 +325,9 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.INCUBATOR.get());
 
 
-                        pOutput.accept(PreludeBlocks.PIPE_POWA.get());
-                        pOutput.accept(PreludeBlocks.PIPE_FLUID.get());
-                        pOutput.accept(PreludeBlocks.PIPE_ITEM.get());
+                        //pOutput.accept(PreludeBlocks.PIPE_POWA.get());
+                        //pOutput.accept(PreludeBlocks.PIPE_FLUID.get());
+                        //pOutput.accept(PreludeBlocks.PIPE_ITEM.get());
 
                         pOutput.accept(PreludeItems.PIPE_STATE_CHANGER.get());
 
