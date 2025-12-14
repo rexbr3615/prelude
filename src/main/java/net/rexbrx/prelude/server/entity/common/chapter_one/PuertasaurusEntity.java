@@ -90,9 +90,9 @@ public class PuertasaurusEntity extends PathfinderMob implements GeoEntity
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Walk/Idle", state -> {
+        controllers.add(new AnimationController<>(this, "Walk/Idle",10, state -> {
             if (state.isMoving())
-                return state.setAndContinue(RawAnimation.begin().then("walk", Animation.LoopType.LOOP));
+                return state.setAndContinue(RawAnimation.begin().then("walk2", Animation.LoopType.LOOP));
 
             return state.setAndContinue(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
         }));

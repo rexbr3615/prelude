@@ -154,7 +154,7 @@ public class PteranodonEntity extends PathfinderMob implements GeoEntity {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "Walk/Idle", state -> {
+        controllers.add(new AnimationController<>(this, "Walk/Idle",10, state -> {
             if (!PteranodonEntity.this.onGround()) {
                 return state.setAndContinue(RawAnimation.begin().then("fly", Animation.LoopType.LOOP));
             }
