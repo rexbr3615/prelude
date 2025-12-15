@@ -10,10 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.rexbrx.prelude.prelude;
-import net.rexbrx.prelude.server.screens.menu.AnalyzerMenu;
-import net.rexbrx.prelude.server.screens.menu.CrusherMenu;
-import net.rexbrx.prelude.server.screens.menu.IncubatorMenu;
-import net.rexbrx.prelude.server.screens.menu.VatMenu;
+import net.rexbrx.prelude.server.screens.menu.*;
 
 
 public class ModMenuTypes {
@@ -32,6 +29,9 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<IncubatorMenu>> INCUBATOR_MENU =
             registerMenuType("incubator_menu", IncubatorMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<IndustrialCrusherMenu>> INDUSTRIAL_CRUSHER_MENU =
+            registerMenuType("industrial_crusher_menu", IndustrialCrusherMenu::new);
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,
                                                                                                               IContainerFactory<T> factory) {

@@ -9,10 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.rexbrx.prelude.client.menu.AnalyzerScreen;
-import net.rexbrx.prelude.client.menu.CrusherScreen;
-import net.rexbrx.prelude.client.menu.IncubatorScreen;
-import net.rexbrx.prelude.client.menu.VatScreen;
+import net.rexbrx.prelude.client.menu.*;
 import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 import net.rexbrx.prelude.server.entity.EntityInit;
 
@@ -136,6 +133,8 @@ public class PreludeModClient {
         event.register(ModMenuTypes.VAT_MENU.get(), VatScreen::new);
         event.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
         event.register(ModMenuTypes.INCUBATOR_MENU.get(), IncubatorScreen::new);
+        event.register(ModMenuTypes.INDUSTRIAL_CRUSHER_MENU.get(), IndustrialCrusherScreen::new);
+
     }
 
 }

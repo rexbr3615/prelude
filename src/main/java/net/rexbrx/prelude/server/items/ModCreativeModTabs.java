@@ -324,6 +324,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.CRUSHER.get());
                         pOutput.accept(PreludeBlocks.INCUBATOR.get());
 
+                        pOutput.accept(PreludeBlocks.INDUSTRIAL_CRUSHER.get());
 
                         //pOutput.accept(PreludeBlocks.PIPE_POWA.get());
                         pOutput.accept(PreludeBlocks.PIPE_FLUID.get());

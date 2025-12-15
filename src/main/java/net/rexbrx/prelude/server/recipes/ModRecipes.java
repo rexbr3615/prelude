@@ -7,10 +7,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rexbrx.prelude.prelude;
-import net.rexbrx.prelude.server.recipes.common.AnalyzerRecipe;
-import net.rexbrx.prelude.server.recipes.common.CrusherRecipe;
-import net.rexbrx.prelude.server.recipes.common.VatRecipe;
-import net.rexbrx.prelude.server.recipes.common.incubatorRecipe;
+import net.rexbrx.prelude.server.recipes.common.*;
 
 
 public class ModRecipes {
@@ -57,6 +54,16 @@ public class ModRecipes {
                 @Override
                 public String toString() {
                     return "incubator";
+                }
+            });
+
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<IndustrialCrusherRecipe>> INDUSTRIAL_CRUSHER_SERIALIZER =
+            SERIALIZERS.register("icrusher", IndustrialCrusherRecipe.Serializer::new);
+    public static final DeferredHolder<RecipeType<?>, RecipeType<IndustrialCrusherRecipe>> INDUSTRIAL_CRUSHER_TYPE =
+            TYPES.register("icrusher", () -> new RecipeType<IndustrialCrusherRecipe>() {
+                @Override
+                public String toString() {
+                    return "crusher";
                 }
             });
 

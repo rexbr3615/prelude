@@ -428,7 +428,8 @@ public class PreludeBlocks
     public static final DeferredBlock<Block> INCUBATOR = registerBlock("bacteriological_incubator",
             () -> new IncubatorBlock(ofFullCopy(Blocks.IRON_BLOCK).noOcclusion()));
 
-
+    public static final DeferredBlock<Block> INDUSTRIAL_CRUSHER = registerBlock("industrial_crusher",
+            () -> new IndustrialCrusherBlock(ofFullCopy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
     public static final DeferredBlock<Block> PIPE_ITEM = registerBlock("item_pipe",

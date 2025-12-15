@@ -37,6 +37,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(IncubatorEntity::new,
                             PreludeBlocks.INCUBATOR.get()).build(null));
 
+    public static final Supplier<BlockEntityType<IndustrialCrusherEntity>> INDUSTRIAL_CRUSHER_ENTITY =
+            BLOCK_ENTITIES.register("industrial_crusher_entity", () ->
+                    BlockEntityType.Builder.of(IndustrialCrusherEntity::new,
+                            PreludeBlocks.INDUSTRIAL_CRUSHER.get()).build(null));
+
 
     public static final Supplier<BlockEntityType<PipeBlockEntity>> TILE_ITEM_PIPE_ENTITY =
             BLOCK_ENTITIES.register("item_pipe_entity", () -> BlockEntityType.Builder.of(
