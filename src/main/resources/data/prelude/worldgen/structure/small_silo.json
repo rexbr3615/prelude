@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:jigsaw",
+  "start_pool": "prelude:small_silo",
+  "size": 1,
+  "max_distance_from_center": 64,
+  "spawn_overrides": {},
+  "step": "surface_structures",
+  "terrain_adaptation": "bury",
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": 64
+    },
+    "max_inclusive": {
+      "absolute": 226
+    }
+  },
+  "biomes": [
+    "badlands",
+    "birch_forest",
+    "desert",
+    "forest"
+  ],
+  "use_expansion_hack": false
+}
