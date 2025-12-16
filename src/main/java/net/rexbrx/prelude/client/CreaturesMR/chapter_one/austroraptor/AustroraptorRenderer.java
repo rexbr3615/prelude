@@ -24,7 +24,7 @@ public class AustroraptorRenderer extends GeoEntityRenderer<AustroraptorEntity> 
 
     @Override
     public void preRender(PoseStack poseStack, AustroraptorEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
-        float scale = 0.75f;
+        float scale = 0.79f;
         poseStack.scale(scale,scale,scale);
         super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
 

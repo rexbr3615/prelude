@@ -1,0 +1,11 @@
+{
+  "type": "prelude:icrusher",
+  "ingredients": [
+    {
+      "item": "prelude:hyperflora_calamites_leaves"
+    }
+  ],
+  "output": {
+    "id": "prelude:hyperflora_calamites_sapling"
+  }
+}

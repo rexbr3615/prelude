@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:monolophosaurus_dna"
+    }
+  ],
+  "output": {
+    "id": "prelude:monolophosaurus_spawn_egg"
+  }
+}

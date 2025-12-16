@@ -9,6 +9,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rexbrx.prelude.prelude;
+import net.rexbrx.prelude.server.entity.common.chapter_omega.IrritatorEntity;
+import net.rexbrx.prelude.server.entity.common.chapter_omega.MonolophosaurusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_one.*;
 
 import java.util.function.Supplier;
@@ -178,12 +180,22 @@ public class EntityInit {
     public static final Supplier<EntityType<CladoselacheEntity>> CLADOSELACHE = ENTITY_TYPES.register("cladoselache",
             () -> EntityType.Builder.of(CladoselacheEntity::new, MobCategory.WATER_CREATURE)
 
-                    .sized(1.5f, 1.3f).build("cladoselache"));
+                    .sized(1.5f, 0.89f).build("cladoselache"));
 
     public static final Supplier<EntityType<ArgentavisEntity>> ARGENTAVIS = ENTITY_TYPES.register("argentavis",
             () -> EntityType.Builder.of(ArgentavisEntity::new, MobCategory.CREATURE)
 
-                    .sized(0.78f, 0.9f).build("argentavis"));
+                    .sized(0.84f, 0.97f).build("argentavis"));
+
+    public static final Supplier<EntityType<IrritatorEntity>> IRRITATOR = ENTITY_TYPES.register("irritator",
+            () -> EntityType.Builder.of(IrritatorEntity::new, MobCategory.CREATURE)
+
+                    .sized(1.60f, 1.65f).build("irritator"));
+
+    public static final Supplier<EntityType<MonolophosaurusEntity>> MONOLOPHOSAURUS = ENTITY_TYPES.register("monolophosaurus",
+            () -> EntityType.Builder.of(MonolophosaurusEntity::new, MobCategory.CREATURE)
+
+                    .sized(1.61f, 1.8911f).build("monolophosaurus"));
 
 
     @SubscribeEvent
@@ -223,6 +235,8 @@ public class EntityInit {
             JinfengopteryxEntity.init();
             CladoselacheEntity.init();
             ArgentavisEntity.init();
+            IrritatorEntity.init();
+            MonolophosaurusEntity.init();
         });
     }
 

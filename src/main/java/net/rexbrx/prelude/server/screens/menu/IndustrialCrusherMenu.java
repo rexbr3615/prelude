@@ -9,11 +9,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.rexbrx.prelude.server.blocks.PreludeBlocks;
-import net.rexbrx.prelude.server.blocks.tile.CrusherEntity;
+import net.rexbrx.prelude.server.blocks.tile.IndustrialCrusherEntity;
 import net.rexbrx.prelude.server.screens.ModMenuTypes;
 
 public class IndustrialCrusherMenu extends AbstractContainerMenu {
-    public final CrusherEntity blockEntity;
+    public final IndustrialCrusherEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
@@ -24,7 +24,7 @@ public class IndustrialCrusherMenu extends AbstractContainerMenu {
     public IndustrialCrusherMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.INDUSTRIAL_CRUSHER_MENU.get(), pContainerId);
         checkContainerSize(inv, 2);
-        blockEntity = ((CrusherEntity) entity);
+        blockEntity = ((IndustrialCrusherEntity) entity);
         this.level = inv.player.level();
         this.data = data;
 
@@ -103,7 +103,7 @@ public class IndustrialCrusherMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, PreludeBlocks.CRUSHER.get());
+                pPlayer, PreludeBlocks.INDUSTRIAL_CRUSHER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

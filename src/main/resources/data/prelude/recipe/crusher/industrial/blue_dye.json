@@ -1,0 +1,11 @@
+{
+  "type": "prelude:icrusher",
+  "ingredients": [
+    {
+      "item": "minecraft:lapis_lazuli"
+    }
+  ],
+  "output": {
+    "id": "minecraft:blue_dye"
+  }
+}

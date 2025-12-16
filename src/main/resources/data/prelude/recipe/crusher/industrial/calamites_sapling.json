@@ -1,0 +1,11 @@
+{
+  "type": "prelude:icrusher",
+  "ingredients": [
+    {
+      "item": "prelude:calamites_leaves"
+    }
+  ],
+  "output": {
+    "id": "prelude:calamites_sapling1"
+  }
+}

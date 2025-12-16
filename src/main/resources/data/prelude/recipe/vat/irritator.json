@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:irritator_dna"
+    }
+  ],
+  "output": {
+    "id": "prelude:irritator_spawn_egg"
+  }
+}

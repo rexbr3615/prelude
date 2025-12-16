@@ -231,5 +231,12 @@
   "item.prelude.cladoselache_dna": "Cladoselache DNA",
   "item.prelude.cladoselache_spawn_egg": "Cladoselache Spawn Egg",
   "item.prelude.argentavis_dna": "Argentavis DNA",
-  "item.prelude.argentavis_spawn_egg": "Argentavis Spawn Egg"
+  "item.prelude.argentavis_spawn_egg": "Argentavis Spawn Egg",
+  "item.prelude.irritator_dna": "Irritator DNA",
+  "item.prelude.irritator_spawn_egg": "Irritator Spawn Egg",
+  "item.prelude.monolophosaurus_dna": "Monolophosaurus DNA",
+  "item.prelude.monolophosaurus_spawn_egg": "Monolophosaurus Spawn Egg",
+  "entity.prelude.monolophosaurus": "Monolophosaurus",
+  "entity.prelude.irritator": "Irritator",
+  "item.prelude.pipe_wrench": "Wrench [WIP]"
 }

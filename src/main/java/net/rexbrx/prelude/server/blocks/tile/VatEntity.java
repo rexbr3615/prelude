@@ -45,7 +45,7 @@ public class VatEntity extends BlockEntity implements MenuProvider {
         }
     };
 
-    private static final int INPUT_SLOT = 0;
+    private static final int INPUT_SLOT = 1;
     private static final int OUTPUT_SLOT = 3;
 
     protected final ContainerData data;

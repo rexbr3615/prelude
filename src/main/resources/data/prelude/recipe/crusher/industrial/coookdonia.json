@@ -1,0 +1,11 @@
+{
+  "type": "prelude:icrusher",
+  "ingredients": [
+    {
+      "item": "prelude:cooksonia"
+    }
+  ],
+  "output": {
+    "id": "prelude:cooksonia_spores"
+  }
+}

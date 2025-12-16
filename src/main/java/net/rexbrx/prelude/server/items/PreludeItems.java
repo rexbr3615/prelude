@@ -179,6 +179,16 @@ public class PreludeItems {
             () -> new DeferredSpawnEggItem(EntityInit.ARGENTAVIS,0x69270f, 0xed4305,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> IRRITATOR_SPAWN_EGG = ITEMS.register("irritator_spawn_egg",
+            () -> new DeferredSpawnEggItem(EntityInit.IRRITATOR,0x10470e, 0x23d963,
+                    new Item.Properties()));
+
+    public static final DeferredItem<Item> MONOLOPHOSAURUS_SPAWN_EGG = ITEMS.register("monolophosaurus_spawn_egg",
+            () -> new DeferredSpawnEggItem(EntityInit.MONOLOPHOSAURUS,0x356E34, 0xf73105,
+                    new Item.Properties()));
+
+
+
     public static final DeferredItem<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 
@@ -289,6 +299,10 @@ public class PreludeItems {
     public static final DeferredItem<Item> CLADOSELACHE_DNA = ITEMS.register("cladoselache_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> ARGENTAVIS_DNA = ITEMS.register("argentavis_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> IRRITATOR_DNA = ITEMS.register("irritator_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> MONOLOPHOSAURUS_DNA = ITEMS.register("monolophosaurus_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> TEST_DNA = ITEMS.register("test_dna",

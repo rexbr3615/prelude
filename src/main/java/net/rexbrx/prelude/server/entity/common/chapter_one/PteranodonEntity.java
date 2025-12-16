@@ -54,13 +54,13 @@ public class PteranodonEntity extends PathfinderMob implements GeoEntity {
     protected void registerGoals() {
         super.registerGoals();
         super.registerGoals();
-        this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1, 20) {
+        this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1.5, 20) {
             @Override
             protected Vec3 getPosition() {
                 RandomSource random = PteranodonEntity.this.getRandom();
-                double dir_x = PteranodonEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+                double dir_x = PteranodonEntity.this.getX() + ((random.nextFloat() * 4 - 1) * 16);
                 double dir_y = PteranodonEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-                double dir_z = PteranodonEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+                double dir_z = PteranodonEntity.this.getZ() + ((random.nextFloat() * 4 - 1) * 16);
                 return new Vec3(dir_x, dir_y, dir_z);
             }
         });

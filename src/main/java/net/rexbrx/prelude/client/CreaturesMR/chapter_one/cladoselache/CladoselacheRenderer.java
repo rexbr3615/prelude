@@ -14,7 +14,7 @@ import software.bernie.geckolib.renderer.GeoEntityRenderer;
 public class CladoselacheRenderer extends GeoEntityRenderer<CladoselacheEntity> {
     public CladoselacheRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new CladoselacheModel());
-        this.shadowRadius = 1.29f;
+        this.shadowRadius = 0.67f;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class CladoselacheRenderer extends GeoEntityRenderer<CladoselacheEntity> 
     @Override
     public void preRender(PoseStack poseStack, CladoselacheEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
 
-        float scale = 0.65f;
+        float scale = 0.68f;
 
         poseStack.scale(scale,scale,scale);
         super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);

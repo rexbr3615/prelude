@@ -33,7 +33,7 @@ public class IndustrialCrusherEntity extends BlockEntity implements MenuProvider
         protected void onContentsChanged(int slot) {
             setChanged();
             if(!level.isClientSide()) {
-                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 5);
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
         }
     };
@@ -132,7 +132,7 @@ public class IndustrialCrusherEntity extends BlockEntity implements MenuProvider
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount() + 3));
+                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount() + 5));
     }
 
     private boolean hasRecipe() {

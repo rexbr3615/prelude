@@ -1,0 +1,11 @@
+{
+  "type": "prelude:icrusher",
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    }
+  ],
+  "output": {
+    "id": "prelude:agar"
+  }
+}

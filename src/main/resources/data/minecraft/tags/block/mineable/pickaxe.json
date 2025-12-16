@@ -34,6 +34,7 @@
     "prelude:asphalt_block",
     "prelude:reinforced_asphalt_block",
     "prelude:ancient_relic",
-    "prelude:bitumen_stone"
+    "prelude:bitumen_stone",
+    "prelude:bacteriological_incubator"
   ]
 }

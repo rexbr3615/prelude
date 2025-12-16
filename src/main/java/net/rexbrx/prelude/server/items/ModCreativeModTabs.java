@@ -174,6 +174,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.JINFENGOPTERYX_DNA.get());
                         pOutput.accept(PreludeItems.CLADOSELACHE_DNA.get());
                         pOutput.accept(PreludeItems.ARGENTAVIS_DNA.get());
+                        pOutput.accept(PreludeItems.IRRITATOR_DNA.get());
+                        pOutput.accept(PreludeItems.MONOLOPHOSAURUS_DNA.get());
 
 
                     })
@@ -218,6 +220,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.JINFENGOPTERYX_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.CLADOSELACHE_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.ARGENTAVIS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.IRRITATOR_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.MONOLOPHOSAURUS_SPAWN_EGG.get());
 
 
                     })

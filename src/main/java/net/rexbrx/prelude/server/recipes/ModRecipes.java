@@ -63,7 +63,7 @@ public class ModRecipes {
             TYPES.register("icrusher", () -> new RecipeType<IndustrialCrusherRecipe>() {
                 @Override
                 public String toString() {
-                    return "crusher";
+                    return "icrusher";
                 }
             });
 

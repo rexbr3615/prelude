@@ -6,6 +6,7 @@
     "prelude:torvosaurus_dna",
     "prelude:ceratosaurus_dna",
     "prelude:dryosaurus_dna",
-    "prelude:kentrosaurus_dna"
+    "prelude:kentrosaurus_dna",
+    "prelude:monolophosaurus_dna"
   ]
 }

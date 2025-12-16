@@ -9,6 +9,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.irritator.IrritatorRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.monolophosaurus.MonolophosaurusRenderer;
 import net.rexbrx.prelude.client.menu.*;
 import net.rexbrx.prelude.server.blocks.PreludeBlocks;
 import net.rexbrx.prelude.server.entity.EntityInit;
@@ -89,6 +91,8 @@ public class PreludeModClient {
         event.registerEntityRenderer(EntityInit.JINFENGOPTERYX.get(), JinfengopteryxRenderer::new);
         event.registerEntityRenderer(EntityInit.CLADOSELACHE.get(), CladoselacheRenderer::new);
         event.registerEntityRenderer(EntityInit.ARGENTAVIS.get(), ArgentavisRenderer::new);
+        event.registerEntityRenderer(EntityInit.MONOLOPHOSAURUS.get(), MonolophosaurusRenderer::new);
+        event.registerEntityRenderer(EntityInit.IRRITATOR.get(), IrritatorRenderer::new);
 
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());

@@ -1,0 +1,11 @@
+{
+  "type": "prelude:icrusher",
+  "ingredients": [
+    {
+      "item": "prelude:gypsum_crystal"
+    }
+  ],
+  "output": {
+    "id": "prelude:gypsum_powder"
+  }
+}

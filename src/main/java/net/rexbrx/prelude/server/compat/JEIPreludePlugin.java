@@ -9,16 +9,10 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
-import net.rexbrx.prelude.client.menu.AnalyzerScreen;
-import net.rexbrx.prelude.client.menu.CrusherScreen;
-import net.rexbrx.prelude.client.menu.IncubatorScreen;
-import net.rexbrx.prelude.client.menu.VatScreen;
+import net.rexbrx.prelude.client.menu.*;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.recipes.ModRecipes;
-import net.rexbrx.prelude.server.recipes.common.AnalyzerRecipe;
-import net.rexbrx.prelude.server.recipes.common.CrusherRecipe;
-import net.rexbrx.prelude.server.recipes.common.VatRecipe;
-import net.rexbrx.prelude.server.recipes.common.incubatorRecipe;
+import net.rexbrx.prelude.server.recipes.common.*;
 
 import java.util.List;
 
@@ -35,6 +29,7 @@ public class JEIPreludePlugin implements IModPlugin {
         registration.addRecipeCategories(new VatCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new CrusherCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new IncubatorCategory(registration.getJeiHelpers().getGuiHelper()));
+        registration.addRecipeCategories(new IndustrialCrusherCategory(registration.getJeiHelpers().getGuiHelper()));
 
     }
 
@@ -53,6 +48,9 @@ public class JEIPreludePlugin implements IModPlugin {
 
         List<incubatorRecipe> IncubatorRecipes = recipeManager.getAllRecipesFor(ModRecipes.INCUBATOR_TYPE.get()).stream().map(RecipeHolder::value).toList();
         registration.addRecipes(IncubatorCategory.INCUBATOR_TYPE, IncubatorRecipes);
+
+        List<IndustrialCrusherRecipe> ICrusherRecipes = recipeManager.getAllRecipesFor(ModRecipes.INDUSTRIAL_CRUSHER_TYPE.get()).stream().map(RecipeHolder::value).toList();
+        registration.addRecipes(IndustrialCrusherCategory.INDUSTRIAL_CRUSHER_TYPE, ICrusherRecipes);
     }
 
     @Override
@@ -65,5 +63,7 @@ public class JEIPreludePlugin implements IModPlugin {
                 CrusherCategory.CRUSHER_TYPE);
         registration.addRecipeClickArea(IncubatorScreen.class, 60, 30, 20, 30,
                 IncubatorCategory.INCUBATOR_TYPE);
+        registration.addRecipeClickArea(IndustrialCrusherScreen.class, 60, 30, 20, 30,
+                IndustrialCrusherCategory.INDUSTRIAL_CRUSHER_TYPE);
     }
 }
