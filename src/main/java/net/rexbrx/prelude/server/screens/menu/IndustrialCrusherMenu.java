@@ -4,6 +4,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -37,6 +38,7 @@ public class IndustrialCrusherMenu extends AbstractContainerMenu {
 
         addDataSlots(data);
     }
+
 
     public boolean isCrafting() {
         return data.get(0) > 0;

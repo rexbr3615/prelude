@@ -238,5 +238,6 @@
   "item.prelude.monolophosaurus_spawn_egg": "Monolophosaurus Spawn Egg",
   "entity.prelude.monolophosaurus": "Monolophosaurus",
   "entity.prelude.irritator": "Irritator",
-  "item.prelude.pipe_wrench": "Wrench [WIP]"
+  "item.prelude.pipe_wrench": "Wrench [WIP]",
+  "history.prelude.datalog1": "Prelude Corporation Genetic Worker Sheet"
 }

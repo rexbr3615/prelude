@@ -72,6 +72,7 @@ public class IndustrialCrusherEntity extends BlockEntity implements MenuProvider
         };
     }
 
+
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
         for(int i = 0; i < itemHandler.getSlots(); i++) {
@@ -84,6 +85,10 @@ public class IndustrialCrusherEntity extends BlockEntity implements MenuProvider
     public Component getDisplayName() {
         return Component.translatable("block.tutorialmod.gem_polishing_station");
     }
+
+
+
+
 
     @Nullable
     @Override
