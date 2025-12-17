@@ -16,6 +16,9 @@ public class ProcedureCeline
                             "Celine: " +
                             "Geneticist" +
                             "\n" +
+                            "Type: " +
+                            "Major Doctor" +
+                            "\n" +
                             "Woman, 34 Years Old" +
                             "\n" +
                             "Worker ID:" +
