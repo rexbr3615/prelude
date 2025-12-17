@@ -19,7 +19,10 @@ public class ProcedureCeline
                             "Woman, 34 Years Old" +
                             "\n" +
                             "Worker ID:" +
-                            "p345"
+                            "p345" +
+                            "\n" +
+                            "Nationality:" +
+                            "Russian"
             )), true);
 
 
