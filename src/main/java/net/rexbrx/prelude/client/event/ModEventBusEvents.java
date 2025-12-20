@@ -5,6 +5,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.entity.EntityInit;
+import net.rexbrx.prelude.server.entity.common.chapter_omega.DiplocaulusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_omega.IrritatorEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_omega.MonolophosaurusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_one.*;
@@ -50,6 +51,7 @@ public class ModEventBusEvents
         event.put(EntityInit.ARGENTAVIS.get(), ArgentavisEntity.createAttributes().build());
         event.put(EntityInit.IRRITATOR.get(), IrritatorEntity.createAttributes().build());
         event.put(EntityInit.MONOLOPHOSAURUS.get(), MonolophosaurusEntity.createAttributes().build());
+        event.put(EntityInit.DIPLOCAULUS.get(), DiplocaulusEntity.createAttributes().build());
 
     }
 

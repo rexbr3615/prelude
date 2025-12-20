@@ -187,7 +187,9 @@ public class PreludeItems {
             () -> new DeferredSpawnEggItem(EntityInit.MONOLOPHOSAURUS,0x356E34, 0xf73105,
                     new Item.Properties()));
 
-
+    public static final DeferredItem<Item> DIPLOCAULUS_SPAWN_EGG = ITEMS.register("diplocaulus_spawn_egg",
+            () -> new DeferredSpawnEggItem(EntityInit.DIPLOCAULUS,0xffffff, 0xffffff,
+                    new Item.Properties()));
 
     public static final DeferredItem<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
@@ -328,6 +330,14 @@ public class PreludeItems {
             () -> new PreludeFuelItem(new Item.Properties()));
     public static final DeferredItem<Item> BITUMEN_NUGGET = ITEMS.register("bitumen_nugget",
             () -> new PreludeFuelItem(new Item.Properties()));
+
+
+    public static final DeferredItem<Item> BIG_IRON = ITEMS.register("big_iron",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_BIG_IRON = ITEMS.register("raw_big_iron",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> DISK = ITEMS.register("disk",
+            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> COAL_DUST = ITEMS.register("coal_dust",
             () -> new Item(new Item.Properties()));

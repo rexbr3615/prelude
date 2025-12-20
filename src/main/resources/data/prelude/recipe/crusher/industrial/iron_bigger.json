@@ -1,0 +1,11 @@
+{
+  "type": "prelude:icrusher",
+  "ingredients": [
+    {
+      "item": "prelude:raw_big_iron"
+    }
+  ],
+  "output": {
+    "id": "minecraft:raw_iron"
+  }
+}

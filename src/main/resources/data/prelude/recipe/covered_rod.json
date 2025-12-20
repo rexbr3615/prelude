@@ -7,7 +7,7 @@
   ],
   "key": {
     "A": {
-      "item": "minecraft:iron_ingot"
+      "item": "prelude:big_iron"
     },
     "Y": {
       "item": "prelude:carbon_fibre_plate"

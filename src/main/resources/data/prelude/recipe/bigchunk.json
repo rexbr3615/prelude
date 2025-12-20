@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:raw_iron"
+    }
+  },
+  "result": {
+    "id": "prelude:raw_big_iron",
+    "count": 1
+  }
+}

@@ -3,6 +3,7 @@ package net.rexbrx.prelude.server.entity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import net.rexbrx.prelude.server.entity.common.chapter_omega.DiplocaulusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_omega.IrritatorEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_omega.MonolophosaurusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_one.*;
@@ -272,6 +273,14 @@ public class EntityAnimationFactory {
             }
 
             if (event.getEntity() instanceof MonolophosaurusEntity syncable) {
+                String animation = syncable.getSyncedAnimation();
+                if (!animation.equals("undefined")) {
+                    syncable.setAnimation("undefined");
+                    syncable.animationprocedure = animation;
+                }
+            }
+
+            if (event.getEntity() instanceof DiplocaulusEntity syncable) {
                 String animation = syncable.getSyncedAnimation();
                 if (!animation.equals("undefined")) {
                     syncable.setAnimation("undefined");

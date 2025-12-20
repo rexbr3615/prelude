@@ -182,29 +182,27 @@ public class PreludeBlocks
                     return 30;
                 }
             });
-    //public static final DeferredBlock<Block> CALAMITES_STAIRS = registerBlock("calamites_stairs",
-    //        () -> new StairBlock(() -> PreludeBlocks.CALAMITES_PLANKS.get().defaultBlockState(),
-    //                ofFullCopy(Blocks.OAK_STAIRS)));
+    public static final DeferredBlock<Block> CALAMITES_STAIRS = registerBlock("calamites_stairs",
+            () -> new StairBlock(PreludeBlocks.CALAMITES_PLANKS.get().defaultBlockState(),
+                    ofFullCopy(Blocks.OAK_STAIRS)));
     public static final DeferredBlock<Block> CALAMITES_SLAB = registerBlock("calamites_slab",
             () -> new SlabBlock(ofFullCopy(Blocks.OAK_SLAB)));
     public static final DeferredBlock<Block> CALAMITES_FENCE = registerBlock("calamites_fence",
             () -> new FenceBlock(ofFullCopy(Blocks.OAK_FENCE)));
     public static final DeferredBlock<Block> CALAMITES_FENCE_GATE = registerBlock("calamites_fence_gate",
             () -> new FenceGateBlock(ofFullCopy(Blocks.OAK_FENCE).sound(SoundType.WOOD), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    //public static final DeferredBlock<Block> CALAMITES_BUTTON = registerBlock("calamites_button",
-    //        () -> new ButtonBlock(ofFullCopy(Blocks.OAK_BUTTON)
-    //                .noCollission(),
-    //                BlockSetType.OAK, 10, true));
-    //public static final DeferredBlock<Block> CALAMITES_PRESSURE_PLATE = registerBlock("calamites_pressure_plate",
-    //        () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, ofFullCopy(Blocks.OAK_PRESSURE_PLATE),
-    //                BlockSetType.IRON));
+    public static final DeferredBlock<Block> CALAMITES_BUTTON = registerBlock("calamites_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 10, ofFullCopy(Blocks.OAK_BUTTON)
+                    .noCollission()));
+    public static final DeferredBlock<Block> CALAMITES_PRESSURE_PLATE = registerBlock("calamites_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK, ofFullCopy(Blocks.OAK_PRESSURE_PLATE)));
 
-    //public static final DeferredBlock<Block> CALAMITES_DOOR = registerBlock("calamites_door",
-    //        () -> new DoorBlock(ofFullCopy(Blocks.OAK_DOOR)
-    //                .noOcclusion(), BlockSetType.OAK));
-    //public static final DeferredBlock<Block> CALAMITES_TRAPDOOR = registerBlock("calamites_trapdoor",
-    //        () -> new TrapDoorBlock(ofFullCopy(Blocks.OAK_TRAPDOOR)
-    //                .noOcclusion(), BlockSetType.OAK));
+    public static final DeferredBlock<Block> CALAMITES_DOOR = registerBlock("calamites_door",
+            () -> new DoorBlock(BlockSetType.OAK, ofFullCopy(Blocks.OAK_DOOR)
+                    .noOcclusion()));
+    public static final DeferredBlock<Block> CALAMITES_TRAPDOOR = registerBlock("calamites_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, ofFullCopy(Blocks.OAK_TRAPDOOR)
+                    .noOcclusion()));
 
     public static final DeferredBlock<Block> CALAMITES_SAPLING2 = registerBlock("calamites_sapling1",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
@@ -267,28 +265,26 @@ public class PreludeBlocks
                     return 30;
                 }
             });
-    //public static final DeferredBlock<Block> GINKGO_STAIRS = registerBlock("ginkgo_stairs",
-    //       () -> new StairBlock(() -> PreludeBlocks.CALAMITES_PLANKS.get().defaultBlockState(),
-    //                ofFullCopy(Blocks.OAK_STAIRS)));
+    public static final DeferredBlock<Block> GINKGO_STAIRS = registerBlock("ginkgo_stairs",
+           () -> new StairBlock(PreludeBlocks.CALAMITES_PLANKS.get().defaultBlockState(),
+                    ofFullCopy(Blocks.OAK_STAIRS)));
     public static final DeferredBlock<Block> GINKGO_SLAB = registerBlock("ginkgo_slab",
             () -> new SlabBlock(ofFullCopy(Blocks.OAK_SLAB)));
     public static final DeferredBlock<Block> GINKGO_FENCE = registerBlock("ginkgo_fence",
             () -> new FenceBlock(ofFullCopy(Blocks.OAK_FENCE)));
     public static final DeferredBlock<Block> GINKGO_FENCE_GATE = registerBlock("ginkgo_fence_gate",
             () -> new FenceGateBlock(ofFullCopy(Blocks.OAK_FENCE_GATE).sound(SoundType.WOOD), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    //public static final DeferredBlock<Block> GINKGO_BUTTON = registerBlock("ginkgo_button",
-    //        () -> new ButtonBlock(ofFullCopy(Blocks.OAK_BUTTON)
-    //                .noCollission().noCollission(),
-    //                BlockSetType.OAK, 10, true));
-    //public static final DeferredBlock<Block> GINKGO_PRESSURE_PLATE = registerBlock("ginkgo_pressure_plate",
-    //        () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, ofFullCopy(Blocks.OAK_PRESSURE_PLATE),
-    //BlockSetType.IRON));
-    //public static final DeferredBlock<Block> GINKGO_DOOR = registerBlock("ginkgo_door",
-    //        () -> new DoorBlock(ofFullCopy(Blocks.OAK_DOOR)
-    //                .noOcclusion(), BlockSetType.OAK));
-    //public static final DeferredBlock<Block> GINKGO_TRAPDOOR = registerBlock("ginkgo_trapdoor",
-    //        () -> new TrapDoorBlock(ofFullCopy(Blocks.OAK_TRAPDOOR)
-    //                .noOcclusion(), BlockSetType.OAK));
+    public static final DeferredBlock<Block> GINKGO_BUTTON = registerBlock("ginkgo_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 10, ofFullCopy(Blocks.OAK_BUTTON)
+                    .noCollission()));
+    public static final DeferredBlock<Block> GINKGO_PRESSURE_PLATE = registerBlock("ginkgo_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK, ofFullCopy(Blocks.OAK_PRESSURE_PLATE)));
+    public static final DeferredBlock<Block> GINKGO_DOOR = registerBlock("ginkgo_door",
+            () -> new DoorBlock(BlockSetType.OAK, ofFullCopy(Blocks.OAK_DOOR)
+                    .noOcclusion()));
+    public static final DeferredBlock<Block> GINKGO_TRAPDOOR = registerBlock("ginkgo_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK, ofFullCopy(Blocks.OAK_TRAPDOOR)
+                    .noOcclusion()));
     public static final DeferredBlock<Block> GINKGO_SAPLING = registerBlock("ginkgo_sapling",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
                     ofFullCopy(Blocks.OAK_SAPLING).noOcclusion().noCollission().instabreak()));

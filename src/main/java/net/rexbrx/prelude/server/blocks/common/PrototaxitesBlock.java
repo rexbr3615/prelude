@@ -2,16 +2,23 @@ package net.rexbrx.prelude.server.blocks.common;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.SugarCaneBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.storage.loot.LootParams;
+import net.neoforged.neoforge.client.resources.NeoForgeSplashHooks;
+import net.neoforged.neoforge.common.CommonHooks;
 
 import java.util.Collections;
 import java.util.List;
@@ -19,6 +26,7 @@ import java.util.List;
 
 public class PrototaxitesBlock extends Block {
     public static final EnumProperty<GrowingPart> PART = EnumProperty.create("part", GrowingPart.class);
+    public static final IntegerProperty AGE;
 
     public PrototaxitesBlock(Properties properties) {
         super(properties);
@@ -30,19 +38,31 @@ public class PrototaxitesBlock extends Block {
         return this.defaultBlockState().setValue(PART, GrowingPart.BASE);
     }
 
-    //@Override
-    //public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-    //    if (canGrow(level, pos, state)) {
-    //        BlockPos above = pos.above();
-    //        BlockState aboveState = level.getBlockState(above);
-    //        if (aboveState.isAir()) {
-    //            int height = getStackHeight(level, pos);
-    //            if (height < 4) {
-    //                level.setBlock(above, this.defaultBlockState().setValue(PART, getPartForHeight(height + 1)), 3);
-    //            }
-    //        }
-    //    }
-    //}
+
+
+    protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if (level.isEmptyBlock(pos.above())) {
+            int i;
+            for(i = 1; level.getBlockState(pos.below(i)).is(this); ++i) {
+            }
+
+            if (i < 7) {
+                int j = (Integer)state.getValue(AGE);
+                if (CommonHooks.canCropGrow(level, pos, state, true)) {
+                    if (j == 15) {
+                        level.setBlockAndUpdate(pos.above(), this.defaultBlockState());
+                        CommonHooks.fireCropGrowPost(level, pos.above(), this.defaultBlockState());
+                        level.setBlock(pos, (BlockState)state.setValue(AGE, 0), 4);
+                    } else {
+                        level.setBlock(pos, (BlockState)state.setValue(AGE, j + 1), 4);
+                    }
+                }
+            }
+        }
+
+    }
+
+
 
     private boolean canGrow(Level level, BlockPos pos, BlockState state) {
         return level.getBlockState(pos.below()).is(this); // pode crescer se o bloco abaixo for igual
@@ -120,6 +140,7 @@ public class PrototaxitesBlock extends Block {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(PART);
+        builder.add(new Property[]{AGE});
     }
 
     public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
@@ -127,6 +148,10 @@ public class PrototaxitesBlock extends Block {
         if (!dropsOriginal.isEmpty())
             return dropsOriginal;
         return Collections.singletonList(new ItemStack(this, 1));
+    }
+
+    static {
+        AGE = BlockStateProperties.AGE_15;
     }
 
 }

@@ -30,17 +30,17 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 
-public class IrritatorEntity extends PathfinderMob implements GeoEntity
+public class DiplocaulusEntity extends PathfinderMob implements GeoEntity
 {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public IrritatorEntity(EntityType<? extends PathfinderMob> entityEntityType, Level level) {
+
+    public DiplocaulusEntity(EntityType<? extends PathfinderMob> entityEntityType, Level level) {
         super(entityEntityType, level);
         xpReward = 5;
         setNoAi(false);
         setPersistenceRequired();
     }
-
 
     @Override
     protected void registerGoals() {
@@ -48,7 +48,7 @@ public class IrritatorEntity extends PathfinderMob implements GeoEntity
         this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1));
         this.goalSelector.addGoal(1, new TemptGoal(this, (double)1.25F, Ingredient.of(new ItemLike[]{PreludeItems.FLARE.get()}), false));
         this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0D));
+        //this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(5, (new HurtByTargetGoal(this)).setAlertOthers());
 
@@ -59,7 +59,6 @@ public class IrritatorEntity extends PathfinderMob implements GeoEntity
         });
 
     }
-
 
     @Override
     public void baseTick() {
@@ -78,21 +77,22 @@ public class IrritatorEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 48.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 4.5f);
+        builder = builder.add(Attributes.MAX_HEALTH, 14.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 1.0f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.163f);
-        builder = builder.add(Attributes.ARMOR, 2.5f);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.101f);
+        builder = builder.add(Attributes.ARMOR, 1.5f);
         builder = builder.add(Attributes.FOLLOW_RANGE, 16.0f);
         builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2.5f);
         return builder;
     }
 
+
     @Override
     protected void tickDeath() {
         ++this.deathTime;
         if (this.deathTime == 20) {
-            this.remove(IrritatorEntity.RemovalReason.KILLED);
+            this.remove(DiplocaulusEntity.RemovalReason.KILLED);
         }
     }
 
@@ -122,7 +122,7 @@ public class IrritatorEntity extends PathfinderMob implements GeoEntity
     }
 
 
-    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(IrritatorEntity.class, EntityDataSerializers.STRING);
+    public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(DiplocaulusEntity.class, EntityDataSerializers.STRING);
     private boolean swinging;
     private boolean lastloop;
     private long lastSwing;
@@ -147,7 +147,7 @@ public class IrritatorEntity extends PathfinderMob implements GeoEntity
     private PlayState movementPredicate(software.bernie.geckolib.animation.AnimationState event) {
         if (this.animationprocedure.equals("empty")) {
             if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F)) && this.onGround() && !this.isSprinting()) {
-                return event.setAndContinue(RawAnimation.begin().thenLoop("walk2"));
+                return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
             }
             //if (this.isSprinting()) {
             //    return event.setAndContinue(RawAnimation.begin().thenLoop("running"));
@@ -161,7 +161,7 @@ public class IrritatorEntity extends PathfinderMob implements GeoEntity
             //if (!this.onGround() && event.isMoving()) {
             //    return event.setAndContinue(RawAnimation.begin().thenLoop("fly"));
             //}
-            return event.setAndContinue(RawAnimation.begin().thenLoop("idle2"));
+            return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
         }
         return PlayState.STOP;
     }
@@ -203,3 +203,4 @@ public class IrritatorEntity extends PathfinderMob implements GeoEntity
 
 
 }
+

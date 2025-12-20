@@ -1,8 +1,8 @@
 {
   "variants": {
-    "part=base":  { "model": "prelude:block/fossil_ore" },
-    "part=top": { "model": "prelude:block/analyzer" },
-    "part=topmid": { "model": "prelude:block/proto_model_topmid" },
-    "part=middle": { "model": "prelude:block/proto_model_middle" }
+    "part=base":  { "model": "prelude:block/prototaxites/base" },
+    "part=top": { "model": "prelude:block/prototaxites/top" },
+    "part=topmid": { "model": "prelude:block/prototaxites/mid_top" },
+    "part=middle": { "model": "prelude:block/prototaxites/mid_low" }
   }
 }

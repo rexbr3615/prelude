@@ -1,19 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "YYX",
+    "XXX",
+    "XYX",
     "XXX"
   ],
   "key": {
     "X": {
-      "item": "prelude:coal_dust"
+      "item": "prelude:steel_nuggets"
     },
     "Y": {
-      "item": "prelude:big_iron"
+      "item": "prelude:disk"
     }
   },
   "result": {
-    "id": "prelude:steel_ingot",
-    "count": 4
+    "id": "prelude:diskdrive",
+    "count": 2
   }
 }

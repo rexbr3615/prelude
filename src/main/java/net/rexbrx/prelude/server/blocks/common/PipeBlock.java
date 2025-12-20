@@ -332,6 +332,6 @@ public class PipeBlock extends Block implements EntityBlock, SimpleWaterloggedBl
     }
 
     public int getMaxEnergyPerTick() {
-        return 2048;
+        return 1000;
     }
 }

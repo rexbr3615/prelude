@@ -9,6 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.diplocaulus.DiplocaulusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.irritator.IrritatorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.monolophosaurus.MonolophosaurusRenderer;
 import net.rexbrx.prelude.client.menu.*;
@@ -93,6 +94,7 @@ public class PreludeModClient {
         event.registerEntityRenderer(EntityInit.ARGENTAVIS.get(), ArgentavisRenderer::new);
         event.registerEntityRenderer(EntityInit.MONOLOPHOSAURUS.get(), MonolophosaurusRenderer::new);
         event.registerEntityRenderer(EntityInit.IRRITATOR.get(), IrritatorRenderer::new);
+        event.registerEntityRenderer(EntityInit.DIPLOCAULUS.get(), DiplocaulusRenderer::new);
 
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());
@@ -107,13 +109,13 @@ public class PreludeModClient {
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CONCRETE_BARRIER.get(), RenderType.cutoutMipped());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_SAPLING2.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
-        //ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_TRAPDOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CALAMITES_DOOR.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.HYPER_CALAMITES_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_SAPLING.get(), RenderType.cutout());
-        //ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());
-        //ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_TRAPDOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.GINKGO_DOOR.get(), RenderType.translucent());
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.POWER_BOX.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.CABLE_BLOCK.get(), RenderType.translucent());

@@ -104,6 +104,9 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.PIPE_STATE_CHANGER.get());
 
 
+                        pOutput.accept(PreludeItems.BIG_IRON.get());
+                        pOutput.accept(PreludeItems.RAW_BIG_IRON.get());
+                        pOutput.accept(PreludeItems.DISK.get());
 
 
 
@@ -222,6 +225,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.ARGENTAVIS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.IRRITATOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.MONOLOPHOSAURUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.DIPLOCAULUS_SPAWN_EGG.get());
 
 
                     })
@@ -360,28 +364,28 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeBlocks.CALAMITES_LOG.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_WOOD.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_PLANKS.get());
-                        //pOutput.accept(PreludeBlocks.CALAMITES_DOOR.get());
-                        //pOutput.accept(PreludeBlocks.CALAMITES_BUTTON.get());
-                        //pOutput.accept(PreludeBlocks.CALAMITES_PRESSURE_PLATE.get());
+                        pOutput.accept(PreludeBlocks.CALAMITES_DOOR.get());
+                        pOutput.accept(PreludeBlocks.CALAMITES_BUTTON.get());
+                        pOutput.accept(PreludeBlocks.CALAMITES_PRESSURE_PLATE.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_SLAB.get());
-                        //pOutput.accept(PreludeBlocks.CALAMITES_STAIRS.get());
+                        pOutput.accept(PreludeBlocks.CALAMITES_STAIRS.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_FENCE.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_FENCE_GATE.get());
-                        //pOutput.accept(PreludeBlocks.CALAMITES_TRAPDOOR.get());
+                        pOutput.accept(PreludeBlocks.CALAMITES_TRAPDOOR.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_LEAVES.get());
                         pOutput.accept(PreludeBlocks.CALAMITES_SAPLING2.get());
 
                         pOutput.accept(PreludeBlocks.GINKGO_LOG.get());
                         pOutput.accept(PreludeBlocks.GINKGO_WOOD.get());
                         pOutput.accept(PreludeBlocks.GINKGO_PLANKS.get());
-                        //pOutput.accept(PreludeBlocks.GINKGO_DOOR.get());
-                        //pOutput.accept(PreludeBlocks.GINKGO_BUTTON.get());
-                        //pOutput.accept(PreludeBlocks.GINKGO_PRESSURE_PLATE.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_DOOR.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_BUTTON.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_PRESSURE_PLATE.get());
                         pOutput.accept(PreludeBlocks.GINKGO_SLAB.get());
-                        //pOutput.accept(PreludeBlocks.GINKGO_STAIRS.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_STAIRS.get());
                         pOutput.accept(PreludeBlocks.GINKGO_FENCE.get());
                         pOutput.accept(PreludeBlocks.GINKGO_FENCE_GATE.get());
-                        //pOutput.accept(PreludeBlocks.GINKGO_TRAPDOOR.get());
+                        pOutput.accept(PreludeBlocks.GINKGO_TRAPDOOR.get());
                         pOutput.accept(PreludeBlocks.GINKGO_LEAVES.get());
                         pOutput.accept(PreludeBlocks.GINKGO_LEAVES_FRUIT.get());
                         pOutput.accept(PreludeBlocks.GINKGO_SAPLING.get());
