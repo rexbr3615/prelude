@@ -1,9 +1,5 @@
 package net.rexbrx.prelude.server.blocks.tile;
 
-import net.rexbrx.prelude.server.blocks.ModBlockEntities;
-import net.rexbrx.prelude.server.blocks.common.PipeBlock;
-import net.rexbrx.prelude.server.blocks.common.PipeBlock.Transport;
-import net.rexbrx.prelude.server.blocks.common.PipeBlock.ConnectionType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.Container;
@@ -21,6 +17,7 @@ import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
+import net.rexbrx.prelude.server.blocks.ModBlockEntities;
 import net.rexbrx.prelude.server.blocks.common.PipeBlock;
 
 import java.util.ArrayDeque;
@@ -137,15 +134,15 @@ public class PipeBlockEntity extends BlockEntity {
             if (!(st.getBlock() instanceof PipeBlock pb) || pb.getTransport() != transport) continue;
 
             for (Direction d : Direction.values()) {
-                ConnectionType ct = st.getValue(PipeBlock.getProp(d));
+                PipeBlock.ConnectionType ct = st.getValue(PipeBlock.getProp(d));
 
-                if (ct == ConnectionType.CONNECTOR_PULL) {
+                if (ct == PipeBlock.ConnectionType.CONNECTOR_PULL) {
                     net.sources.add(new PipeEndpoint(p, d));
-                } else if (ct == ConnectionType.CONNECTOR) {
+                } else if (ct == PipeBlock.ConnectionType.CONNECTOR) {
                     net.sinks.add(new PipeEndpoint(p, d));
                 }
 
-                if (ct == ConnectionType.PIPE) {
+                if (ct == PipeBlock.ConnectionType.PIPE) {
                     BlockPos np = p.relative(d);
                     if (!seen.contains(np)) {
                         BlockState ns = level.getBlockState(np);
@@ -167,7 +164,7 @@ public class PipeBlockEntity extends BlockEntity {
     private static void transferItems(Level level, BlockPos pos, BlockState state, int perTickLimit) {
         if (level.isClientSide || perTickLimit <= 0) return;
 
-        Transport transport = ((PipeBlock) state.getBlock()).getTransport();
+        PipeBlock.Transport transport = ((PipeBlock) state.getBlock()).getTransport();
         var net = PipeBlockEntity.<IItemHandler>discoverNetwork(level, pos, transport);
 
         // Resolve sinks
@@ -236,7 +233,7 @@ public class PipeBlockEntity extends BlockEntity {
     private static void transferFluids(Level level, BlockPos pos, BlockState state, int perTickLimit) {
         if (level.isClientSide || perTickLimit <= 0) return;
 
-        Transport transport = ((PipeBlock) state.getBlock()).getTransport();
+        PipeBlock.Transport transport = ((PipeBlock) state.getBlock()).getTransport();
         var net = PipeBlockEntity.<IFluidHandler>discoverNetwork(level, pos, transport);
 
         var outputs = new java.util.ArrayList<IFluidHandler>();
@@ -289,7 +286,7 @@ public class PipeBlockEntity extends BlockEntity {
     private static void transferEnergy(Level level, BlockPos pos, BlockState state, int perTickLimit) {
         if (perTickLimit <= 0) return;
 
-        Transport transport = ((PipeBlock) state.getBlock()).getTransport();
+        PipeBlock.Transport transport = ((PipeBlock) state.getBlock()).getTransport();
         var net = PipeBlockEntity.<IEnergyStorage>discoverNetwork(level, pos, transport);
 
         var outputs = new java.util.ArrayList<IEnergyStorage>();

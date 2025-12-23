@@ -238,6 +238,16 @@
   "item.prelude.monolophosaurus_spawn_egg": "Monolophosaurus Spawn Egg",
   "entity.prelude.monolophosaurus": "Monolophosaurus",
   "entity.prelude.irritator": "Irritator",
-  "item.prelude.pipe_wrench": "Wrench [WIP]",
-  "history.prelude.datalog1": "Prelude Corporation Genetic Worker Sheet"
+  "item.prelude.pipe_wrench": "Wrench",
+  "history.prelude.datalog1": "Prelude Corporation Genetic Worker Sheet",
+  "item.prelude.big_iron": "Big Iron Ingot",
+  "item.prelude.raw_big_iron": "Raw Big Iron",
+  "item.prelude.disk": "Disk",
+  "item.prelude.diplocaulus_dna": "Diplocaulus DNA",
+  "item.prelude.diplocaulus_spawn_egg": "Potted Diplocaulus",
+  "entity.prelude.diplocaulus": "Diplocaulus",
+  "block.prelude.industrial_crusher": "Industrial Crusher",
+  "block.prelude.power_pipe": "Power Transport Pipe",
+  "block.prelude.fluid_pipe": "Fluid Transport Pipe",
+  "block.prelude.item_pipe": "Item Transport Pipe"
 }

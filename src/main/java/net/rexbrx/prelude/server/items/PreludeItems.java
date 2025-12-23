@@ -306,6 +306,10 @@ public class PreludeItems {
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> MONOLOPHOSAURUS_DNA = ITEMS.register("monolophosaurus_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> DIPLOCAULUS_DNA = ITEMS.register("diplocaulus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> DIPLODOCUS_DNA = ITEMS.register("diplodocus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> TEST_DNA = ITEMS.register("test_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));

@@ -7,13 +7,17 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.diplocaulus.DiplocaulusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.irritator.IrritatorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.monolophosaurus.MonolophosaurusRenderer;
 import net.rexbrx.prelude.client.menu.*;
+import net.rexbrx.prelude.server.blocks.ModBlockEntities;
 import net.rexbrx.prelude.server.blocks.PreludeBlocks;
+import net.rexbrx.prelude.server.blocks.tile.GeneratorBlockEntity;
 import net.rexbrx.prelude.server.entity.EntityInit;
 
 import net.rexbrx.prelude.client.CreaturesMR.chapter_one.albertosaurus.AlbertosaurusRenderer;
@@ -140,6 +144,15 @@ public class PreludeModClient {
         event.register(ModMenuTypes.CRUSHER_MENU.get(), CrusherScreen::new);
         event.register(ModMenuTypes.INCUBATOR_MENU.get(), IncubatorScreen::new);
         event.register(ModMenuTypes.INDUSTRIAL_CRUSHER_MENU.get(), IndustrialCrusherScreen::new);
+        event.register(ModMenuTypes.GENERATOR_MENU.get(), GeneratorScreen::new);
+
+    }
+
+    @SubscribeEvent
+    public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+
+        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, ModBlockEntities.GENERATOR_BE.get(), GeneratorBlockEntity::getEnergyStorage);
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModBlockEntities.GENERATOR_BE.get(), GeneratorBlockEntity::getItemHandler);
 
     }
 

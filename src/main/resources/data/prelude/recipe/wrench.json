@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " Y ",
+    " A ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "prelude:steel_ingot"
+    },
+    "Y": {
+      "item": "minecraft:iron_nugget"
+    },
+    "A": {
+      "item": "prelude:carbon_fibre_plate"
+    }
+  },
+  "result": {
+    "id": "prelude:pipe_wrench",
+    "count": 1
+  }
+}

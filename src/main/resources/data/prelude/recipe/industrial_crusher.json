@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C C",
+    "SMS",
+    "SDS"
+  ],
+  "key": {
+    "C": {
+      "item": "prelude:steel_cogwheel"
+    },
+    "S": {
+      "item": "prelude:steel_ingot"
+    },
+    "M": {
+      "item": "prelude:mechanism"
+    },
+    "D": {
+      "item": "prelude:heat_dissipator"
+    }
+  },
+  "result": {
+    "id": "prelude:industrial_crusher",
+    "count": 1
+  }
+}

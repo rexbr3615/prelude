@@ -179,7 +179,7 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.ARGENTAVIS_DNA.get());
                         pOutput.accept(PreludeItems.IRRITATOR_DNA.get());
                         pOutput.accept(PreludeItems.MONOLOPHOSAURUS_DNA.get());
-
+                        pOutput.accept(PreludeItems.DIPLOCAULUS_DNA.get());
 
                     })
                     .build());
@@ -334,9 +334,9 @@ public class ModCreativeModTabs
 
                         pOutput.accept(PreludeBlocks.INDUSTRIAL_CRUSHER.get());
 
-                        //pOutput.accept(PreludeBlocks.PIPE_POWA.get());
+                        pOutput.accept(PreludeBlocks.PIPE_POWA.get());
                         pOutput.accept(PreludeBlocks.PIPE_FLUID.get());
-                        //pOutput.accept(PreludeBlocks.PIPE_ITEM.get());
+                        pOutput.accept(PreludeBlocks.PIPE_ITEM.get());
 
                         pOutput.accept(PreludeItems.PIPE_STATE_CHANGER.get());
 

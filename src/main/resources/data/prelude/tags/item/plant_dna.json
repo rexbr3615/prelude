@@ -6,6 +6,7 @@
     "prelude:cooksonia_spores",
     "prelude:ginkgo_sapling",
     "prelude:stromatolites",
-    "prelude:stromatolite_block"
+    "prelude:stromatolite_block",
+    "prelude:prototaxites_block"
   ]
 }

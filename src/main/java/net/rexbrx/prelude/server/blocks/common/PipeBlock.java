@@ -324,14 +324,14 @@ public class PipeBlock extends Block implements EntityBlock, SimpleWaterloggedBl
     }
 
     public int getMaxItemsPerTick() {
-        return 64;
+        return Math.max(0, 64 / 20);
     }
 
     public int getMaxFluidPerTick() {
-        return 1000;
+        return Math.max(0, 1000 / 20);
     }
 
     public int getMaxEnergyPerTick() {
-        return 1000;
+        return Math.max(0, 2_097_152 / 20);
     }
 }

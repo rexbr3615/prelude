@@ -33,6 +33,7 @@ import net.rexbrx.prelude.server.screens.menu.CrusherMenu;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Map;
 import java.util.Optional;
 
 public class CrusherEntity extends BlockEntity implements MenuProvider {

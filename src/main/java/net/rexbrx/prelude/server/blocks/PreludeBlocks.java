@@ -438,6 +438,10 @@ public class PreludeBlocks
             () -> new PipeBlock(BlockBehaviour.Properties.of().strength(1.0F).noOcclusion(), PipeBlock.Transport.ENERGY));
 
 
+    public static final DeferredBlock<Block> GENERATOR = registerBlock("generator",
+            () -> new GeneratorBlock(BlockBehaviour.Properties.of().noOcclusion().requiresCorrectToolForDrops().strength(4f).noLootTable()));
+
+
     //==================================================================================
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

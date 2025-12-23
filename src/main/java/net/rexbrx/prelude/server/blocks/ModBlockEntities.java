@@ -56,6 +56,12 @@ public class ModBlockEntities {
                     PipeBlockEntity::new, PreludeBlocks.PIPE_POWA.get()).build(null));
 
 
+    public static final Supplier<BlockEntityType<GeneratorBlockEntity>> GENERATOR_BE =
+            BLOCK_ENTITIES.register("generator_be", () -> BlockEntityType.Builder.of(
+                    GeneratorBlockEntity::new, PreludeBlocks.GENERATOR.get()).build(null));
+
+
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

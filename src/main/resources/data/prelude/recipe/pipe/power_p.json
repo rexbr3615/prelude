@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " A ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "prelude:carbon_fibre_plate"
+    },
+    "A": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "id": "prelude:power_pipe",
+    "count": 16
+  }
+}
