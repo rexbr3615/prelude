@@ -42,6 +42,7 @@ public class DiplodocusEntity extends PathfinderMob implements GeoEntity
     }
 
 
+
     @Override
     protected void registerGoals() {
         super.registerGoals();
@@ -60,7 +61,6 @@ public class DiplodocusEntity extends PathfinderMob implements GeoEntity
 
     }
 
-
     @Override
     public void baseTick() {
         super.baseTick();
@@ -78,15 +78,16 @@ public class DiplodocusEntity extends PathfinderMob implements GeoEntity
 
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MAX_HEALTH, 128.0f);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 25.5f);
+        builder = builder.add(Attributes.MAX_HEALTH, 202.0f);
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 29.5f);
         builder = builder.add(Attributes.ATTACK_SPEED, 2.0f);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.161f);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.141f);
         builder = builder.add(Attributes.ARMOR, 5.0f);
         builder = builder.add(Attributes.FOLLOW_RANGE, 16.0f);
         builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2.5f);
         return builder;
     }
+
 
     @Override
     protected void tickDeath() {
@@ -101,10 +102,17 @@ public class DiplodocusEntity extends PathfinderMob implements GeoEntity
         return super.finalizeSpawn(level, difficulty, spawnType, spawnGroupData);
     }
 
+
     @Override
     public EntityDimensions getDefaultDimensions(Pose pose) {
         return super.getDefaultDimensions(pose).scale(1f, 1f);
     }
+
+    @Override
+    public boolean canCollideWith(Entity entity) {
+        return true;
+    }
+
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
@@ -203,3 +211,4 @@ public class DiplodocusEntity extends PathfinderMob implements GeoEntity
 
 
 }
+

@@ -25,7 +25,7 @@ public class DiplodocusRenderer extends GeoEntityRenderer<DiplodocusEntity> {
 
     @Override
     public void preRender(PoseStack poseStack, DiplodocusEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
-        float scale = 2.38f;
+        float scale = 1.98f;
         poseStack.scale(scale,scale,scale);
         super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
 
