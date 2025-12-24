@@ -10,6 +10,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.rexbrx.prelude.prelude;
 import net.rexbrx.prelude.server.entity.common.chapter_omega.DiplocaulusEntity;
+import net.rexbrx.prelude.server.entity.common.chapter_omega.DiplodocusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_omega.IrritatorEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_omega.MonolophosaurusEntity;
 import net.rexbrx.prelude.server.entity.common.chapter_one.*;
@@ -203,6 +204,11 @@ public class EntityInit {
 
                     .sized(0.56f, 0.23f).build("diplocaulus"));
 
+    public static final Supplier<EntityType<DiplodocusEntity>> DIPLODOCUS = ENTITY_TYPES.register("diplodocus",
+            () -> EntityType.Builder.of(DiplodocusEntity::new, MobCategory.CREATURE)
+
+                    .sized(4.44f, 4.44f).build("diplodocus"));
+
 
     @SubscribeEvent
     public static void init(FMLCommonSetupEvent event) {
@@ -244,6 +250,7 @@ public class EntityInit {
             IrritatorEntity.init();
             MonolophosaurusEntity.init();
             DiplocaulusEntity.init();
+            DiplodocusEntity.init();
 
         });
     }
