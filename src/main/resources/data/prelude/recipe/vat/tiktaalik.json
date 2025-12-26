@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:tiktaalik_dna"
+    }
+  ],
+  "output": {
+    "id": "prelude:tiktaalik_spawn_egg"
+  }
+}

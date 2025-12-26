@@ -15,6 +15,7 @@ import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.diplocaulus.Diplocaul
 import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.diplodocus.DiplodocusRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.irritator.IrritatorRenderer;
 import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.monolophosaurus.MonolophosaurusRenderer;
+import net.rexbrx.prelude.client.CreaturesMR.chapter_omega.tiktaalik.TiktaalikRenderer;
 import net.rexbrx.prelude.client.menu.*;
 import net.rexbrx.prelude.server.blocks.ModBlockEntities;
 import net.rexbrx.prelude.server.blocks.PreludeBlocks;
@@ -101,6 +102,7 @@ public class PreludeModClient {
         event.registerEntityRenderer(EntityInit.IRRITATOR.get(), IrritatorRenderer::new);
         event.registerEntityRenderer(EntityInit.DIPLOCAULUS.get(), DiplocaulusRenderer::new);
         event.registerEntityRenderer(EntityInit.DIPLODOCUS.get(), DiplodocusRenderer::new);
+        event.registerEntityRenderer(EntityInit.TIKTAALIK.get(), TiktaalikRenderer::new);
 
 
         ItemBlockRenderTypes.setRenderLayer(PreludeBlocks.VAT.get(), RenderType.translucent());

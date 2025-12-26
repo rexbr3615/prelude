@@ -1,0 +1,11 @@
+{
+  "type": "prelude:vat",
+  "ingredients": [
+    {
+      "item": "prelude:diplodocus_dna"
+    }
+  ],
+  "output": {
+    "id": "prelude:diplodocus_spawn_egg"
+  }
+}

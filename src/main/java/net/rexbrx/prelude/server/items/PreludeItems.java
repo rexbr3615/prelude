@@ -191,6 +191,14 @@ public class PreludeItems {
             () -> new DeferredSpawnEggItem(EntityInit.DIPLOCAULUS,0xffffff, 0xffffff,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> DIPLODOCUS_SPAWN_EGG = ITEMS.register("diplodocus_spawn_egg",
+            () -> new DeferredSpawnEggItem(EntityInit.DIPLODOCUS,0xffffff, 0xffffff,
+                    new Item.Properties()));
+
+    public static final DeferredItem<Item> TIKTAALIK_SPAWN_EGG = ITEMS.register("tiktaalik_spawn_egg",
+            () -> new DeferredSpawnEggItem(EntityInit.TIKTAALIK,0xffffff, 0xffffff,
+                    new Item.Properties()));
+
     public static final DeferredItem<Item> PLASTER = ITEMS.register("plaster",
             () -> new PlasterItem(new Item.Properties()));
 
@@ -309,6 +317,8 @@ public class PreludeItems {
     public static final DeferredItem<Item> DIPLOCAULUS_DNA = ITEMS.register("diplocaulus_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> DIPLODOCUS_DNA = ITEMS.register("diplodocus_dna",
+            () -> new ItemDNA(new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> TIKTAALIK_DNA = ITEMS.register("tiktaalik_dna",
             () -> new ItemDNA(new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> TEST_DNA = ITEMS.register("test_dna",

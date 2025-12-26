@@ -180,6 +180,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.IRRITATOR_DNA.get());
                         pOutput.accept(PreludeItems.MONOLOPHOSAURUS_DNA.get());
                         pOutput.accept(PreludeItems.DIPLOCAULUS_DNA.get());
+                        pOutput.accept(PreludeItems.DIPLODOCUS_DNA.get());
+                        pOutput.accept(PreludeItems.TIKTAALIK_DNA.get());
 
                     })
                     .build());
@@ -226,6 +228,8 @@ public class ModCreativeModTabs
                         pOutput.accept(PreludeItems.IRRITATOR_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.MONOLOPHOSAURUS_SPAWN_EGG.get());
                         pOutput.accept(PreludeItems.DIPLOCAULUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.DIPLODOCUS_SPAWN_EGG.get());
+                        pOutput.accept(PreludeItems.TIKTAALIK_SPAWN_EGG.get());
 
 
                     })
